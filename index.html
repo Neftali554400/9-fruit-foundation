@@ -1,0 +1,966 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>9 Fruit Foundation — Simple, fruitful giving for children</title>
+  <link rel="icon" type="image/png" href="design assest/logo.png" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --brand:        #52A93F;
+      --brand-dark:   #428F31;
+      --brand-light:  #F1F8EE;
+      --brand-tint:   #E2F4DA;
+      --ink:          #1C1917;
+      --ink-soft:     #44403C;
+      --ink-muted:    #78716C;
+      --surface:      #FFFFFF;
+      --surface-2:    #FAFAF9;
+      --surface-3:    #F5F5F4;
+      --border:       #E7E5E4;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      color: var(--ink);
+      background: var(--surface);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    h1, h2, h3, h4 {
+      font-family: 'Playfair Display', Georgia, serif;
+      letter-spacing: -0.03em;
+      line-height: 1.15;
+    }
+
+    /* SVG noise grain filter */
+    .grain::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    /* Nav */
+    .nav-link {
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: var(--ink-soft);
+      text-decoration: none;
+      padding: 0.25rem 0;
+      position: relative;
+      transition: color 0.2s cubic-bezier(0.34,1.56,0.64,1);
+    }
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: -2px; left: 0; right: 0;
+      height: 2px;
+      background: var(--brand);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.25s cubic-bezier(0.34,1.56,0.64,1);
+    }
+    .nav-link:hover { color: var(--brand); }
+    .nav-link:hover::after { transform: scaleX(1); }
+    .nav-link:focus-visible { outline: 2px solid var(--brand); outline-offset: 4px; border-radius: 2px; }
+
+    /* Buttons */
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: var(--brand);
+      color: #fff;
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+      font-size: 0.9375rem;
+      padding: 0.75rem 1.75rem;
+      border-radius: 9999px;
+      border: none;
+      cursor: pointer;
+      text-decoration: none;
+      box-shadow:
+        0 4px 6px -1px rgba(82,169,63,0.35),
+        0 8px 20px -4px rgba(82,169,63,0.2);
+      transition: transform 0.2s cubic-bezier(0.34,1.56,0.64,1),
+                  background 0.15s ease,
+                  box-shadow 0.2s ease;
+    }
+    .btn-primary:hover {
+      background: var(--brand-dark);
+      transform: translateY(-2px);
+      box-shadow:
+        0 6px 12px -2px rgba(82,169,63,0.45),
+        0 12px 28px -4px rgba(82,169,63,0.25);
+    }
+    .btn-primary:active { transform: translateY(0); }
+    .btn-primary:focus-visible { outline: 3px solid var(--brand); outline-offset: 3px; }
+
+    .btn-outline {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: transparent;
+      color: var(--ink);
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+      font-size: 0.9375rem;
+      padding: 0.75rem 1.75rem;
+      border-radius: 9999px;
+      border: 2px solid var(--border);
+      cursor: pointer;
+      text-decoration: none;
+      transition: border-color 0.2s ease,
+                  color 0.2s ease,
+                  transform 0.2s cubic-bezier(0.34,1.56,0.64,1);
+    }
+    .btn-outline:hover {
+      border-color: var(--brand);
+      color: var(--brand);
+      transform: translateY(-2px);
+    }
+    .btn-outline:active { transform: translateY(0); }
+    .btn-outline:focus-visible { outline: 3px solid var(--brand); outline-offset: 3px; }
+
+    /* Badge */
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 9999px;
+      padding: 0.5rem 1rem;
+      font-size: 0.8125rem;
+      font-weight: 600;
+      color: var(--ink-soft);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
+    }
+    .badge-dot {
+      width: 8px; height: 8px;
+      border-radius: 50%;
+      background: var(--brand);
+      flex-shrink: 0;
+    }
+
+    /* Step cards */
+    .step-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 2rem;
+      position: relative;
+      box-shadow:
+        0 2px 4px rgba(0,0,0,0.04),
+        0 8px 24px rgba(0,0,0,0.06);
+      transition: transform 0.25s cubic-bezier(0.34,1.56,0.64,1),
+                  box-shadow 0.25s ease;
+    }
+    .step-card:hover {
+      transform: translateY(-4px);
+      box-shadow:
+        0 4px 8px rgba(82,169,63,0.08),
+        0 16px 40px rgba(0,0,0,0.1);
+    }
+
+    /* Fund cards */
+    .fund-card {
+      border-radius: 24px;
+      overflow: hidden;
+      position: relative;
+      box-shadow:
+        0 4px 8px rgba(0,0,0,0.08),
+        0 20px 48px rgba(0,0,0,0.12);
+      transition: transform 0.3s cubic-bezier(0.34,1.56,0.64,1),
+                  box-shadow 0.3s ease;
+    }
+    .fund-card:hover {
+      transform: translateY(-6px);
+      box-shadow:
+        0 8px 16px rgba(82,169,63,0.12),
+        0 28px 64px rgba(0,0,0,0.16);
+    }
+    .fund-card img {
+      width: 100%; height: 280px;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* Donation amount buttons */
+    .amount-btn {
+      background: var(--surface);
+      border: 2px solid var(--border);
+      border-radius: 12px;
+      padding: 1rem;
+      cursor: pointer;
+      text-align: center;
+      transition: border-color 0.2s ease,
+                  background 0.2s ease,
+                  transform 0.2s cubic-bezier(0.34,1.56,0.64,1);
+      font-family: 'Inter', sans-serif;
+    }
+    .amount-btn:hover {
+      border-color: var(--brand);
+      background: var(--brand-light);
+      transform: translateY(-2px);
+    }
+    .amount-btn.selected {
+      border-color: var(--brand);
+      background: var(--brand-tint);
+    }
+    .amount-btn:focus-visible { outline: 3px solid var(--brand); outline-offset: 2px; }
+
+    /* Toggle */
+    .toggle-btn {
+      padding: 0.5rem 1.25rem;
+      border-radius: 9999px;
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+      font-size: 0.875rem;
+      cursor: pointer;
+      border: none;
+      transition: background 0.2s ease, color 0.2s ease;
+    }
+    .toggle-btn.active {
+      background: var(--brand);
+      color: #fff;
+      box-shadow: 0 2px 8px rgba(82,169,63,0.3);
+    }
+    .toggle-btn.inactive {
+      background: transparent;
+      color: var(--ink-muted);
+    }
+    .toggle-btn:focus-visible { outline: 3px solid var(--brand); outline-offset: 2px; }
+
+    /* Section headings */
+    .section-label {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--brand);
+    }
+
+    /* Hero gradient background */
+    .hero-bg {
+      background:
+        radial-gradient(ellipse 70% 60% at 80% 20%, rgba(82,169,63,0.12) 0%, transparent 60%),
+        radial-gradient(ellipse 50% 40% at 10% 80%, rgba(251,191,36,0.08) 0%, transparent 50%),
+        var(--surface-2);
+    }
+
+    /* Metrics strip */
+    .metric-item {
+      text-align: center;
+    }
+
+    /* Impact section bg */
+    .impact-bg {
+      background:
+        radial-gradient(ellipse 80% 50% at 50% 0%, rgba(82,169,63,0.1) 0%, transparent 60%),
+        var(--surface-3);
+    }
+
+    /* Footer */
+    footer {
+      background: var(--ink);
+      color: rgba(255,255,255,0.65);
+    }
+    footer a {
+      color: rgba(255,255,255,0.55);
+      text-decoration: none;
+      font-size: 0.875rem;
+      transition: color 0.2s ease;
+    }
+    footer a:hover { color: #fff; }
+    footer a:focus-visible { outline: 2px solid var(--brand); outline-offset: 3px; }
+
+    /* Number counter display */
+    .match-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.875rem 1.25rem;
+      border-radius: 12px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    }
+    .arrow-right {
+      font-size: 1.25rem;
+      color: var(--brand);
+    }
+
+    /* Mobile menu */
+    #mobile-menu {
+      display: none;
+      flex-direction: column;
+      gap: 0.25rem;
+      padding: 1rem 1.5rem 1.5rem;
+      border-top: 1px solid var(--border);
+    }
+    #mobile-menu.open { display: flex; }
+    #mobile-menu a {
+      font-size: 1rem;
+      font-weight: 500;
+      color: var(--ink-soft);
+      text-decoration: none;
+      padding: 0.5rem 0;
+    }
+    #mobile-menu a:hover { color: var(--brand); }
+
+    @media (max-width: 767px) {
+      .desktop-nav { display: none !important; }
+      .hamburger { display: flex !important; }
+    }
+    @media (min-width: 768px) {
+      .hamburger { display: none !important; }
+    }
+
+    /* Responsive grid stacking */
+    @media (max-width: 767px) {
+      .two-col-grid {
+        grid-template-columns: 1fr !important;
+        gap: 2rem !important;
+      }
+      .two-col-grid .floating-card {
+        right: 0 !important;
+        bottom: -1rem !important;
+      }
+      .footer-grid {
+        grid-template-columns: 1fr 1fr !important;
+        gap: 2rem !important;
+      }
+      .hero-section {
+        padding: 3rem 1.25rem 3rem !important;
+      }
+    }
+    @media (max-width: 480px) {
+      .footer-grid {
+        grid-template-columns: 1fr !important;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════
+     NAVBAR
+════════════════════════════════════════ -->
+<header style="position:sticky;top:0;z-index:50;background:rgba(255,255,255,0.92);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--border);">
+  <nav style="max-width:1200px;margin:0 auto;padding:0 1.5rem;height:68px;display:flex;align-items:center;justify-content:space-between;">
+    <!-- Logo -->
+    <a href="index.html" style="display:flex;align-items:center;gap:0.75rem;text-decoration:none;flex-shrink:0;" aria-label="9 Fruit home">
+      <img src="design assest/logo.png" alt="9 Fruit logo" style="width:42px;height:42px;object-fit:contain;border-radius:8px;" />
+      <div style="display:flex;flex-direction:column;gap:0;">
+        <span style="font-family:'Playfair Display',serif;font-size:1.125rem;font-weight:700;color:var(--ink);letter-spacing:-0.02em;line-height:1.2;">9 Fruit</span>
+        <span style="font-family:'Inter',sans-serif;font-size:0.6875rem;font-weight:500;color:var(--ink-muted);letter-spacing:0.02em;line-height:1;">With Love, by Faith</span>
+      </div>
+    </a>
+
+    <!-- Desktop Nav -->
+    <div class="desktop-nav" style="display:flex;align-items:center;gap:2rem;">
+      <a href="how-it-works.html" class="nav-link">How It Works</a>
+      <a href="what-we-fund.html" class="nav-link">What We Fund</a>
+      <a href="our-impact.html" class="nav-link">Our Impact</a>
+      <a href="donate.html" class="btn-primary" style="padding:0.6rem 1.375rem;font-size:0.875rem;">Donate Now</a>
+    </div>
+
+    <!-- Hamburger -->
+    <button class="hamburger" id="hamburger-btn" aria-label="Open menu" style="background:none;border:none;cursor:pointer;padding:0.5rem;display:none;flex-direction:column;gap:5px;" onclick="document.getElementById('mobile-menu').classList.toggle('open')">
+      <span style="display:block;width:22px;height:2px;background:var(--ink);border-radius:2px;"></span>
+      <span style="display:block;width:22px;height:2px;background:var(--ink);border-radius:2px;"></span>
+      <span style="display:block;width:22px;height:2px;background:var(--ink);border-radius:2px;"></span>
+    </button>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu">
+    <a href="how-it-works.html">How It Works</a>
+    <a href="what-we-fund.html">What We Fund</a>
+    <a href="our-impact.html">Our Impact</a>
+    <a href="donate.html" class="btn-primary" style="margin-top:0.5rem;justify-content:center;">Donate Now</a>
+  </div>
+</header>
+
+
+<!-- ═══════════════════════════════════════
+     HERO
+════════════════════════════════════════ -->
+<section class="hero-bg grain hero-section" style="position:relative;overflow:hidden;padding:5rem 1.5rem 4rem;">
+  <div class="two-col-grid" style="max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;">
+    <!-- Text -->
+    <div style="position:relative;z-index:2;">
+      <p class="section-label" style="margin-bottom:1rem;">Giving That Multiplies</p>
+      <h1 style="font-size:clamp(2.5rem,5vw,3.75rem);font-weight:800;color:var(--ink);margin-bottom:1.25rem;max-width:520px;">
+        Simple, fruitful giving for <span style="color:var(--brand);">children</span>
+      </h1>
+      <p style="font-size:1.125rem;color:var(--ink-soft);line-height:1.75;margin-bottom:2rem;max-width:460px;">
+        Give to your vetted charity of choice.<br>
+        Eligible donations receive a 9% match.
+      </p>
+      <div style="display:flex;flex-wrap:wrap;gap:0.875rem;margin-bottom:1.25rem;">
+        <a href="donate.html" class="btn-primary" style="padding:0.9rem 2.25rem;font-size:1rem;background:#3D8F2C;box-shadow:0 6px 16px rgba(61,143,44,0.4),0 2px 4px rgba(61,143,44,0.3);">
+          Donate Now
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none"><path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <a href="#how-it-works" class="btn-outline">Learn More</a>
+      </div>
+      <!-- Trust line -->
+      <div style="display:flex;flex-wrap:wrap;gap:1.125rem;align-items:center;">
+        <span style="display:flex;align-items:center;gap:0.375rem;font-size:0.78rem;color:var(--ink-muted);font-weight:500;">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none"><path d="M9 12L11 14L15 10M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="var(--brand)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          100% pass-through for designated gifts
+        </span>
+        <span style="display:flex;align-items:center;gap:0.375rem;font-size:0.78rem;color:var(--ink-muted);font-weight:500;">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none"><path d="M9 12L11 14L15 10M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="var(--brand)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Transparent reporting
+        </span>
+        <span style="display:flex;align-items:center;gap:0.375rem;font-size:0.78rem;color:var(--ink-muted);font-weight:500;">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none"><path d="M9 12L11 14L15 10M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="var(--brand)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Annual independent auditing
+        </span>
+      </div>
+
+    </div>
+
+    <!-- Hero Image -->
+    <div style="position:relative;z-index:2;border-radius:28px;overflow:hidden;box-shadow:0 8px 16px rgba(0,0,0,0.1),0 32px 64px rgba(0,0,0,0.15);">
+      <img src="design assest/photo-1488521787991-ed7bbaae773c.jpeg"
+           alt="Children smiling and reaching out together"
+           style="width:100%;height:460px;object-fit:cover;display:block;" />
+      <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0) 40%,rgba(0,0,0,0.55) 100%);"></div>
+      <!-- Floating stat card — slightly smaller -->
+      <div style="position:absolute;bottom:1.5rem;left:1.5rem;background:rgba(255,255,255,0.95);backdrop-filter:blur(8px);border-radius:14px;padding:0.75rem 1rem;box-shadow:0 4px 20px rgba(0,0,0,0.15);">
+        <div style="font-size:1.25rem;font-weight:800;font-family:'Playfair Display',serif;color:var(--ink);">$109</div>
+        <div style="font-size:0.6875rem;color:var(--ink-muted);font-weight:500;">for every $100 you give</div>
+        <div style="font-size:0.625rem;color:var(--brand);font-weight:700;margin-top:0.2rem;">+9% MATCHED</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Decorative radial blobs -->
+  <div style="position:absolute;top:-120px;right:-80px;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(82,169,63,0.1) 0%,transparent 70%);pointer-events:none;z-index:1;"></div>
+  <div style="position:absolute;bottom:-80px;left:-60px;width:360px;height:360px;border-radius:50%;background:radial-gradient(circle,rgba(251,191,36,0.08) 0%,transparent 70%);pointer-events:none;z-index:1;"></div>
+</section>
+
+
+<!-- ═══════════════════════════════════════
+     FEATURE BADGES STRIP
+════════════════════════════════════════ -->
+<section style="background:var(--surface-3);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:1.5rem 1.5rem;">
+  <div style="max-width:1200px;margin:0 auto;display:flex;flex-wrap:wrap;justify-content:center;gap:1rem;">
+    <div class="badge" style="font-size:0.875rem;padding:0.625rem 1.125rem;">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" fill="var(--brand)" stroke="var(--brand)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      +9% Match on Every Gift
+    </div>
+    <div class="badge" style="font-size:0.875rem;padding:0.625rem 1.125rem;">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M9 12L11 14L15 10M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="var(--brand)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      Christian, non-partisan nonprofit
+    </div>
+    <div class="badge" style="font-size:0.875rem;padding:0.625rem 1.125rem;">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M12 2L13.5 8.5H20L14.5 12.5L16.5 19L12 15L7.5 19L9.5 12.5L4 8.5H10.5L12 2Z" fill="var(--brand)" stroke="var(--brand)" stroke-width="1" stroke-linejoin="round"/></svg>
+      Built on matching
+    </div>
+    <div class="badge" style="font-size:0.875rem;padding:0.625rem 1.125rem;">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M15 12H9M12 9V15M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="var(--brand)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      100% Transparent
+    </div>
+    <div class="badge" style="font-size:0.875rem;padding:0.625rem 1.125rem;">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M13 2L3 14H12L11 22L21 10H12L13 2Z" stroke="var(--brand)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      Proven Results
+    </div>
+    <div class="badge" style="font-size:0.875rem;padding:0.625rem 1.125rem;">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M17 21V19C17 17.9391 16.5786 16.9217 15.8284 16.1716C15.0783 15.4214 14.0609 15 13 15H5C3.93913 15 2.92172 15.4214 2.17157 16.1716C1.42143 16.9217 1 17.9391 1 19V21M23 21V19C22.9993 18.1137 22.7044 17.2528 22.1614 16.5523C21.6184 15.8519 20.8581 15.3516 20 15.13M16 3.13C16.8604 3.35031 17.623 3.85071 18.1676 4.55232C18.7122 5.25392 19.0078 6.11683 19.0078 7.005C19.0078 7.89317 18.7122 8.75608 18.1676 9.45768C17.623 10.1593 16.8604 10.6597 16 10.88M13 7C13 9.20914 11.2091 11 9 11C6.79086 11 5 9.20914 5 7C5 4.79086 6.79086 3 9 3C11.2091 3 13 4.79086 13 7Z" stroke="var(--brand)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      Community Focused
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════
+     HOW IT WORKS
+════════════════════════════════════════ -->
+<section id="how-it-works" style="padding:6rem 1.5rem;">
+  <div style="max-width:1200px;margin:0 auto;">
+    <div style="text-align:center;margin-bottom:3.5rem;">
+      <p class="section-label" style="margin-bottom:0.75rem;">Simple Process</p>
+      <h2 style="font-size:clamp(2rem,4vw,3rem);color:var(--ink);margin-bottom:1rem;">How It Works</h2>
+      <p style="font-size:1.0625rem;color:var(--ink-soft);max-width:520px;margin:0 auto;line-height:1.75;">
+        Three easy steps — from your heart to a child's future.
+      </p>
+    </div>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem;position:relative;">
+      <!-- Connector line (desktop) -->
+      <div style="position:absolute;top:3.5rem;left:calc(33.33% - 1rem);right:calc(33.33% - 1rem);height:2px;background:linear-gradient(90deg,var(--brand-tint),var(--brand),var(--brand-tint));display:none;" class="desktop-connector"></div>
+
+      <!-- Step 1 -->
+      <div class="step-card" tabindex="0">
+        <div style="width:56px;height:56px;border-radius:16px;background:var(--brand-tint);display:flex;align-items:center;justify-content:center;margin-bottom:1.5rem;">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9V8h2v8zm4 0h-2V8h2v8z" fill="var(--brand)"/><rect x="1" y="1" width="22" height="22" rx="11" stroke="var(--brand)" stroke-width="1.5" fill="none"/><path d="M7 15V9L12 6L17 9V15L12 18L7 15Z" fill="none" stroke="var(--brand)" stroke-width="2" stroke-linejoin="round"/><path d="M12 6V18M7 9L17 15M17 9L7 15" stroke="var(--brand-tint)" stroke-width="1"/></svg>
+        </div>
+        <div style="display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:50%;background:var(--brand);color:#fff;font-size:0.75rem;font-weight:700;margin-bottom:1rem;">1</div>
+        <h3 style="font-size:1.375rem;margin-bottom:0.75rem;color:var(--ink);">Choose your vetted charity</h3>
+        <p style="color:var(--ink-soft);font-size:0.9375rem;line-height:1.7;">Select from our list of vetted, reputable charities and give with confidence. Every size gift makes a real difference.</p>
+      </div>
+
+      <!-- Step 2 -->
+      <div class="step-card" tabindex="0" style="border-color:var(--brand);box-shadow:0 4px 12px rgba(82,169,63,0.12),0 16px 40px rgba(0,0,0,0.08);">
+        <div style="position:absolute;top:-1px;left:50%;transform:translateX(-50%);background:var(--brand);color:#fff;font-size:0.7rem;font-weight:700;padding:0.25rem 0.75rem;border-radius:0 0 8px 8px;letter-spacing:0.06em;">THE MAGIC</div>
+        <div style="width:56px;height:56px;border-radius:16px;background:var(--brand-tint);display:flex;align-items:center;justify-content:center;margin-bottom:1.5rem;">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M12 2L13.5 8.5H20L14.5 12.5L16.5 19L12 15L7.5 19L9.5 12.5L4 8.5H10.5L12 2Z" fill="var(--brand)" stroke="var(--brand)" stroke-width="1.5" stroke-linejoin="round"/></svg>
+        </div>
+        <div style="display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:50%;background:var(--brand);color:#fff;font-size:0.75rem;font-weight:700;margin-bottom:1rem;">2</div>
+        <h3 style="font-size:1.375rem;margin-bottom:0.75rem;color:var(--ink);">We Match</h3>
+        <p style="color:var(--ink-soft);font-size:0.9375rem;line-height:1.7;">Eligible donations receive a 9% match, subject to program limits.</p>
+        <div style="margin-top:1.25rem;padding:1rem 1.25rem;background:var(--brand-tint);border-radius:10px;display:flex;align-items:center;justify-content:center;gap:1rem;">
+          <span style="font-weight:700;color:var(--ink);font-size:1.25rem;">$100</span>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M5 12H19M19 12L13 6M19 12L13 18" stroke="var(--brand)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span style="font-weight:800;color:var(--brand);font-size:1.5rem;">$109</span>
+        </div>
+      </div>
+
+      <!-- Step 3 -->
+      <div class="step-card" tabindex="0">
+        <div style="width:56px;height:56px;border-radius:16px;background:var(--brand-tint);display:flex;align-items:center;justify-content:center;margin-bottom:1.5rem;">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="var(--brand)" stroke-width="2"/><path d="M8 12L10.5 14.5L16 9" stroke="var(--brand)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <div style="display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:50%;background:var(--brand);color:#fff;font-size:0.75rem;font-weight:700;margin-bottom:1rem;">3</div>
+        <h3 style="font-size:1.375rem;margin-bottom:0.75rem;color:var(--ink);">Impact Grows</h3>
+        <p style="color:var(--ink-soft);font-size:0.9375rem;line-height:1.7;">Every dollar reaches children through carefully vetted programs in health and education worldwide.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════
+     WALK ALONGSIDE
+════════════════════════════════════════ -->
+<section style="padding:4rem 1.5rem;background:var(--brand-tint);border-top:1px solid rgba(82,169,63,0.15);border-bottom:1px solid rgba(82,169,63,0.15);">
+  <div style="max-width:800px;margin:0 auto;display:grid;grid-template-columns:auto 1fr;gap:2rem;align-items:start;">
+    <div style="width:48px;height:48px;border-radius:14px;background:var(--brand);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:0.2rem;box-shadow:0 4px 12px rgba(82,169,63,0.3);">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M17 21V19C17 17.9391 16.5786 16.9217 15.8284 16.1716C15.0783 15.4214 14.0609 15 13 15H5C3.93913 15 2.92172 15.4214 2.17157 16.1716C1.42143 16.9217 1 17.9391 1 19V21M23 21V19C22.9993 18.1137 22.7044 17.2528 22.1614 16.5523C21.6184 15.8519 20.8581 15.3516 20 15.13M16 3.13C16.8604 3.35031 17.623 3.85071 18.1676 4.55232C18.7122 5.25392 19.0078 6.11683 19.0078 7.005C19.0078 7.89317 18.7122 8.75608 18.1676 9.45768C17.623 10.1593 16.8604 10.6597 16 10.88M13 7C13 9.20914 11.2091 11 9 11C6.79086 11 5 9.20914 5 7C5 4.79086 6.79086 3 9 3C11.2091 3 13 4.79086 13 7Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </div>
+    <div>
+      <p style="font-size:1.125rem;font-weight:600;color:var(--ink);line-height:1.65;margin-bottom:0.625rem;">
+        We walk alongside established, reputable organizations already serving communities.
+      </p>
+      <p style="font-size:0.9375rem;color:var(--ink-soft);line-height:1.75;">
+        9 Fruit raises awareness and funds for charities with a proven history of impact and fiscal responsibility. A simpler way to give, built on matching — amplifying the work already being done by those on the ground.
+      </p>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════
+     WHAT WE FUND
+════════════════════════════════════════ -->
+<section id="what-we-fund" style="padding:6rem 1.5rem;background:var(--surface-2);">
+  <div style="max-width:1200px;margin:0 auto;">
+    <div style="text-align:center;margin-bottom:3.5rem;">
+      <p class="section-label" style="margin-bottom:0.75rem;">Where It Goes</p>
+      <h2 style="font-size:clamp(2rem,4vw,3rem);color:var(--ink);margin-bottom:1rem;">What We Fund</h2>
+      <p style="font-size:1.0625rem;color:var(--ink-soft);max-width:480px;margin:0 auto;line-height:1.75;">
+        Your matched gift supports two core pillars that transform children's lives.
+      </p>
+    </div>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:2rem;">
+      <!-- Health -->
+      <article class="fund-card" tabindex="0">
+        <div style="position:relative;overflow:hidden;">
+          <img src="design assest/photo-1576091160550-2173dba999ef.jpeg"
+               alt="Healthcare professional with stethoscope and laptop"
+               style="width:100%;height:280px;object-fit:cover;display:block;" />
+          <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0.05) 0%,rgba(0,0,0,0.6) 100%);"></div>
+          <div style="position:absolute;inset:0;background:rgba(82,169,63,0.15);mix-blend-mode:multiply;"></div>
+          <div style="position:absolute;top:1.25rem;left:1.25rem;">
+            <span style="background:rgba(255,255,255,0.9);color:var(--brand);font-size:0.75rem;font-weight:700;padding:0.3rem 0.75rem;border-radius:9999px;letter-spacing:0.05em;">HEALTH</span>
+          </div>
+        </div>
+        <div style="background:var(--surface);padding:2rem;">
+          <h3 style="font-size:1.5rem;margin-bottom:0.75rem;color:var(--ink);">Health Initiatives</h3>
+          <p style="color:var(--ink-soft);font-size:0.9375rem;line-height:1.7;margin-bottom:1.25rem;">Essential healthcare services, nutrition programs, and wellness initiatives that give every child a healthy start.</p>
+          <a href="donate.html" style="color:var(--brand);font-weight:600;font-size:0.875rem;text-decoration:none;display:inline-flex;align-items:center;gap:0.375rem;transition:gap 0.2s ease;">
+            Support Health Programs
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+      </article>
+
+      <!-- Education -->
+      <article class="fund-card" tabindex="0">
+        <div style="position:relative;overflow:hidden;">
+          <img src="design assest/photo-1503676260728-1c00da094a0b.jpeg"
+               alt="Books, apple and ABC blocks on a school desk"
+               style="width:100%;height:280px;object-fit:cover;display:block;" />
+          <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0.05) 0%,rgba(0,0,0,0.6) 100%);"></div>
+          <div style="position:absolute;inset:0;background:rgba(82,169,63,0.15);mix-blend-mode:multiply;"></div>
+          <div style="position:absolute;top:1.25rem;left:1.25rem;">
+            <span style="background:rgba(255,255,255,0.9);color:var(--brand);font-size:0.75rem;font-weight:700;padding:0.3rem 0.75rem;border-radius:9999px;letter-spacing:0.05em;">EDUCATION</span>
+          </div>
+        </div>
+        <div style="background:var(--surface);padding:2rem;">
+          <h3 style="font-size:1.5rem;margin-bottom:0.75rem;color:var(--ink);">Education Programs</h3>
+          <p style="color:var(--ink-soft);font-size:0.9375rem;line-height:1.7;margin-bottom:1.25rem;">Quality learning opportunities, school supplies, and educational resources that open doors to brighter futures.</p>
+          <a href="donate.html" style="color:var(--brand);font-weight:600;font-size:0.875rem;text-decoration:none;display:inline-flex;align-items:center;gap:0.375rem;transition:gap 0.2s ease;">
+            Support Education Programs
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════
+     OUR IMPACT / DONATE
+════════════════════════════════════════ -->
+<section id="our-impact" style="padding:6rem 1.5rem;">
+  <div class="two-col-grid" style="max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;">
+    <!-- Image side -->
+    <div style="position:relative;">
+      <div style="border-radius:28px;overflow:hidden;box-shadow:0 8px 16px rgba(0,0,0,0.1),0 32px 64px rgba(0,0,0,0.12);">
+        <img src="design assest/photo-1509099836639-18ba1795216d.jpeg"
+             alt="Children smiling and playing together in a community"
+             style="width:100%;height:480px;object-fit:cover;display:block;" />
+        <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0) 50%,rgba(0,0,0,0.55) 100%);"></div>
+        <div style="position:absolute;inset:0;background:rgba(82,169,63,0.1);mix-blend-mode:multiply;"></div>
+      </div>
+
+      <!-- Floating impact card -->
+      <div style="position:absolute;bottom:-1.5rem;right:-1.5rem;background:var(--surface);border-radius:20px;padding:1.25rem 1.5rem;box-shadow:0 8px 32px rgba(0,0,0,0.14);border:1px solid var(--border);min-width:180px;">
+        <div style="font-size:2rem;font-weight:800;font-family:'Playfair Display',serif;color:var(--brand);">+9%</div>
+        <div style="font-size:0.8125rem;color:var(--ink-soft);font-weight:500;line-height:1.4;">more impact<br>every single gift</div>
+      </div>
+    </div>
+
+    <!-- Text + Match calculator -->
+    <div>
+      <p class="section-label" style="margin-bottom:0.75rem;">The Power of Matching</p>
+      <h2 style="font-size:clamp(1.875rem,3.5vw,2.75rem);color:var(--ink);margin-bottom:1rem;">Your gift grows through a <span style="color:var(--brand);">9% matching program</span></h2>
+      <p style="font-size:1.0625rem;color:var(--ink-soft);line-height:1.75;margin-bottom:0.875rem;">
+        Our unique model ensures every eligible donation works harder. When you give, our foundation matches your gift at 9%, subject to program limits.
+      </p>
+      <p style="font-size:1.0625rem;color:var(--ink-soft);line-height:1.75;margin-bottom:2rem;">
+        Your contributions become seeds in the lives of children who need it most.
+      </p>
+
+      <!-- Match examples -->
+      <div style="display:flex;flex-direction:column;gap:0.75rem;margin-bottom:2rem;">
+        <div class="match-row">
+          <div>
+            <div style="font-size:0.75rem;color:var(--ink-muted);font-weight:500;margin-bottom:0.125rem;">You give</div>
+            <div style="font-size:1.125rem;font-weight:700;color:var(--ink);">$50</div>
+          </div>
+          <span class="arrow-right">→</span>
+          <div style="text-align:right;">
+            <div style="font-size:0.75rem;color:var(--brand);font-weight:600;margin-bottom:0.125rem;">Children receive</div>
+            <div style="font-size:1.25rem;font-weight:800;color:var(--brand);">$54.50</div>
+          </div>
+        </div>
+        <div class="match-row">
+          <div>
+            <div style="font-size:0.75rem;color:var(--ink-muted);font-weight:500;margin-bottom:0.125rem;">You give</div>
+            <div style="font-size:1.125rem;font-weight:700;color:var(--ink);">$100</div>
+          </div>
+          <span class="arrow-right">→</span>
+          <div style="text-align:right;">
+            <div style="font-size:0.75rem;color:var(--brand);font-weight:600;margin-bottom:0.125rem;">Children receive</div>
+            <div style="font-size:1.25rem;font-weight:800;color:var(--brand);">$109.00</div>
+          </div>
+        </div>
+        <div class="match-row">
+          <div>
+            <div style="font-size:0.75rem;color:var(--ink-muted);font-weight:500;margin-bottom:0.125rem;">You give</div>
+            <div style="font-size:1.125rem;font-weight:700;color:var(--ink);">$500</div>
+          </div>
+          <span class="arrow-right">→</span>
+          <div style="text-align:right;">
+            <div style="font-size:0.75rem;color:var(--brand);font-weight:600;margin-bottom:0.125rem;">Children receive</div>
+            <div style="font-size:1.25rem;font-weight:800;color:var(--brand);">$545.00</div>
+          </div>
+        </div>
+      </div>
+
+      <a href="donate.html" class="btn-primary">See Your Impact</a>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════
+     DONATE SECTION
+════════════════════════════════════════ -->
+<section id="donate" class="impact-bg" style="padding:6rem 1.5rem;">
+  <div style="max-width:640px;margin:0 auto;text-align:center;">
+    <p class="section-label" style="margin-bottom:0.75rem;">Make a Difference</p>
+    <h2 style="font-size:clamp(2rem,4vw,3rem);color:var(--ink);margin-bottom:1rem;">Choose Your Gift</h2>
+    <p style="font-size:1.0625rem;color:var(--ink-soft);line-height:1.75;margin-bottom:2.5rem;">
+      Every donation is matched by 9%. Pick an amount below and watch your impact grow.
+    </p>
+
+    <!-- One-time / Monthly toggle -->
+    <div style="display:inline-flex;background:var(--surface);border:1px solid var(--border);border-radius:9999px;padding:0.25rem;margin-bottom:2rem;">
+      <button class="toggle-btn active" id="toggle-onetime" onclick="setToggle('onetime')" aria-pressed="true">One-Time</button>
+      <button class="toggle-btn inactive" id="toggle-monthly" onclick="setToggle('monthly')" aria-pressed="false">Monthly</button>
+    </div>
+
+    <!-- Amount grid -->
+    <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:1rem;margin-bottom:1.5rem;" role="group" aria-label="Select donation amount">
+      <button class="amount-btn selected" id="amt-25" onclick="selectAmount(25)" aria-pressed="true">
+        <div style="font-size:1.5rem;font-weight:800;font-family:'Playfair Display',serif;color:var(--ink);">$25</div>
+        <div style="font-size:0.75rem;color:var(--brand);font-weight:600;margin-top:0.25rem;">→ $27.25 matched</div>
+      </button>
+      <button class="amount-btn" id="amt-50" onclick="selectAmount(50)" aria-pressed="false">
+        <div style="font-size:1.5rem;font-weight:800;font-family:'Playfair Display',serif;color:var(--ink);">$50</div>
+        <div style="font-size:0.75rem;color:var(--brand);font-weight:600;margin-top:0.25rem;">→ $54.50 matched</div>
+      </button>
+      <button class="amount-btn" id="amt-100" onclick="selectAmount(100)" aria-pressed="false">
+        <div style="font-size:1.5rem;font-weight:800;font-family:'Playfair Display',serif;color:var(--ink);">$100</div>
+        <div style="font-size:0.75rem;color:var(--brand);font-weight:600;margin-top:0.25rem;">→ $109.00 matched</div>
+      </button>
+      <button class="amount-btn" id="amt-250" onclick="selectAmount(250)" aria-pressed="false">
+        <div style="font-size:1.5rem;font-weight:800;font-family:'Playfair Display',serif;color:var(--ink);">$250</div>
+        <div style="font-size:0.75rem;color:var(--brand);font-weight:600;margin-top:0.25rem;">→ $272.50 matched</div>
+      </button>
+    </div>
+
+    <!-- Donate CTA -->
+    <a href="#" class="btn-primary" style="width:100%;justify-content:center;padding:1rem 2rem;font-size:1rem;border-radius:14px;">
+      Donate $25 Now — $27.25 Reaches Children
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </a>
+
+    <p style="font-size:0.8125rem;color:var(--ink-muted);margin-top:1rem;">
+      Secure donation · 501(c)(3) tax-deductible · Open financial reports
+    </p>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════
+     OUR FOUNDATION
+════════════════════════════════════════ -->
+<section style="padding:6rem 1.5rem;background:var(--surface-2);">
+  <div style="max-width:1200px;margin:0 auto;">
+    <div style="text-align:center;margin-bottom:3.5rem;">
+      <p class="section-label" style="margin-bottom:0.75rem;">Who We Are</p>
+      <h2 style="font-size:clamp(2rem,4vw,3rem);color:var(--ink);margin-bottom:1rem;">Our Foundation</h2>
+      <p style="font-size:1.0625rem;color:var(--ink-soft);max-width:560px;margin:0 auto;line-height:1.75;">
+        Rooted in faith, committed to results. Here's how we approach our mission.
+      </p>
+    </div>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem;">
+      <!-- Pillar 1 -->
+      <div class="step-card" tabindex="0" style="text-align:center;">
+        <div style="width:64px;height:64px;border-radius:20px;background:var(--brand-tint);display:flex;align-items:center;justify-content:center;margin:0 auto 1.5rem;">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
+            <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="var(--brand)" stroke-width="2" stroke-linejoin="round"/>
+            <path d="M2 17L12 22L22 17" stroke="var(--brand)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M2 12L12 17L22 12" stroke="var(--brand)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <h3 style="font-size:1.25rem;margin-bottom:0.75rem;color:var(--ink);">Concentrated Resources</h3>
+        <p style="color:var(--ink-soft);font-size:0.9375rem;line-height:1.7;">We focus giving where it has the greatest multiplied impact — channeling every dollar with precision and purpose.</p>
+      </div>
+
+      <!-- Pillar 2 -->
+      <div class="step-card" tabindex="0" style="text-align:center;">
+        <div style="width:64px;height:64px;border-radius:20px;background:var(--brand-tint);display:flex;align-items:center;justify-content:center;margin:0 auto 1.5rem;">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
+            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" stroke="var(--brand)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <h3 style="font-size:1.25rem;margin-bottom:0.75rem;color:var(--ink);">Faith-Inspired Action</h3>
+        <p style="color:var(--ink-soft);font-size:0.9375rem;line-height:1.7;">Our work is grounded in faith — not as a barrier, but as a foundation for measurable outcomes and accountability.</p>
+      </div>
+
+      <!-- Pillar 3 -->
+      <div class="step-card" tabindex="0" style="text-align:center;">
+        <div style="width:64px;height:64px;border-radius:20px;background:var(--brand-tint);display:flex;align-items:center;justify-content:center;margin:0 auto 1.5rem;">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
+            <circle cx="12" cy="12" r="10" stroke="var(--brand)" stroke-width="2"/>
+            <path d="M12 6V12L16 14" stroke="var(--brand)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <h3 style="font-size:1.25rem;margin-bottom:0.75rem;color:var(--ink);">Community-Designed</h3>
+        <p style="color:var(--ink-soft);font-size:0.9375rem;line-height:1.7;">Health and education initiatives are designed with communities, not just for them — ensuring lasting, locally-owned change.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════
+     READY TO MAKE A DIFFERENCE
+════════════════════════════════════════ -->
+<section style="position:relative;overflow:hidden;padding:7rem 1.5rem;">
+  <!-- Hero photo background -->
+  <div style="position:absolute;inset:0;z-index:0;">
+    <img src="design assest/photo-1488521787991-ed7bbaae773c.jpeg"
+         alt=""
+         aria-hidden="true"
+         style="width:100%;height:100%;object-fit:cover;object-position:center;display:block;" />
+    <!-- Dark navy overlay, matches reference -->
+    <div style="position:absolute;inset:0;background:rgba(18,28,60,0.72);"></div>
+  </div>
+
+  <div style="max-width:720px;margin:0 auto;text-align:center;position:relative;z-index:2;">
+    <p style="font-size:0.75rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.6);margin-bottom:0.875rem;">Make a Difference Today</p>
+    <h2 style="font-size:clamp(2rem,4.5vw,3.25rem);font-family:'Playfair Display',serif;font-weight:800;letter-spacing:-0.03em;color:#fff;line-height:1.15;margin-bottom:1.25rem;">
+      Ready to Make a Difference?
+    </h2>
+    <p style="font-size:1.125rem;color:rgba(255,255,255,0.78);line-height:1.75;margin-bottom:2.5rem;max-width:540px;margin-left:auto;margin-right:auto;">
+      Your generosity, combined with our matching commitment, creates lasting change for children around the world.
+    </p>
+    <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:1rem;">
+      <a href="donate.html" style="display:inline-flex;align-items:center;gap:0.5rem;background:var(--brand);color:#fff;font-family:'Inter',sans-serif;font-weight:700;font-size:1rem;padding:0.875rem 2rem;border-radius:9999px;text-decoration:none;box-shadow:0 4px 20px rgba(82,169,63,0.4);transition:transform 0.2s cubic-bezier(0.34,1.56,0.64,1),background 0.15s ease;">
+        Give Now
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+      <a href="how-it-works.html" style="display:inline-flex;align-items:center;gap:0.5rem;background:transparent;color:#fff;font-family:'Inter',sans-serif;font-weight:600;font-size:1rem;padding:0.875rem 2rem;border-radius:9999px;text-decoration:none;border:2px solid rgba(255,255,255,0.4);transition:border-color 0.2s ease,transform 0.2s cubic-bezier(0.34,1.56,0.64,1);">
+        Learn How It Works
+      </a>
+    </div>
+    <p style="font-size:0.8125rem;color:rgba(255,255,255,0.45);margin-top:1.5rem;">
+      501(c)(3) Tax-deductible · 100% Transparent · Verified Nonprofit
+    </p>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════
+     FOOTER
+════════════════════════════════════════ -->
+<footer style="padding:4rem 1.5rem 2rem;">
+  <div style="max-width:1200px;margin:0 auto;">
+    <!-- Top row -->
+    <div class="footer-grid" style="display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:3rem;margin-bottom:3rem;">
+      <!-- Brand col -->
+      <div>
+        <a href="index.html" style="display:flex;align-items:center;gap:0.75rem;text-decoration:none;margin-bottom:1.25rem;">
+          <img src="design assest/logo.png" alt="9 Fruit logo" style="width:40px;height:40px;object-fit:contain;border-radius:8px;flex-shrink:0;" />
+          <div style="display:flex;flex-direction:column;gap:0;">
+            <span style="font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;color:#fff;line-height:1.2;">9 Fruit</span>
+            <span style="font-family:'Inter',sans-serif;font-size:0.6875rem;font-weight:500;color:rgba(255,255,255,0.45);letter-spacing:0.02em;line-height:1;">With Love, by Faith</span>
+          </div>
+        </a>
+        <p style="font-size:0.875rem;line-height:1.75;color:rgba(255,255,255,0.5);max-width:280px;">
+          Give to your vetted charity of choice. Eligible donations receive a 9% match — with love, by faith.
+        </p>
+        <div style="margin-top:1.5rem;display:flex;gap:0.75rem;">
+          <a href="#" aria-label="Twitter" style="width:36px;height:36px;border-radius:9999px;border:1px solid rgba(255,255,255,0.15);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,0.55);transition:border-color 0.2s ease,color 0.2s ease;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          </a>
+          <a href="#" aria-label="Facebook" style="width:36px;height:36px;border-radius:9999px;border:1px solid rgba(255,255,255,0.15);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,0.55);transition:border-color 0.2s ease,color 0.2s ease;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          </a>
+          <a href="#" aria-label="Instagram" style="width:36px;height:36px;border-radius:9999px;border:1px solid rgba(255,255,255,0.15);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,0.55);transition:border-color 0.2s ease,color 0.2s ease;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Organization -->
+      <div>
+        <h4 style="font-size:0.75rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.4);margin-bottom:1.125rem;font-family:'Inter',sans-serif;">Organization</h4>
+        <ul style="list-style:none;display:flex;flex-direction:column;gap:0.625rem;">
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Our Mission</a></li>
+          <li><a href="#">Our Team</a></li>
+          <li><a href="#">Annual Reports</a></li>
+        </ul>
+      </div>
+
+      <!-- Programs -->
+      <div>
+        <h4 style="font-size:0.75rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.4);margin-bottom:1.125rem;font-family:'Inter',sans-serif;">Programs</h4>
+        <ul style="list-style:none;display:flex;flex-direction:column;gap:0.625rem;">
+          <li><a href="#">Health Initiatives</a></li>
+          <li><a href="#">Education Programs</a></li>
+          <li><a href="#">Community Projects</a></li>
+          <li><a href="#">Success Stories</a></li>
+        </ul>
+      </div>
+
+      <!-- Connect -->
+      <div>
+        <h4 style="font-size:0.75rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.4);margin-bottom:1.125rem;font-family:'Inter',sans-serif;">Connect</h4>
+        <ul style="list-style:none;display:flex;flex-direction:column;gap:0.625rem;">
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Newsletter</a></li>
+          <li><a href="#">Volunteer</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Divider -->
+    <div style="border-top:1px solid rgba(255,255,255,0.1);padding-top:2rem;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:1rem;">
+      <p style="font-size:0.8125rem;color:rgba(255,255,255,0.35);">
+        EIN: 00-0000000 &nbsp;·&nbsp; 501(c)(3) Nonprofit &nbsp;·&nbsp; Open Financial Reports
+      </p>
+      <p style="font-size:0.8125rem;color:rgba(255,255,255,0.35);">
+        © 2026 9 Fruit Foundation. All rights reserved.
+      </p>
+    </div>
+  </div>
+</footer>
+
+
+<script>
+  // Donation amount selection
+  const amounts = [25, 50, 100, 250];
+  const matched = { 25: '27.25', 50: '54.50', 100: '109.00', 250: '272.50' };
+  let selected = 25;
+
+  function selectAmount(amt) {
+    selected = amt;
+    amounts.forEach(a => {
+      const btn = document.getElementById('amt-' + a);
+      btn.classList.toggle('selected', a === amt);
+      btn.setAttribute('aria-pressed', a === amt ? 'true' : 'false');
+    });
+    const cta = document.querySelector('#donate .btn-primary');
+    cta.textContent = '';
+    cta.innerHTML = `Donate $${amt} Now — $${matched[amt]} Reaches Children <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
+  }
+
+  // Frequency toggle
+  function setToggle(type) {
+    const ot = document.getElementById('toggle-onetime');
+    const mo = document.getElementById('toggle-monthly');
+    if (type === 'onetime') {
+      ot.classList.replace('inactive', 'active'); ot.setAttribute('aria-pressed', 'true');
+      mo.classList.replace('active', 'inactive'); mo.setAttribute('aria-pressed', 'false');
+    } else {
+      mo.classList.replace('inactive', 'active'); mo.setAttribute('aria-pressed', 'true');
+      ot.classList.replace('active', 'inactive'); ot.setAttribute('aria-pressed', 'false');
+    }
+  }
+
+  // Smooth scroll for anchor links
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const target = document.querySelector(a.getAttribute('href'));
+      if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+    });
+  });
+</script>
+
+</body>
+</html>

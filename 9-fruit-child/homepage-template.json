@@ -4,7 +4,7 @@
   "type": "page",
   "content": [
     {
-      "id": "3b4ec299",
+      "id": "2722ce3c",
       "elType": "section",
       "isInner": false,
       "settings": {
@@ -28,7 +28,7 @@
       },
       "elements": [
         {
-          "id": "35b42564",
+          "id": "b1532563",
           "elType": "column",
           "settings": {
             "_column_size": 100,
@@ -43,7 +43,7 @@
           },
           "elements": [
             {
-              "id": "e7d8e00a",
+              "id": "97cbe2f4",
               "elType": "widget",
               "widgetType": "html",
               "settings": {
@@ -56,7 +56,7 @@
       ]
     },
     {
-      "id": "5326fa6e",
+      "id": "87dad6e6",
       "elType": "section",
       "isInner": false,
       "settings": {
@@ -80,7 +80,7 @@
       },
       "elements": [
         {
-          "id": "3e794c58",
+          "id": "12909a9b",
           "elType": "column",
           "settings": {
             "_column_size": 100,
@@ -95,7 +95,7 @@
           },
           "elements": [
             {
-              "id": "3ce16238",
+              "id": "c6e58cf7",
               "elType": "widget",
               "widgetType": "html",
               "settings": {
@@ -108,7 +108,7 @@
       ]
     },
     {
-      "id": "c54f2823",
+      "id": "283b616a",
       "elType": "section",
       "isInner": false,
       "settings": {
@@ -132,7 +132,7 @@
       },
       "elements": [
         {
-          "id": "07e280ae",
+          "id": "ad717eb1",
           "elType": "column",
           "settings": {
             "_column_size": 100,
@@ -147,11 +147,11 @@
           },
           "elements": [
             {
-              "id": "2c2c171f",
+              "id": "29b59dc6",
               "elType": "widget",
               "widgetType": "html",
               "settings": {
-                "html": "\n<section id=\"how-it-works\" style=\"padding:6rem 1.5rem;\">\n  <div style=\"max-width:1200px;margin:0 auto;\">\n    <div style=\"text-align:center;margin-bottom:3.5rem;\">\n      <p class=\"section-label\" style=\"margin-bottom:0.75rem;\">Simple Process</p>\n      <h2 style=\"font-size:clamp(2rem,4vw,3rem);color:var(--ink);margin-bottom:1rem;\">How It Works</h2>\n      <p style=\"font-size:1.0625rem;color:var(--ink-soft);max-width:520px;margin:0 auto;line-height:1.75;\">Three easy steps — from your heart to a child's future.</p>\n    </div>\n    <div class=\"three-col-grid\" style=\"display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;position:relative;\">\n      <div class=\"step-card\" tabindex=\"0\">\n        <div style=\"width:56px;height:56px;border-radius:16px;background:var(--brand-tint);display:flex;align-items:center;justify-content:center;margin-bottom:1.5rem;\"><svg width=\"28\" height=\"28\" viewBox=\"0 0 24 24\" fill=\"none\"><path d=\"M7 15V9L12 6L17 9V15L12 18L7 15Z\" fill=\"none\" stroke=\"var(--brand)\" stroke-width=\"2\" stroke-linejoin=\"round\"/></svg></div>\n        <div style=\"display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:50%;background:var(--brand);color:#fff;font-size:0.75rem;font-weight:700;margin-bottom:1rem;\">1</div>\n        <h3 style=\"font-size:1.375rem;margin-bottom:0.75rem;color:var(--ink);\">Choose your vetted charity</h3>\n        <p style=\"color:var(--ink-soft);font-size:0.9375rem;line-height:1.7;\">Select from our list of vetted, reputable charities and give with confidence. Every size gift makes a real difference.</p>\n      </div>\n      <div class=\"step-card\" tabindex=\"0\" style=\"border-color:var(--brand);box-shadow:0 4px 12px rgba(82,169,63,0.12),0 16px 40px rgba(0,0,0,0.08);\">\n        <div style=\"position:absolute;top:-1px;left:50%;transform:translateX(-50%);background:var(--brand);color:#fff;font-size:0.7rem;font-weight:700;padding:0.25rem 0.75rem;border-radius:0 0 8px 8px;letter-spacing:0.06em;\">THE MAGIC</div>\n        <div style=\"width:56px;height:56px;border-radius:16px;background:var(--brand-tint);display:flex;align-items:center;justify-content:center;margin-bottom:1.5rem;\"><svg width=\"28\" height=\"28\" viewBox=\"0 0 24 24\" fill=\"none\"><path d=\"M12 2L13.5 8.5H20L14.5 12.5L16.5 19L12 15L7.5 19L9.5 12.5L4 8.5H10.5L12 2Z\" fill=\"var(--brand)\" stroke=\"var(--brand)\" stroke-width=\"1.5\" stroke-linejoin=\"round\"/></svg></div>\n        <div style=\"display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:50%;background:var(--brand);color:#fff;font-size:0.75rem;font-weight:700;margin-bottom:1rem;\">2</div>\n        <h3 style=\"font-size:1.375rem;margin-bottom:0.75rem;color:var(--ink);\">We Match</h3>\n        <p style=\"color:var(--ink-soft);font-size:0.9375rem;line-height:1.7;\">Eligible donations receive a 9% match, subject to program limits.</p>\n        <div style=\"margin-top:1.25rem;padding:1rem 1.25rem;background:var(--brand-tint);border-radius:10px;display:flex;align-items:center;justify-content:center;gap:1rem;\">\n          <span style=\"font-weight:700;color:var(--ink);font-size:1.25rem;\">$100</span>\n          <svg width=\"22\" height=\"22\" viewBox=\"0 0 24 24\" fill=\"none\"><path d=\"M5 12H19M19 12L13 6M19 12L13 18\" stroke=\"var(--brand)\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>\n          <span style=\"font-weight:800;color:var(--brand);font-size:1.5rem;\">$109</span>\n        </div>\n      </div>\n      <div class=\"step-card\" tabindex=\"0\">\n        <div style=\"width:56px;height:56px;border-radius:16px;background:var(--brand-tint);display:flex;align-items:center;justify-content:center;margin-bottom:1.5rem;\"><svg width=\"28\" height=\"28\" viewBox=\"0 0 24 24\" fill=\"none\"><path d=\"M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z\" stroke=\"var(--brand)\" stroke-width=\"2\"/><path d=\"M8 12L10.5 14.5L16 9\" stroke=\"var(--brand)\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></div>\n        <div style=\"display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:50%;background:var(--brand);color:#fff;font-size:0.75rem;font-weight:700;margin-bottom:1rem;\">3</div>\n        <h3 style=\"font-size:1.375rem;margin-bottom:0.75rem;color:var(--ink);\">Impact Grows</h3>\n        <p style=\"color:var(--ink-soft);font-size:0.9375rem;line-height:1.7;\">Every dollar reaches children through carefully vetted programs in health and education worldwide.</p>\n      </div>\n    </div>\n  </div>\n</section>"
+                "html": "\n<section id=\"how-it-works\" style=\"padding:6rem 1.5rem;\">\n  <div style=\"max-width:1200px;margin:0 auto;\">\n    <div style=\"text-align:center;margin-bottom:3.5rem;\">\n      <p class=\"section-label\" style=\"margin-bottom:0.75rem;\">Simple Process</p>\n      <h2 style=\"font-size:clamp(2rem,4vw,3rem);color:var(--ink);margin-bottom:1rem;\">How It Works</h2>\n      <p style=\"font-size:1.0625rem;color:var(--ink-soft);max-width:520px;margin:0 auto;line-height:1.75;\">A simple, transparent way to give with confidence.</p>\n    </div>\n    <div class=\"three-col-grid\" style=\"display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;position:relative;\">\n      <div class=\"step-card\" tabindex=\"0\">\n        <div style=\"width:56px;height:56px;border-radius:16px;background:var(--brand-tint);display:flex;align-items:center;justify-content:center;margin-bottom:1.5rem;\"><svg width=\"28\" height=\"28\" viewBox=\"0 0 24 24\" fill=\"none\"><path d=\"M7 15V9L12 6L17 9V15L12 18L7 15Z\" fill=\"none\" stroke=\"var(--brand)\" stroke-width=\"2\" stroke-linejoin=\"round\"/></svg></div>\n        <div style=\"display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:50%;background:var(--brand);color:#fff;font-size:0.75rem;font-weight:700;margin-bottom:1rem;\">1</div>\n        <h3 style=\"font-size:1.375rem;margin-bottom:0.75rem;color:var(--ink);\">Choose your vetted charity</h3>\n        <p style=\"color:var(--ink-soft);font-size:0.9375rem;line-height:1.7;\">Support an organization you trust and believe in.</p>\n      </div>\n      <div class=\"step-card\" tabindex=\"0\" style=\"border-color:var(--brand);box-shadow:0 4px 12px rgba(82,169,63,0.12),0 16px 40px rgba(0,0,0,0.08);\">\n        <div style=\"width:56px;height:56px;border-radius:16px;background:var(--brand-tint);display:flex;align-items:center;justify-content:center;margin-bottom:1.5rem;\"><svg width=\"28\" height=\"28\" viewBox=\"0 0 24 24\" fill=\"none\"><path d=\"M12 2L13.5 8.5H20L14.5 12.5L16.5 19L12 15L7.5 19L9.5 12.5L4 8.5H10.5L12 2Z\" fill=\"var(--brand)\" stroke=\"var(--brand)\" stroke-width=\"1.5\" stroke-linejoin=\"round\"/></svg></div>\n        <div style=\"display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:50%;background:var(--brand);color:#fff;font-size:0.75rem;font-weight:700;margin-bottom:1rem;\">2</div>\n        <h3 style=\"font-size:1.375rem;margin-bottom:0.75rem;color:var(--ink);\">Give</h3>\n        <p style=\"color:var(--ink-soft);font-size:0.9375rem;line-height:1.7;\">Make your donation securely. Eligible gifts receive a 9% match.</p>\n        <div style=\"margin-top:1.25rem;padding:1rem 1.25rem;background:var(--brand-tint);border-radius:10px;display:flex;align-items:center;justify-content:center;gap:1rem;\">\n          <span style=\"font-weight:700;color:var(--ink);font-size:1.25rem;\">$100</span>\n          <svg width=\"22\" height=\"22\" viewBox=\"0 0 24 24\" fill=\"none\"><path d=\"M5 12H19M19 12L13 6M19 12L13 18\" stroke=\"var(--brand)\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>\n          <span style=\"font-weight:800;color:var(--brand);font-size:1.5rem;\">$109</span>\n        </div>\n      </div>\n      <div class=\"step-card\" tabindex=\"0\">\n        <div style=\"width:56px;height:56px;border-radius:16px;background:var(--brand-tint);display:flex;align-items:center;justify-content:center;margin-bottom:1.5rem;\"><svg width=\"28\" height=\"28\" viewBox=\"0 0 24 24\" fill=\"none\"><path d=\"M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z\" stroke=\"var(--brand)\" stroke-width=\"2\"/><path d=\"M8 12L10.5 14.5L16 9\" stroke=\"var(--brand)\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></div>\n        <div style=\"display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:50%;background:var(--brand);color:#fff;font-size:0.75rem;font-weight:700;margin-bottom:1rem;\">3</div>\n        <h3 style=\"font-size:1.375rem;margin-bottom:0.75rem;color:var(--ink);\">We deliver</h3>\n        <p style=\"color:var(--ink-soft);font-size:0.9375rem;line-height:1.7;\">Funds are distributed in alignment with your intent and the charity's mission, with full transparency.</p>\n      </div>\n    </div>\n  </div>\n</section>"
               },
               "elements": []
             }
@@ -160,7 +160,7 @@
       ]
     },
     {
-      "id": "d6cff213",
+      "id": "632d921a",
       "elType": "section",
       "isInner": false,
       "settings": {
@@ -184,7 +184,7 @@
       },
       "elements": [
         {
-          "id": "216f08fa",
+          "id": "4f8a76ec",
           "elType": "column",
           "settings": {
             "_column_size": 100,
@@ -199,7 +199,7 @@
           },
           "elements": [
             {
-              "id": "375abe25",
+              "id": "9904171c",
               "elType": "widget",
               "widgetType": "html",
               "settings": {
@@ -212,7 +212,7 @@
       ]
     },
     {
-      "id": "1b173a44",
+      "id": "7afa7934",
       "elType": "section",
       "isInner": false,
       "settings": {
@@ -236,7 +236,7 @@
       },
       "elements": [
         {
-          "id": "6e92b810",
+          "id": "223e9c2c",
           "elType": "column",
           "settings": {
             "_column_size": 100,
@@ -251,7 +251,7 @@
           },
           "elements": [
             {
-              "id": "3ef2b97e",
+              "id": "e5561206",
               "elType": "widget",
               "widgetType": "html",
               "settings": {
@@ -264,7 +264,7 @@
       ]
     },
     {
-      "id": "830f8892",
+      "id": "73b341ff",
       "elType": "section",
       "isInner": false,
       "settings": {
@@ -288,7 +288,7 @@
       },
       "elements": [
         {
-          "id": "7eceabe2",
+          "id": "551fd2e6",
           "elType": "column",
           "settings": {
             "_column_size": 100,
@@ -303,7 +303,7 @@
           },
           "elements": [
             {
-              "id": "46a8f17a",
+              "id": "ec122d19",
               "elType": "widget",
               "widgetType": "html",
               "settings": {
@@ -316,7 +316,7 @@
       ]
     },
     {
-      "id": "f1f0859d",
+      "id": "4525d6c8",
       "elType": "section",
       "isInner": false,
       "settings": {
@@ -340,7 +340,7 @@
       },
       "elements": [
         {
-          "id": "94ad2edc",
+          "id": "52b39dd7",
           "elType": "column",
           "settings": {
             "_column_size": 100,
@@ -355,7 +355,7 @@
           },
           "elements": [
             {
-              "id": "7776ace2",
+              "id": "759f9767",
               "elType": "widget",
               "widgetType": "html",
               "settings": {
@@ -368,7 +368,7 @@
       ]
     },
     {
-      "id": "ad8489e7",
+      "id": "fe3f7cef",
       "elType": "section",
       "isInner": false,
       "settings": {
@@ -392,7 +392,7 @@
       },
       "elements": [
         {
-          "id": "f215b959",
+          "id": "4f0c9459",
           "elType": "column",
           "settings": {
             "_column_size": 100,
@@ -407,7 +407,7 @@
           },
           "elements": [
             {
-              "id": "d43cd7de",
+              "id": "06279603",
               "elType": "widget",
               "widgetType": "html",
               "settings": {
@@ -420,7 +420,7 @@
       ]
     },
     {
-      "id": "5305bf3c",
+      "id": "34700cc0",
       "elType": "section",
       "isInner": false,
       "settings": {
@@ -444,7 +444,7 @@
       },
       "elements": [
         {
-          "id": "35a7b310",
+          "id": "0a6d0eef",
           "elType": "column",
           "settings": {
             "_column_size": 100,
@@ -459,7 +459,7 @@
           },
           "elements": [
             {
-              "id": "bbacba79",
+              "id": "38e2f723",
               "elType": "widget",
               "widgetType": "html",
               "settings": {

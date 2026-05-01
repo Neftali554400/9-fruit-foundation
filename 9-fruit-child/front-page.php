@@ -122,12 +122,14 @@ get_header();
   <div style="position:absolute;inset:0;background:radial-gradient(ellipse 70% 80% at 50% 50%,rgba(82,169,63,0.08) 0%,transparent 70%);pointer-events:none;"></div>
   <div style="max-width:760px;margin:0 auto;text-align:center;position:relative;z-index:1;">
     <span style="display:inline-block;font-size:0.72rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--brand-dark);background:rgba(82,169,63,0.12);border:1px solid rgba(82,169,63,0.25);border-radius:100px;padding:0.3rem 0.875rem;margin-bottom:1.5rem;">Our Approach</span>
-    <h2 style="font-family:'Playfair Display',serif;font-size:clamp(1.6rem,3.5vw,2.4rem);font-weight:700;color:var(--ink);line-height:1.25;letter-spacing:-0.02em;margin-bottom:1.125rem;">
-      We walk alongside established, reputable<br class="hidden-mobile"> organizations already serving communities.
+    <h2 style="font-family:'Playfair Display',serif;font-size:clamp(1.6rem,3.5vw,2.4rem);font-weight:700;color:var(--ink);line-height:1.25;letter-spacing:-0.02em;margin-bottom:1.5rem;">
+      Working alongside trusted organizations
     </h2>
-    <p style="font-size:1.0625rem;color:var(--ink-soft);line-height:1.8;max-width:620px;margin:0 auto 3rem;">
-      9 Fruit raises awareness and funds for charities with a proven history of impact and fiscal responsibility — amplifying the work already being done by those on the ground.
-    </p>
+    <div style="display:flex;flex-direction:column;gap:0.75rem;max-width:620px;margin:0 auto 3rem;">
+      <p style="font-size:1.0625rem;color:var(--ink-soft);line-height:1.8;">We walk alongside established, reputable charities already serving communities.</p>
+      <p style="font-size:1.0625rem;color:var(--ink-soft);line-height:1.8;">9 Fruit raises awareness and funding for organizations with a proven history of impact and fiscal responsibility.</p>
+      <p style="font-size:1.0625rem;color:var(--ink-soft);line-height:1.8;">All giving is fully aligned with the donor's intent and the charity's mission.</p>
+    </div>
     <div class="alongside-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;">
       <div style="background:rgba(255,255,255,0.7);border:1px solid rgba(82,169,63,0.2);border-radius:16px;padding:1.5rem 1.25rem;backdrop-filter:blur(8px);">
         <div style="width:40px;height:40px;border-radius:10px;background:var(--brand);display:flex;align-items:center;justify-content:center;margin:0 auto 0.875rem;box-shadow:0 4px 10px rgba(82,169,63,0.3);">

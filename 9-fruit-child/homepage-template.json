@@ -4,7 +4,7 @@
   "type": "page",
   "content": [
     {
-      "id": "62a57ed8",
+      "id": "3b4ec299",
       "elType": "section",
       "isInner": false,
       "settings": {
@@ -28,7 +28,7 @@
       },
       "elements": [
         {
-          "id": "003298ba",
+          "id": "35b42564",
           "elType": "column",
           "settings": {
             "_column_size": 100,
@@ -43,11 +43,11 @@
           },
           "elements": [
             {
-              "id": "557570d3",
+              "id": "e7d8e00a",
               "elType": "widget",
               "widgetType": "html",
               "settings": {
-                "html": "\n<style>\n  html,body{overflow-x:hidden}\n  .arrow-right{font-size:1.25rem;color:var(--brand)}\n  .nine-fruit-homepage .hero-section,\n  .nine-fruit .hero-section { padding:5rem 1.5rem 4rem }\n  @media(max-width:767px){\n    .two-col-grid{grid-template-columns:1fr!important;gap:2rem!important}\n    .hero-section{padding:3rem 1.25rem!important}\n  }\n</style>\n<section class=\"hero-bg grain\" style=\"position:relative;overflow:hidden;padding:5rem 1.5rem 4rem;\">\n  <div class=\"two-col-grid\" style=\"max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;\">\n    <div style=\"position:relative;z-index:2;\">\n      <p class=\"section-label\" style=\"margin-bottom:1rem;\">Giving That Multiplies</p>\n      <h1 style=\"font-size:clamp(2.5rem,5vw,3.75rem);font-weight:800;color:var(--ink);margin-bottom:1.25rem;max-width:520px;\">9 Fruit: simple, fruitful giving for <span style=\"color:var(--brand);\">children</span></h1>\n      <p style=\"font-size:1.125rem;color:var(--ink-soft);line-height:1.75;margin-bottom:2rem;max-width:460px;\">Give to your vetted charity of choice.<br>Eligible donations receive a 9% match.</p>\n      <div style=\"display:flex;flex-wrap:wrap;gap:0.875rem;margin-bottom:1rem;\">\n        <a href=\"#donate\" class=\"btn-primary\" style=\"padding:0.9rem 2.25rem;font-size:1rem;background:#3D8F2C;box-shadow:0 6px 16px rgba(61,143,44,0.4),0 2px 4px rgba(61,143,44,0.3);\">Give Now <svg width=\"17\" height=\"17\" viewBox=\"0 0 24 24\" fill=\"none\"><path d=\"M5 12H19M19 12L12 5M19 12L12 19\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></a>\n        <a href=\"#how-it-works\" class=\"btn-outline\">Learn More</a>\n      </div>\n      <p style=\"font-size:0.75rem;color:var(--ink-muted);line-height:1.6;\">100% pass-through for designated gifts &nbsp;&bull;&nbsp; Transparent reporting &nbsp;&bull;&nbsp; Annual independent auditing</p>\n    </div>\n    <div style=\"position:relative;z-index:2;border-radius:28px;overflow:hidden;box-shadow:0 8px 16px rgba(0,0,0,0.1),0 32px 64px rgba(0,0,0,0.15);\">\n      <img src=\"https://9fruitfoundations.stagingsea.com/wp-content/themes/9-fruit-child/assets/hero.jpeg\" alt=\"Children smiling and reaching out together\" style=\"width:100%;height:460px;object-fit:cover;display:block;\" />\n      <div style=\"position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0) 40%,rgba(0,0,0,0.55) 100%);\"></div>\n      <div style=\"position:absolute;bottom:2.25rem;left:2rem;background:rgba(255,255,255,0.96);backdrop-filter:blur(12px);border-radius:16px;padding:1rem 1.25rem;box-shadow:0 8px 24px rgba(0,0,0,0.18);min-width:160px;\">\n        <div style=\"font-size:1.5rem;font-weight:800;font-family:'Playfair Display',serif;color:var(--ink);\">$109</div>\n        <div style=\"font-size:0.75rem;color:var(--ink-muted);font-weight:500;margin-top:0.125rem;\">for every $100 you give</div>\n        <div style=\"font-size:0.6875rem;color:var(--brand);font-weight:700;margin-top:0.3rem;\">+9% MATCHED</div>\n      </div>\n    </div>\n  </div>\n  <div style=\"position:absolute;top:-120px;right:-80px;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(82,169,63,0.1) 0%,transparent 70%);pointer-events:none;z-index:1;\"></div>\n  <div style=\"position:absolute;bottom:-80px;left:-60px;width:360px;height:360px;border-radius:50%;background:radial-gradient(circle,rgba(251,191,36,0.08) 0%,transparent 70%);pointer-events:none;z-index:1;\"></div>\n</section>"
+                "html": "\n<style>\n  html,body{overflow-x:hidden}\n  .arrow-right{font-size:1.25rem;color:var(--brand)}\n  .nine-fruit-homepage .hero-section,\n  .nine-fruit .hero-section { padding:5rem 1.5rem 4rem }\n  @media(max-width:767px){\n    .two-col-grid{grid-template-columns:1fr!important;gap:2rem!important}\n    .hero-section{padding:3rem 1.25rem!important}\n  }\n</style>\n<section class=\"hero-bg grain\" style=\"position:relative;overflow:hidden;padding:5rem 1.5rem 4rem;\">\n  <div class=\"two-col-grid\" style=\"max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;\">\n    <div style=\"position:relative;z-index:2;\">\n      <div style=\"display:flex;flex-wrap:wrap;gap:0.5rem;margin-bottom:1.25rem;\">\n        <span style=\"display:inline-flex;align-items:center;font-size:0.6875rem;font-weight:700;letter-spacing:0.07em;text-transform:uppercase;color:var(--brand-dark);background:rgba(82,169,63,0.1);border:1px solid rgba(82,169,63,0.22);border-radius:100px;padding:0.3rem 0.8rem;\">Christian, non-partisan nonprofit</span>\n        <span style=\"display:inline-flex;align-items:center;font-size:0.6875rem;font-weight:700;letter-spacing:0.07em;text-transform:uppercase;color:var(--brand-dark);background:rgba(82,169,63,0.1);border:1px solid rgba(82,169,63,0.22);border-radius:100px;padding:0.3rem 0.8rem;\">Built on matching</span>\n      </div>\n      <h1 style=\"font-size:clamp(2.5rem,5vw,3.75rem);font-weight:800;color:var(--ink);margin-bottom:1.25rem;max-width:520px;\">9 Fruit: simple, fruitful giving for <span style=\"color:var(--brand);\">children</span></h1>\n      <p style=\"font-size:1.125rem;color:var(--ink-soft);line-height:1.75;margin-bottom:2rem;max-width:460px;\">Give to your vetted charity of choice.<br>Eligible donations receive a 9% match.</p>\n      <div style=\"display:flex;flex-wrap:wrap;gap:0.875rem;margin-bottom:1rem;\">\n        <a href=\"#donate\" class=\"btn-primary\" style=\"padding:0.9rem 2.25rem;font-size:1rem;background:#3D8F2C;box-shadow:0 6px 16px rgba(61,143,44,0.4),0 2px 4px rgba(61,143,44,0.3);\">Give Now <svg width=\"17\" height=\"17\" viewBox=\"0 0 24 24\" fill=\"none\"><path d=\"M5 12H19M19 12L12 5M19 12L12 19\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></a>\n        <a href=\"#how-it-works\" class=\"btn-outline\">Learn More</a>\n      </div>\n      <p style=\"font-size:0.75rem;color:var(--ink-muted);line-height:1.6;\">100% pass-through for designated gifts &nbsp;&bull;&nbsp; Transparent reporting &nbsp;&bull;&nbsp; Annual independent auditing</p>\n    </div>\n    <div style=\"position:relative;z-index:2;border-radius:28px;overflow:hidden;box-shadow:0 8px 16px rgba(0,0,0,0.1),0 32px 64px rgba(0,0,0,0.15);\">\n      <img src=\"https://9fruitfoundations.stagingsea.com/wp-content/themes/9-fruit-child/assets/hero.jpeg\" alt=\"Children smiling and reaching out together\" style=\"width:100%;height:460px;object-fit:cover;display:block;\" />\n      <div style=\"position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0) 40%,rgba(0,0,0,0.55) 100%);\"></div>\n      <div style=\"position:absolute;bottom:2.25rem;left:2rem;background:rgba(255,255,255,0.96);backdrop-filter:blur(12px);border-radius:16px;padding:1rem 1.25rem;box-shadow:0 8px 24px rgba(0,0,0,0.18);min-width:160px;\">\n        <div style=\"font-size:1.5rem;font-weight:800;font-family:'Playfair Display',serif;color:var(--ink);\">$109</div>\n        <div style=\"font-size:0.75rem;color:var(--ink-muted);font-weight:500;margin-top:0.125rem;\">for every $100 you give</div>\n        <div style=\"font-size:0.6875rem;color:var(--brand);font-weight:700;margin-top:0.3rem;\">+9% MATCHED</div>\n      </div>\n    </div>\n  </div>\n  <div style=\"position:absolute;top:-120px;right:-80px;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(82,169,63,0.1) 0%,transparent 70%);pointer-events:none;z-index:1;\"></div>\n  <div style=\"position:absolute;bottom:-80px;left:-60px;width:360px;height:360px;border-radius:50%;background:radial-gradient(circle,rgba(251,191,36,0.08) 0%,transparent 70%);pointer-events:none;z-index:1;\"></div>\n</section>"
               },
               "elements": []
             }
@@ -56,7 +56,7 @@
       ]
     },
     {
-      "id": "225a678a",
+      "id": "5326fa6e",
       "elType": "section",
       "isInner": false,
       "settings": {
@@ -80,7 +80,7 @@
       },
       "elements": [
         {
-          "id": "6f0eb5cf",
+          "id": "3e794c58",
           "elType": "column",
           "settings": {
             "_column_size": 100,
@@ -95,7 +95,7 @@
           },
           "elements": [
             {
-              "id": "622a629c",
+              "id": "3ce16238",
               "elType": "widget",
               "widgetType": "html",
               "settings": {
@@ -108,7 +108,7 @@
       ]
     },
     {
-      "id": "05591a68",
+      "id": "c54f2823",
       "elType": "section",
       "isInner": false,
       "settings": {
@@ -132,7 +132,7 @@
       },
       "elements": [
         {
-          "id": "cb821110",
+          "id": "07e280ae",
           "elType": "column",
           "settings": {
             "_column_size": 100,
@@ -147,7 +147,7 @@
           },
           "elements": [
             {
-              "id": "981abbfc",
+              "id": "2c2c171f",
               "elType": "widget",
               "widgetType": "html",
               "settings": {
@@ -160,7 +160,7 @@
       ]
     },
     {
-      "id": "90c39734",
+      "id": "d6cff213",
       "elType": "section",
       "isInner": false,
       "settings": {
@@ -184,7 +184,7 @@
       },
       "elements": [
         {
-          "id": "a7ea1fb1",
+          "id": "216f08fa",
           "elType": "column",
           "settings": {
             "_column_size": 100,
@@ -199,7 +199,7 @@
           },
           "elements": [
             {
-              "id": "9b067cfb",
+              "id": "375abe25",
               "elType": "widget",
               "widgetType": "html",
               "settings": {
@@ -212,7 +212,7 @@
       ]
     },
     {
-      "id": "89eb4f70",
+      "id": "1b173a44",
       "elType": "section",
       "isInner": false,
       "settings": {
@@ -236,7 +236,7 @@
       },
       "elements": [
         {
-          "id": "1f3db211",
+          "id": "6e92b810",
           "elType": "column",
           "settings": {
             "_column_size": 100,
@@ -251,7 +251,7 @@
           },
           "elements": [
             {
-              "id": "1c3bb869",
+              "id": "3ef2b97e",
               "elType": "widget",
               "widgetType": "html",
               "settings": {
@@ -264,7 +264,7 @@
       ]
     },
     {
-      "id": "9b450184",
+      "id": "830f8892",
       "elType": "section",
       "isInner": false,
       "settings": {
@@ -288,7 +288,7 @@
       },
       "elements": [
         {
-          "id": "6f46a5e5",
+          "id": "7eceabe2",
           "elType": "column",
           "settings": {
             "_column_size": 100,
@@ -303,7 +303,7 @@
           },
           "elements": [
             {
-              "id": "d2e4d315",
+              "id": "46a8f17a",
               "elType": "widget",
               "widgetType": "html",
               "settings": {
@@ -316,7 +316,7 @@
       ]
     },
     {
-      "id": "b1004c20",
+      "id": "f1f0859d",
       "elType": "section",
       "isInner": false,
       "settings": {
@@ -340,7 +340,7 @@
       },
       "elements": [
         {
-          "id": "2062edc1",
+          "id": "94ad2edc",
           "elType": "column",
           "settings": {
             "_column_size": 100,
@@ -355,7 +355,7 @@
           },
           "elements": [
             {
-              "id": "3f5c17a1",
+              "id": "7776ace2",
               "elType": "widget",
               "widgetType": "html",
               "settings": {
@@ -368,7 +368,7 @@
       ]
     },
     {
-      "id": "5e1796f1",
+      "id": "ad8489e7",
       "elType": "section",
       "isInner": false,
       "settings": {
@@ -392,7 +392,7 @@
       },
       "elements": [
         {
-          "id": "73ae487d",
+          "id": "f215b959",
           "elType": "column",
           "settings": {
             "_column_size": 100,
@@ -407,7 +407,7 @@
           },
           "elements": [
             {
-              "id": "b32573ac",
+              "id": "d43cd7de",
               "elType": "widget",
               "widgetType": "html",
               "settings": {
@@ -420,7 +420,7 @@
       ]
     },
     {
-      "id": "20247b4b",
+      "id": "5305bf3c",
       "elType": "section",
       "isInner": false,
       "settings": {
@@ -444,7 +444,7 @@
       },
       "elements": [
         {
-          "id": "371e2afc",
+          "id": "35a7b310",
           "elType": "column",
           "settings": {
             "_column_size": 100,
@@ -459,7 +459,7 @@
           },
           "elements": [
             {
-              "id": "596cacc3",
+              "id": "bbacba79",
               "elType": "widget",
               "widgetType": "html",
               "settings": {

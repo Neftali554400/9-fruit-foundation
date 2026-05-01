@@ -12,7 +12,10 @@ get_header();
 <section class="hero-bg grain hero-section" style="position:relative;overflow:hidden;padding:5rem 1.5rem 4rem;">
   <div class="two-col-grid" style="max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;">
     <div style="position:relative;z-index:2;">
-      <p class="section-label" style="margin-bottom:1rem;">Giving That Multiplies</p>
+      <div style="display:flex;flex-wrap:wrap;gap:0.5rem;margin-bottom:1.25rem;">
+        <span style="display:inline-flex;align-items:center;font-size:0.6875rem;font-weight:700;letter-spacing:0.07em;text-transform:uppercase;color:var(--brand-dark);background:rgba(82,169,63,0.1);border:1px solid rgba(82,169,63,0.22);border-radius:100px;padding:0.3rem 0.8rem;">Christian, non-partisan nonprofit</span>
+        <span style="display:inline-flex;align-items:center;font-size:0.6875rem;font-weight:700;letter-spacing:0.07em;text-transform:uppercase;color:var(--brand-dark);background:rgba(82,169,63,0.1);border:1px solid rgba(82,169,63,0.22);border-radius:100px;padding:0.3rem 0.8rem;">Built on matching</span>
+      </div>
       <h1 style="font-size:clamp(2.5rem,5vw,3.75rem);font-weight:800;color:var(--ink);margin-bottom:1.25rem;max-width:520px;">
         9 Fruit: simple, fruitful giving for <span style="color:var(--brand);">children</span>
       </h1>

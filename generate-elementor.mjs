@@ -248,9 +248,9 @@ const ourImpactHTML = `
     </div>
     <div>
       <p class="section-label" style="margin-bottom:0.75rem;">The Power of Matching</p>
-      <h2 style="font-size:clamp(1.875rem,3.5vw,2.75rem);color:var(--ink);margin-bottom:1rem;">Your gift grows through a <span style="color:var(--brand);">9% matching program</span></h2>
-      <p style="font-size:1.0625rem;color:var(--ink-soft);line-height:1.75;margin-bottom:0.875rem;">Our unique model ensures every eligible donation works harder. When you give, our foundation matches your gift at 9%, subject to program limits.</p>
-      <p style="font-size:1.0625rem;color:var(--ink-soft);line-height:1.75;margin-bottom:2rem;">Your contributions become seeds in the lives of children who need it most.</p>
+      <h2 style="font-size:clamp(1.875rem,3.5vw,2.75rem);color:var(--ink);margin-bottom:1rem;">Built on <span style="color:var(--brand);">matching</span></h2>
+      <p style="font-size:1.0625rem;color:var(--ink-soft);line-height:1.75;margin-bottom:0.875rem;">Eligible donations receive a 9% match through a dedicated matching pool, increasing impact at the point of giving.</p>
+      <p style="font-size:1.0625rem;color:var(--ink-soft);line-height:1.75;margin-bottom:2rem;">Matching is applied subject to available funds and program limits.</p>
       <div style="display:flex;flex-direction:column;gap:0.75rem;margin-bottom:2rem;">
         <div class="match-row"><div><div style="font-size:0.75rem;color:var(--ink-muted);font-weight:500;margin-bottom:0.125rem;">You give</div><div style="font-size:1.125rem;font-weight:700;color:var(--ink);">$50</div></div><span class="arrow-right">→</span><div style="text-align:right;"><div style="font-size:0.75rem;color:var(--brand);font-weight:600;margin-bottom:0.125rem;">Children receive</div><div style="font-size:1.25rem;font-weight:800;color:var(--brand);">$54.50</div></div></div>
         <div class="match-row"><div><div style="font-size:0.75rem;color:var(--ink-muted);font-weight:500;margin-bottom:0.125rem;">You give</div><div style="font-size:1.125rem;font-weight:700;color:var(--ink);">$100</div></div><span class="arrow-right">→</span><div style="text-align:right;"><div style="font-size:0.75rem;color:var(--brand);font-weight:600;margin-bottom:0.125rem;">Children receive</div><div style="font-size:1.25rem;font-weight:800;color:var(--brand);">$109.00</div></div></div>

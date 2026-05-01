@@ -4,7 +4,7 @@
   "type": "page",
   "content": [
     {
-      "id": "f264a5fa",
+      "id": "ff130509",
       "elType": "section",
       "isInner": false,
       "settings": {
@@ -28,7 +28,7 @@
       },
       "elements": [
         {
-          "id": "9830ccbe",
+          "id": "0e48ead8",
           "elType": "column",
           "settings": {
             "_column_size": 100,
@@ -43,7 +43,7 @@
           },
           "elements": [
             {
-              "id": "5371a69a",
+              "id": "1816e8e9",
               "elType": "widget",
               "widgetType": "html",
               "settings": {
@@ -56,7 +56,7 @@
       ]
     },
     {
-      "id": "0b865ffd",
+      "id": "15b14cde",
       "elType": "section",
       "isInner": false,
       "settings": {
@@ -80,7 +80,7 @@
       },
       "elements": [
         {
-          "id": "8d1792ba",
+          "id": "f1e139c5",
           "elType": "column",
           "settings": {
             "_column_size": 100,
@@ -95,7 +95,7 @@
           },
           "elements": [
             {
-              "id": "a91b3345",
+              "id": "d7dc691d",
               "elType": "widget",
               "widgetType": "html",
               "settings": {
@@ -108,7 +108,7 @@
       ]
     },
     {
-      "id": "bb83bbf3",
+      "id": "db55c9de",
       "elType": "section",
       "isInner": false,
       "settings": {
@@ -132,7 +132,7 @@
       },
       "elements": [
         {
-          "id": "6f6cdc69",
+          "id": "aac1fc51",
           "elType": "column",
           "settings": {
             "_column_size": 100,
@@ -147,7 +147,7 @@
           },
           "elements": [
             {
-              "id": "c01b6b29",
+              "id": "f4dd5a0d",
               "elType": "widget",
               "widgetType": "html",
               "settings": {
@@ -160,7 +160,7 @@
       ]
     },
     {
-      "id": "0c5bcca1",
+      "id": "f5cf03f1",
       "elType": "section",
       "isInner": false,
       "settings": {
@@ -184,7 +184,7 @@
       },
       "elements": [
         {
-          "id": "470c17eb",
+          "id": "d55e36ed",
           "elType": "column",
           "settings": {
             "_column_size": 100,
@@ -199,7 +199,7 @@
           },
           "elements": [
             {
-              "id": "3bf608c1",
+              "id": "895c600a",
               "elType": "widget",
               "widgetType": "html",
               "settings": {
@@ -212,7 +212,7 @@
       ]
     },
     {
-      "id": "09b3b278",
+      "id": "fce987ea",
       "elType": "section",
       "isInner": false,
       "settings": {
@@ -236,7 +236,7 @@
       },
       "elements": [
         {
-          "id": "17b07299",
+          "id": "35a54362",
           "elType": "column",
           "settings": {
             "_column_size": 100,
@@ -251,7 +251,7 @@
           },
           "elements": [
             {
-              "id": "d819856e",
+              "id": "511a711c",
               "elType": "widget",
               "widgetType": "html",
               "settings": {
@@ -264,7 +264,7 @@
       ]
     },
     {
-      "id": "6ac0da07",
+      "id": "cc94a0dd",
       "elType": "section",
       "isInner": false,
       "settings": {
@@ -288,7 +288,7 @@
       },
       "elements": [
         {
-          "id": "6b534448",
+          "id": "84aa0e83",
           "elType": "column",
           "settings": {
             "_column_size": 100,
@@ -303,11 +303,11 @@
           },
           "elements": [
             {
-              "id": "ae1919f7",
+              "id": "25bdd27b",
               "elType": "widget",
               "widgetType": "html",
               "settings": {
-                "html": "\n<section id=\"our-impact\" style=\"padding:6rem 1.5rem;\">\n  <div class=\"two-col-grid\" style=\"max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;\">\n    <div style=\"position:relative;\">\n      <div style=\"position:relative;border-radius:28px;overflow:hidden;box-shadow:0 8px 16px rgba(0,0,0,0.1),0 32px 64px rgba(0,0,0,0.12);\">\n        <img src=\"https://9fruitfoundations.stagingsea.com/wp-content/themes/9-fruit-child/assets/impact.jpeg\" alt=\"Children smiling and playing together in a community\" style=\"width:100%;height:480px;object-fit:cover;display:block;\" />\n        <div style=\"position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0) 50%,rgba(0,0,0,0.55) 100%);\"></div>\n        <div style=\"position:absolute;inset:0;background:rgba(82,169,63,0.1);mix-blend-mode:multiply;\"></div>\n        <div style=\"position:absolute;bottom:1.75rem;right:1.75rem;background:rgba(255,255,255,0.96);backdrop-filter:blur(12px);border-radius:16px;padding:1rem 1.25rem;box-shadow:0 8px 24px rgba(0,0,0,0.18);min-width:150px;\">\n          <div style=\"font-size:1.375rem;font-weight:800;font-family:'Playfair Display',serif;color:var(--brand);\">+9%</div>\n          <div style=\"font-size:0.75rem;color:var(--ink-soft);font-weight:500;line-height:1.4;margin-top:0.2rem;\">more impact<br>every single gift</div>\n        </div>\n      </div>\n    </div>\n    <div>\n      <p class=\"section-label\" style=\"margin-bottom:0.75rem;\">The Power of Matching</p>\n      <h2 style=\"font-size:clamp(1.875rem,3.5vw,2.75rem);color:var(--ink);margin-bottom:1rem;\">Your gift grows through a <span style=\"color:var(--brand);\">9% matching program</span></h2>\n      <p style=\"font-size:1.0625rem;color:var(--ink-soft);line-height:1.75;margin-bottom:0.875rem;\">Our unique model ensures every eligible donation works harder. When you give, our foundation matches your gift at 9%, subject to program limits.</p>\n      <p style=\"font-size:1.0625rem;color:var(--ink-soft);line-height:1.75;margin-bottom:2rem;\">Your contributions become seeds in the lives of children who need it most.</p>\n      <div style=\"display:flex;flex-direction:column;gap:0.75rem;margin-bottom:2rem;\">\n        <div class=\"match-row\"><div><div style=\"font-size:0.75rem;color:var(--ink-muted);font-weight:500;margin-bottom:0.125rem;\">You give</div><div style=\"font-size:1.125rem;font-weight:700;color:var(--ink);\">$50</div></div><span class=\"arrow-right\">→</span><div style=\"text-align:right;\"><div style=\"font-size:0.75rem;color:var(--brand);font-weight:600;margin-bottom:0.125rem;\">Children receive</div><div style=\"font-size:1.25rem;font-weight:800;color:var(--brand);\">$54.50</div></div></div>\n        <div class=\"match-row\"><div><div style=\"font-size:0.75rem;color:var(--ink-muted);font-weight:500;margin-bottom:0.125rem;\">You give</div><div style=\"font-size:1.125rem;font-weight:700;color:var(--ink);\">$100</div></div><span class=\"arrow-right\">→</span><div style=\"text-align:right;\"><div style=\"font-size:0.75rem;color:var(--brand);font-weight:600;margin-bottom:0.125rem;\">Children receive</div><div style=\"font-size:1.25rem;font-weight:800;color:var(--brand);\">$109.00</div></div></div>\n        <div class=\"match-row\"><div><div style=\"font-size:0.75rem;color:var(--ink-muted);font-weight:500;margin-bottom:0.125rem;\">You give</div><div style=\"font-size:1.125rem;font-weight:700;color:var(--ink);\">$500</div></div><span class=\"arrow-right\">→</span><div style=\"text-align:right;\"><div style=\"font-size:0.75rem;color:var(--brand);font-weight:600;margin-bottom:0.125rem;\">Children receive</div><div style=\"font-size:1.25rem;font-weight:800;color:var(--brand);\">$545.00</div></div></div>\n      </div>\n      <a href=\"#donate\" class=\"btn-primary\">See Your Impact</a>\n    </div>\n  </div>\n</section>"
+                "html": "\n<section id=\"our-impact\" style=\"padding:6rem 1.5rem;\">\n  <div class=\"two-col-grid\" style=\"max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;\">\n    <div style=\"position:relative;\">\n      <div style=\"position:relative;border-radius:28px;overflow:hidden;box-shadow:0 8px 16px rgba(0,0,0,0.1),0 32px 64px rgba(0,0,0,0.12);\">\n        <img src=\"https://9fruitfoundations.stagingsea.com/wp-content/themes/9-fruit-child/assets/impact.jpeg\" alt=\"Children smiling and playing together in a community\" style=\"width:100%;height:480px;object-fit:cover;display:block;\" />\n        <div style=\"position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0) 50%,rgba(0,0,0,0.55) 100%);\"></div>\n        <div style=\"position:absolute;inset:0;background:rgba(82,169,63,0.1);mix-blend-mode:multiply;\"></div>\n        <div style=\"position:absolute;bottom:1.75rem;right:1.75rem;background:rgba(255,255,255,0.96);backdrop-filter:blur(12px);border-radius:16px;padding:1rem 1.25rem;box-shadow:0 8px 24px rgba(0,0,0,0.18);min-width:150px;\">\n          <div style=\"font-size:1.375rem;font-weight:800;font-family:'Playfair Display',serif;color:var(--brand);\">+9%</div>\n          <div style=\"font-size:0.75rem;color:var(--ink-soft);font-weight:500;line-height:1.4;margin-top:0.2rem;\">more impact<br>every single gift</div>\n        </div>\n      </div>\n    </div>\n    <div>\n      <p class=\"section-label\" style=\"margin-bottom:0.75rem;\">The Power of Matching</p>\n      <h2 style=\"font-size:clamp(1.875rem,3.5vw,2.75rem);color:var(--ink);margin-bottom:1rem;\">Built on <span style=\"color:var(--brand);\">matching</span></h2>\n      <p style=\"font-size:1.0625rem;color:var(--ink-soft);line-height:1.75;margin-bottom:0.875rem;\">Eligible donations receive a 9% match through a dedicated matching pool, increasing impact at the point of giving.</p>\n      <p style=\"font-size:1.0625rem;color:var(--ink-soft);line-height:1.75;margin-bottom:2rem;\">Matching is applied subject to available funds and program limits.</p>\n      <div style=\"display:flex;flex-direction:column;gap:0.75rem;margin-bottom:2rem;\">\n        <div class=\"match-row\"><div><div style=\"font-size:0.75rem;color:var(--ink-muted);font-weight:500;margin-bottom:0.125rem;\">You give</div><div style=\"font-size:1.125rem;font-weight:700;color:var(--ink);\">$50</div></div><span class=\"arrow-right\">→</span><div style=\"text-align:right;\"><div style=\"font-size:0.75rem;color:var(--brand);font-weight:600;margin-bottom:0.125rem;\">Children receive</div><div style=\"font-size:1.25rem;font-weight:800;color:var(--brand);\">$54.50</div></div></div>\n        <div class=\"match-row\"><div><div style=\"font-size:0.75rem;color:var(--ink-muted);font-weight:500;margin-bottom:0.125rem;\">You give</div><div style=\"font-size:1.125rem;font-weight:700;color:var(--ink);\">$100</div></div><span class=\"arrow-right\">→</span><div style=\"text-align:right;\"><div style=\"font-size:0.75rem;color:var(--brand);font-weight:600;margin-bottom:0.125rem;\">Children receive</div><div style=\"font-size:1.25rem;font-weight:800;color:var(--brand);\">$109.00</div></div></div>\n        <div class=\"match-row\"><div><div style=\"font-size:0.75rem;color:var(--ink-muted);font-weight:500;margin-bottom:0.125rem;\">You give</div><div style=\"font-size:1.125rem;font-weight:700;color:var(--ink);\">$500</div></div><span class=\"arrow-right\">→</span><div style=\"text-align:right;\"><div style=\"font-size:0.75rem;color:var(--brand);font-weight:600;margin-bottom:0.125rem;\">Children receive</div><div style=\"font-size:1.25rem;font-weight:800;color:var(--brand);\">$545.00</div></div></div>\n      </div>\n      <a href=\"#donate\" class=\"btn-primary\">See Your Impact</a>\n    </div>\n  </div>\n</section>"
               },
               "elements": []
             }
@@ -316,7 +316,7 @@
       ]
     },
     {
-      "id": "d05f8d7d",
+      "id": "61bea277",
       "elType": "section",
       "isInner": false,
       "settings": {
@@ -340,7 +340,7 @@
       },
       "elements": [
         {
-          "id": "00c76705",
+          "id": "d6d27fe1",
           "elType": "column",
           "settings": {
             "_column_size": 100,
@@ -355,7 +355,7 @@
           },
           "elements": [
             {
-              "id": "cf337e23",
+              "id": "c4a2bb64",
               "elType": "widget",
               "widgetType": "html",
               "settings": {
@@ -368,7 +368,7 @@
       ]
     },
     {
-      "id": "f15508f6",
+      "id": "2f3edd00",
       "elType": "section",
       "isInner": false,
       "settings": {
@@ -392,7 +392,7 @@
       },
       "elements": [
         {
-          "id": "ed0bfac3",
+          "id": "7cc99701",
           "elType": "column",
           "settings": {
             "_column_size": 100,
@@ -407,7 +407,7 @@
           },
           "elements": [
             {
-              "id": "4bbf5823",
+              "id": "2ddc01be",
               "elType": "widget",
               "widgetType": "html",
               "settings": {
@@ -420,7 +420,7 @@
       ]
     },
     {
-      "id": "caad2363",
+      "id": "eee85d2b",
       "elType": "section",
       "isInner": false,
       "settings": {
@@ -444,7 +444,7 @@
       },
       "elements": [
         {
-          "id": "0e26e0d0",
+          "id": "c01ed90b",
           "elType": "column",
           "settings": {
             "_column_size": 100,
@@ -459,7 +459,7 @@
           },
           "elements": [
             {
-              "id": "cd1142e2",
+              "id": "d09b74cd",
               "elType": "widget",
               "widgetType": "html",
               "settings": {

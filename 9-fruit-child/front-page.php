@@ -160,7 +160,7 @@ get_header();
     <div style="text-align:center;margin-bottom:3.5rem;">
       <p class="section-label" style="margin-bottom:0.75rem;">Where It Goes</p>
       <h2 style="font-size:clamp(2rem,4vw,3rem);color:var(--ink);margin-bottom:1rem;">What We Fund</h2>
-      <p style="font-size:1.0625rem;color:var(--ink-soft);max-width:480px;margin:0 auto;line-height:1.75;">Your matched gift supports two core pillars that transform children's lives.</p>
+      <p style="font-size:1.0625rem;color:var(--ink-soft);max-width:560px;margin:0 auto;line-height:1.75;">We support giving to children and young adults through trusted organizations focused on health and education.</p>
     </div>
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:2rem;">
       <article class="fund-card" tabindex="0">
@@ -171,8 +171,12 @@ get_header();
           <div style="position:absolute;top:1.25rem;left:1.25rem;"><span style="background:rgba(255,255,255,0.9);color:var(--brand);font-size:0.75rem;font-weight:700;padding:0.3rem 0.75rem;border-radius:9999px;letter-spacing:0.05em;">HEALTH</span></div>
         </div>
         <div style="background:var(--surface);padding:2rem;">
-          <h3 style="font-size:1.5rem;margin-bottom:0.75rem;color:var(--ink);">Health Initiatives</h3>
-          <p style="color:var(--ink-soft);font-size:0.9375rem;line-height:1.7;margin-bottom:1.25rem;">Essential healthcare services, nutrition programs, and wellness initiatives that give every child a healthy start.</p>
+          <h3 style="font-size:1.5rem;margin-bottom:1rem;color:var(--ink);">Health Initiatives</h3>
+          <ul style="list-style:none;padding:0;margin:0 0 1.5rem;display:flex;flex-direction:column;gap:0.625rem;">
+            <li style="display:flex;align-items:flex-start;gap:0.625rem;color:var(--ink-soft);font-size:0.9375rem;line-height:1.5;"><span style="width:6px;height:6px;border-radius:50%;background:var(--brand);flex-shrink:0;margin-top:0.45rem;"></span>Physical, mental, and psychological health</li>
+            <li style="display:flex;align-items:flex-start;gap:0.625rem;color:var(--ink-soft);font-size:0.9375rem;line-height:1.5;"><span style="width:6px;height:6px;border-radius:50%;background:var(--brand);flex-shrink:0;margin-top:0.45rem;"></span>Food scarcity and nutrition</li>
+            <li style="display:flex;align-items:flex-start;gap:0.625rem;color:var(--ink-soft);font-size:0.9375rem;line-height:1.5;"><span style="width:6px;height:6px;border-radius:50%;background:var(--brand);flex-shrink:0;margin-top:0.45rem;"></span>Exercise and healthy living</li>
+          </ul>
           <a href="#donate" style="color:var(--brand);font-weight:600;font-size:0.875rem;text-decoration:none;display:inline-flex;align-items:center;gap:0.375rem;">Support Health Programs <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
         </div>
       </article>
@@ -184,8 +188,12 @@ get_header();
           <div style="position:absolute;top:1.25rem;left:1.25rem;"><span style="background:rgba(255,255,255,0.9);color:var(--brand);font-size:0.75rem;font-weight:700;padding:0.3rem 0.75rem;border-radius:9999px;letter-spacing:0.05em;">EDUCATION</span></div>
         </div>
         <div style="background:var(--surface);padding:2rem;">
-          <h3 style="font-size:1.5rem;margin-bottom:0.75rem;color:var(--ink);">Education Programs</h3>
-          <p style="color:var(--ink-soft);font-size:0.9375rem;line-height:1.7;margin-bottom:1.25rem;">Quality learning opportunities, school supplies, and educational resources that open doors to brighter futures.</p>
+          <h3 style="font-size:1.5rem;margin-bottom:1rem;color:var(--ink);">Education Programs</h3>
+          <ul style="list-style:none;padding:0;margin:0 0 1.5rem;display:flex;flex-direction:column;gap:0.625rem;">
+            <li style="display:flex;align-items:flex-start;gap:0.625rem;color:var(--ink-soft);font-size:0.9375rem;line-height:1.5;"><span style="width:6px;height:6px;border-radius:50%;background:var(--brand);flex-shrink:0;margin-top:0.45rem;"></span>Mentorship and development</li>
+            <li style="display:flex;align-items:flex-start;gap:0.625rem;color:var(--ink-soft);font-size:0.9375rem;line-height:1.5;"><span style="width:6px;height:6px;border-radius:50%;background:var(--brand);flex-shrink:0;margin-top:0.45rem;"></span>Research and advancement</li>
+            <li style="display:flex;align-items:flex-start;gap:0.625rem;color:var(--ink-soft);font-size:0.9375rem;line-height:1.5;"><span style="width:6px;height:6px;border-radius:50%;background:var(--brand);flex-shrink:0;margin-top:0.45rem;"></span>Books, teachers, and learning resources</li>
+          </ul>
           <a href="#donate" style="color:var(--brand);font-weight:600;font-size:0.875rem;text-decoration:none;display:inline-flex;align-items:center;gap:0.375rem;">Support Education Programs <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
         </div>
       </article>

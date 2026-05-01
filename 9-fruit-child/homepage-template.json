@@ -4,7 +4,7 @@
   "type": "page",
   "content": [
     {
-      "id": "2722ce3c",
+      "id": "93339234",
       "elType": "section",
       "isInner": false,
       "settings": {
@@ -28,7 +28,7 @@
       },
       "elements": [
         {
-          "id": "b1532563",
+          "id": "35d61627",
           "elType": "column",
           "settings": {
             "_column_size": 100,
@@ -43,7 +43,7 @@
           },
           "elements": [
             {
-              "id": "97cbe2f4",
+              "id": "dd0929dc",
               "elType": "widget",
               "widgetType": "html",
               "settings": {
@@ -56,7 +56,7 @@
       ]
     },
     {
-      "id": "87dad6e6",
+      "id": "49c01464",
       "elType": "section",
       "isInner": false,
       "settings": {
@@ -80,7 +80,7 @@
       },
       "elements": [
         {
-          "id": "12909a9b",
+          "id": "5037f4cf",
           "elType": "column",
           "settings": {
             "_column_size": 100,
@@ -95,7 +95,7 @@
           },
           "elements": [
             {
-              "id": "c6e58cf7",
+              "id": "0e91e576",
               "elType": "widget",
               "widgetType": "html",
               "settings": {
@@ -108,7 +108,7 @@
       ]
     },
     {
-      "id": "283b616a",
+      "id": "51fb867a",
       "elType": "section",
       "isInner": false,
       "settings": {
@@ -132,7 +132,7 @@
       },
       "elements": [
         {
-          "id": "ad717eb1",
+          "id": "bdc4b97e",
           "elType": "column",
           "settings": {
             "_column_size": 100,
@@ -147,7 +147,7 @@
           },
           "elements": [
             {
-              "id": "29b59dc6",
+              "id": "8a25be9b",
               "elType": "widget",
               "widgetType": "html",
               "settings": {
@@ -160,7 +160,7 @@
       ]
     },
     {
-      "id": "632d921a",
+      "id": "371bfd4c",
       "elType": "section",
       "isInner": false,
       "settings": {
@@ -184,7 +184,7 @@
       },
       "elements": [
         {
-          "id": "4f8a76ec",
+          "id": "2fe43d5d",
           "elType": "column",
           "settings": {
             "_column_size": 100,
@@ -199,7 +199,7 @@
           },
           "elements": [
             {
-              "id": "9904171c",
+              "id": "321d6e20",
               "elType": "widget",
               "widgetType": "html",
               "settings": {
@@ -212,7 +212,7 @@
       ]
     },
     {
-      "id": "7afa7934",
+      "id": "ce82ebdd",
       "elType": "section",
       "isInner": false,
       "settings": {
@@ -236,7 +236,7 @@
       },
       "elements": [
         {
-          "id": "223e9c2c",
+          "id": "a333e07e",
           "elType": "column",
           "settings": {
             "_column_size": 100,
@@ -251,11 +251,11 @@
           },
           "elements": [
             {
-              "id": "e5561206",
+              "id": "7a00affa",
               "elType": "widget",
               "widgetType": "html",
               "settings": {
-                "html": "\n<section id=\"what-we-fund\" style=\"padding:6rem 1.5rem;background:var(--surface-2);\">\n  <div style=\"max-width:1200px;margin:0 auto;\">\n    <div style=\"text-align:center;margin-bottom:3.5rem;\">\n      <p class=\"section-label\" style=\"margin-bottom:0.75rem;\">Where It Goes</p>\n      <h2 style=\"font-size:clamp(2rem,4vw,3rem);color:var(--ink);margin-bottom:1rem;\">What We Fund</h2>\n      <p style=\"font-size:1.0625rem;color:var(--ink-soft);max-width:480px;margin:0 auto;line-height:1.75;\">Your matched gift supports two core pillars that transform children's lives.</p>\n    </div>\n    <div style=\"display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:2rem;\">\n      <article class=\"fund-card\" tabindex=\"0\">\n        <div style=\"position:relative;overflow:hidden;\">\n          <img src=\"https://9fruitfoundations.stagingsea.com/wp-content/themes/9-fruit-child/assets/health.jpeg\" alt=\"Healthcare professional with stethoscope and laptop\" style=\"width:100%;height:280px;object-fit:cover;display:block;\" />\n          <div style=\"position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0.05) 0%,rgba(0,0,0,0.6) 100%);\"></div>\n          <div style=\"position:absolute;inset:0;background:rgba(82,169,63,0.15);mix-blend-mode:multiply;\"></div>\n          <div style=\"position:absolute;top:1.25rem;left:1.25rem;\"><span style=\"background:rgba(255,255,255,0.9);color:var(--brand);font-size:0.75rem;font-weight:700;padding:0.3rem 0.75rem;border-radius:9999px;letter-spacing:0.05em;\">HEALTH</span></div>\n        </div>\n        <div style=\"background:var(--surface);padding:2rem;\">\n          <h3 style=\"font-size:1.5rem;margin-bottom:0.75rem;color:var(--ink);\">Health Initiatives</h3>\n          <p style=\"color:var(--ink-soft);font-size:0.9375rem;line-height:1.7;margin-bottom:1.25rem;\">Essential healthcare services, nutrition programs, and wellness initiatives that give every child a healthy start.</p>\n          <a href=\"#donate\" style=\"color:var(--brand);font-weight:600;font-size:0.875rem;text-decoration:none;display:inline-flex;align-items:center;gap:0.375rem;\">Support Health Programs <svg width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\"><path d=\"M5 12H19M19 12L12 5M19 12L12 19\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></a>\n        </div>\n      </article>\n      <article class=\"fund-card\" tabindex=\"0\">\n        <div style=\"position:relative;overflow:hidden;\">\n          <img src=\"https://9fruitfoundations.stagingsea.com/wp-content/themes/9-fruit-child/assets/education.jpeg\" alt=\"Books, apple and ABC blocks on a school desk\" style=\"width:100%;height:280px;object-fit:cover;display:block;\" />\n          <div style=\"position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0.05) 0%,rgba(0,0,0,0.6) 100%);\"></div>\n          <div style=\"position:absolute;inset:0;background:rgba(82,169,63,0.15);mix-blend-mode:multiply;\"></div>\n          <div style=\"position:absolute;top:1.25rem;left:1.25rem;\"><span style=\"background:rgba(255,255,255,0.9);color:var(--brand);font-size:0.75rem;font-weight:700;padding:0.3rem 0.75rem;border-radius:9999px;letter-spacing:0.05em;\">EDUCATION</span></div>\n        </div>\n        <div style=\"background:var(--surface);padding:2rem;\">\n          <h3 style=\"font-size:1.5rem;margin-bottom:0.75rem;color:var(--ink);\">Education Programs</h3>\n          <p style=\"color:var(--ink-soft);font-size:0.9375rem;line-height:1.7;margin-bottom:1.25rem;\">Quality learning opportunities, school supplies, and educational resources that open doors to brighter futures.</p>\n          <a href=\"#donate\" style=\"color:var(--brand);font-weight:600;font-size:0.875rem;text-decoration:none;display:inline-flex;align-items:center;gap:0.375rem;\">Support Education Programs <svg width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\"><path d=\"M5 12H19M19 12L12 5M19 12L12 19\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></a>\n        </div>\n      </article>\n    </div>\n  </div>\n</section>"
+                "html": "\n<section id=\"what-we-fund\" style=\"padding:6rem 1.5rem;background:var(--surface-2);\">\n  <div style=\"max-width:1200px;margin:0 auto;\">\n    <div style=\"text-align:center;margin-bottom:3.5rem;\">\n      <p class=\"section-label\" style=\"margin-bottom:0.75rem;\">Where It Goes</p>\n      <h2 style=\"font-size:clamp(2rem,4vw,3rem);color:var(--ink);margin-bottom:1rem;\">What We Fund</h2>\n      <p style=\"font-size:1.0625rem;color:var(--ink-soft);max-width:560px;margin:0 auto;line-height:1.75;\">We support giving to children and young adults through trusted organizations focused on health and education.</p>\n    </div>\n    <div style=\"display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:2rem;\">\n      <article class=\"fund-card\" tabindex=\"0\">\n        <div style=\"position:relative;overflow:hidden;\">\n          <img src=\"https://9fruitfoundations.stagingsea.com/wp-content/themes/9-fruit-child/assets/health.jpeg\" alt=\"Healthcare professional with stethoscope and laptop\" style=\"width:100%;height:280px;object-fit:cover;display:block;\" />\n          <div style=\"position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0.05) 0%,rgba(0,0,0,0.6) 100%);\"></div>\n          <div style=\"position:absolute;inset:0;background:rgba(82,169,63,0.15);mix-blend-mode:multiply;\"></div>\n          <div style=\"position:absolute;top:1.25rem;left:1.25rem;\"><span style=\"background:rgba(255,255,255,0.9);color:var(--brand);font-size:0.75rem;font-weight:700;padding:0.3rem 0.75rem;border-radius:9999px;letter-spacing:0.05em;\">HEALTH</span></div>\n        </div>\n        <div style=\"background:var(--surface);padding:2rem;\">\n          <h3 style=\"font-size:1.5rem;margin-bottom:1rem;color:var(--ink);\">Health Initiatives</h3>\n          <ul style=\"list-style:none;padding:0;margin:0 0 1.5rem;display:flex;flex-direction:column;gap:0.625rem;\">\n            <li style=\"display:flex;align-items:flex-start;gap:0.625rem;color:var(--ink-soft);font-size:0.9375rem;line-height:1.5;\"><span style=\"width:6px;height:6px;border-radius:50%;background:var(--brand);flex-shrink:0;margin-top:0.45rem;\"></span>Physical, mental, and psychological health</li>\n            <li style=\"display:flex;align-items:flex-start;gap:0.625rem;color:var(--ink-soft);font-size:0.9375rem;line-height:1.5;\"><span style=\"width:6px;height:6px;border-radius:50%;background:var(--brand);flex-shrink:0;margin-top:0.45rem;\"></span>Food scarcity and nutrition</li>\n            <li style=\"display:flex;align-items:flex-start;gap:0.625rem;color:var(--ink-soft);font-size:0.9375rem;line-height:1.5;\"><span style=\"width:6px;height:6px;border-radius:50%;background:var(--brand);flex-shrink:0;margin-top:0.45rem;\"></span>Exercise and healthy living</li>\n          </ul>\n          <a href=\"#donate\" style=\"color:var(--brand);font-weight:600;font-size:0.875rem;text-decoration:none;display:inline-flex;align-items:center;gap:0.375rem;\">Support Health Programs <svg width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\"><path d=\"M5 12H19M19 12L12 5M19 12L12 19\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></a>\n        </div>\n      </article>\n      <article class=\"fund-card\" tabindex=\"0\">\n        <div style=\"position:relative;overflow:hidden;\">\n          <img src=\"https://9fruitfoundations.stagingsea.com/wp-content/themes/9-fruit-child/assets/education.jpeg\" alt=\"Books, apple and ABC blocks on a school desk\" style=\"width:100%;height:280px;object-fit:cover;display:block;\" />\n          <div style=\"position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0.05) 0%,rgba(0,0,0,0.6) 100%);\"></div>\n          <div style=\"position:absolute;inset:0;background:rgba(82,169,63,0.15);mix-blend-mode:multiply;\"></div>\n          <div style=\"position:absolute;top:1.25rem;left:1.25rem;\"><span style=\"background:rgba(255,255,255,0.9);color:var(--brand);font-size:0.75rem;font-weight:700;padding:0.3rem 0.75rem;border-radius:9999px;letter-spacing:0.05em;\">EDUCATION</span></div>\n        </div>\n        <div style=\"background:var(--surface);padding:2rem;\">\n          <h3 style=\"font-size:1.5rem;margin-bottom:1rem;color:var(--ink);\">Education Programs</h3>\n          <ul style=\"list-style:none;padding:0;margin:0 0 1.5rem;display:flex;flex-direction:column;gap:0.625rem;\">\n            <li style=\"display:flex;align-items:flex-start;gap:0.625rem;color:var(--ink-soft);font-size:0.9375rem;line-height:1.5;\"><span style=\"width:6px;height:6px;border-radius:50%;background:var(--brand);flex-shrink:0;margin-top:0.45rem;\"></span>Mentorship and development</li>\n            <li style=\"display:flex;align-items:flex-start;gap:0.625rem;color:var(--ink-soft);font-size:0.9375rem;line-height:1.5;\"><span style=\"width:6px;height:6px;border-radius:50%;background:var(--brand);flex-shrink:0;margin-top:0.45rem;\"></span>Research and advancement</li>\n            <li style=\"display:flex;align-items:flex-start;gap:0.625rem;color:var(--ink-soft);font-size:0.9375rem;line-height:1.5;\"><span style=\"width:6px;height:6px;border-radius:50%;background:var(--brand);flex-shrink:0;margin-top:0.45rem;\"></span>Books, teachers, and learning resources</li>\n          </ul>\n          <a href=\"#donate\" style=\"color:var(--brand);font-weight:600;font-size:0.875rem;text-decoration:none;display:inline-flex;align-items:center;gap:0.375rem;\">Support Education Programs <svg width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\"><path d=\"M5 12H19M19 12L12 5M19 12L12 19\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></a>\n        </div>\n      </article>\n    </div>\n  </div>\n</section>"
               },
               "elements": []
             }
@@ -264,7 +264,7 @@
       ]
     },
     {
-      "id": "73b341ff",
+      "id": "5c9b9df6",
       "elType": "section",
       "isInner": false,
       "settings": {
@@ -288,7 +288,7 @@
       },
       "elements": [
         {
-          "id": "551fd2e6",
+          "id": "d3f9b315",
           "elType": "column",
           "settings": {
             "_column_size": 100,
@@ -303,7 +303,7 @@
           },
           "elements": [
             {
-              "id": "ec122d19",
+              "id": "d358bd6c",
               "elType": "widget",
               "widgetType": "html",
               "settings": {
@@ -316,7 +316,7 @@
       ]
     },
     {
-      "id": "4525d6c8",
+      "id": "da87f07b",
       "elType": "section",
       "isInner": false,
       "settings": {
@@ -340,7 +340,7 @@
       },
       "elements": [
         {
-          "id": "52b39dd7",
+          "id": "6c24de4b",
           "elType": "column",
           "settings": {
             "_column_size": 100,
@@ -355,7 +355,7 @@
           },
           "elements": [
             {
-              "id": "759f9767",
+              "id": "b22631e3",
               "elType": "widget",
               "widgetType": "html",
               "settings": {
@@ -368,7 +368,7 @@
       ]
     },
     {
-      "id": "fe3f7cef",
+      "id": "74c020fc",
       "elType": "section",
       "isInner": false,
       "settings": {
@@ -392,7 +392,7 @@
       },
       "elements": [
         {
-          "id": "4f0c9459",
+          "id": "e221b6c9",
           "elType": "column",
           "settings": {
             "_column_size": 100,
@@ -407,7 +407,7 @@
           },
           "elements": [
             {
-              "id": "06279603",
+              "id": "b339acc9",
               "elType": "widget",
               "widgetType": "html",
               "settings": {
@@ -420,7 +420,7 @@
       ]
     },
     {
-      "id": "34700cc0",
+      "id": "6a054de1",
       "elType": "section",
       "isInner": false,
       "settings": {
@@ -444,7 +444,7 @@
       },
       "elements": [
         {
-          "id": "0a6d0eef",
+          "id": "388aa010",
           "elType": "column",
           "settings": {
             "_column_size": 100,
@@ -459,7 +459,7 @@
           },
           "elements": [
             {
-              "id": "38e2f723",
+              "id": "843b3af1",
               "elType": "widget",
               "widgetType": "html",
               "settings": {

@@ -4,7 +4,7 @@
   "type": "page",
   "content": [
     {
-      "id": "ff130509",
+      "id": "e2e55087",
       "elType": "section",
       "isInner": false,
       "settings": {
@@ -28,7 +28,7 @@
       },
       "elements": [
         {
-          "id": "0e48ead8",
+          "id": "2c1495ce",
           "elType": "column",
           "settings": {
             "_column_size": 100,
@@ -43,7 +43,7 @@
           },
           "elements": [
             {
-              "id": "1816e8e9",
+              "id": "4ae3c041",
               "elType": "widget",
               "widgetType": "html",
               "settings": {
@@ -56,7 +56,7 @@
       ]
     },
     {
-      "id": "15b14cde",
+      "id": "25a77b52",
       "elType": "section",
       "isInner": false,
       "settings": {
@@ -80,7 +80,7 @@
       },
       "elements": [
         {
-          "id": "f1e139c5",
+          "id": "5e7938b9",
           "elType": "column",
           "settings": {
             "_column_size": 100,
@@ -95,7 +95,7 @@
           },
           "elements": [
             {
-              "id": "d7dc691d",
+              "id": "9c0a14a3",
               "elType": "widget",
               "widgetType": "html",
               "settings": {
@@ -108,7 +108,7 @@
       ]
     },
     {
-      "id": "db55c9de",
+      "id": "7ce30802",
       "elType": "section",
       "isInner": false,
       "settings": {
@@ -132,7 +132,7 @@
       },
       "elements": [
         {
-          "id": "aac1fc51",
+          "id": "60f0e7c2",
           "elType": "column",
           "settings": {
             "_column_size": 100,
@@ -147,7 +147,7 @@
           },
           "elements": [
             {
-              "id": "f4dd5a0d",
+              "id": "07cd5851",
               "elType": "widget",
               "widgetType": "html",
               "settings": {
@@ -160,7 +160,7 @@
       ]
     },
     {
-      "id": "f5cf03f1",
+      "id": "23ffb42a",
       "elType": "section",
       "isInner": false,
       "settings": {
@@ -184,7 +184,7 @@
       },
       "elements": [
         {
-          "id": "d55e36ed",
+          "id": "3589d0a9",
           "elType": "column",
           "settings": {
             "_column_size": 100,
@@ -199,7 +199,7 @@
           },
           "elements": [
             {
-              "id": "895c600a",
+              "id": "818d721f",
               "elType": "widget",
               "widgetType": "html",
               "settings": {
@@ -212,7 +212,7 @@
       ]
     },
     {
-      "id": "fce987ea",
+      "id": "ff376a9e",
       "elType": "section",
       "isInner": false,
       "settings": {
@@ -236,7 +236,7 @@
       },
       "elements": [
         {
-          "id": "35a54362",
+          "id": "5b328058",
           "elType": "column",
           "settings": {
             "_column_size": 100,
@@ -251,7 +251,7 @@
           },
           "elements": [
             {
-              "id": "511a711c",
+              "id": "f52deafd",
               "elType": "widget",
               "widgetType": "html",
               "settings": {
@@ -264,7 +264,7 @@
       ]
     },
     {
-      "id": "cc94a0dd",
+      "id": "b7ce0433",
       "elType": "section",
       "isInner": false,
       "settings": {
@@ -288,7 +288,7 @@
       },
       "elements": [
         {
-          "id": "84aa0e83",
+          "id": "cab9cb81",
           "elType": "column",
           "settings": {
             "_column_size": 100,
@@ -303,7 +303,7 @@
           },
           "elements": [
             {
-              "id": "25bdd27b",
+              "id": "a6c4a736",
               "elType": "widget",
               "widgetType": "html",
               "settings": {
@@ -316,7 +316,7 @@
       ]
     },
     {
-      "id": "61bea277",
+      "id": "ac969647",
       "elType": "section",
       "isInner": false,
       "settings": {
@@ -340,7 +340,7 @@
       },
       "elements": [
         {
-          "id": "d6d27fe1",
+          "id": "7463e42d",
           "elType": "column",
           "settings": {
             "_column_size": 100,
@@ -355,7 +355,7 @@
           },
           "elements": [
             {
-              "id": "c4a2bb64",
+              "id": "afbd7f6b",
               "elType": "widget",
               "widgetType": "html",
               "settings": {
@@ -368,7 +368,7 @@
       ]
     },
     {
-      "id": "2f3edd00",
+      "id": "43a82ddd",
       "elType": "section",
       "isInner": false,
       "settings": {
@@ -392,7 +392,7 @@
       },
       "elements": [
         {
-          "id": "7cc99701",
+          "id": "4def1c7c",
           "elType": "column",
           "settings": {
             "_column_size": 100,
@@ -407,11 +407,11 @@
           },
           "elements": [
             {
-              "id": "2ddc01be",
+              "id": "dc2cf475",
               "elType": "widget",
               "widgetType": "html",
               "settings": {
-                "html": "\n<section style=\"padding:6rem 1.5rem;background:var(--surface-2);\">\n  <div style=\"max-width:1200px;margin:0 auto;\">\n    <div style=\"text-align:center;margin-bottom:3.5rem;\">\n      <p class=\"section-label\" style=\"margin-bottom:0.75rem;\">Who We Are</p>\n      <h2 style=\"font-size:clamp(2rem,4vw,3rem);color:var(--ink);margin-bottom:1rem;\">Our Foundation</h2>\n      <p style=\"font-size:1.0625rem;color:var(--ink-soft);max-width:560px;margin:0 auto;line-height:1.75;\">Rooted in faith, committed to results. Here's how we approach our mission.</p>\n    </div>\n    <div class=\"three-col-grid\" style=\"display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;\">\n      <div class=\"step-card\" tabindex=\"0\" style=\"text-align:center;\">\n        <div style=\"width:64px;height:64px;border-radius:20px;background:var(--brand-tint);display:flex;align-items:center;justify-content:center;margin:0 auto 1.5rem;\"><svg width=\"32\" height=\"32\" viewBox=\"0 0 24 24\" fill=\"none\"><path d=\"M12 2L2 7L12 12L22 7L12 2Z\" stroke=\"var(--brand)\" stroke-width=\"2\" stroke-linejoin=\"round\"/><path d=\"M2 17L12 22L22 17\" stroke=\"var(--brand)\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M2 12L12 17L22 12\" stroke=\"var(--brand)\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></div>\n        <h3 style=\"font-size:1.25rem;margin-bottom:0.75rem;color:var(--ink);\">Concentrated Resources</h3>\n        <p style=\"color:var(--ink-soft);font-size:0.9375rem;line-height:1.7;\">We focus giving where it has the greatest multiplied impact — channeling every dollar with precision and purpose.</p>\n      </div>\n      <div class=\"step-card\" tabindex=\"0\" style=\"text-align:center;\">\n        <div style=\"width:64px;height:64px;border-radius:20px;background:var(--brand-tint);display:flex;align-items:center;justify-content:center;margin:0 auto 1.5rem;\"><svg width=\"32\" height=\"32\" viewBox=\"0 0 24 24\" fill=\"none\"><path d=\"M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z\" stroke=\"var(--brand)\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></div>\n        <h3 style=\"font-size:1.25rem;margin-bottom:0.75rem;color:var(--ink);\">Faith-Inspired Action</h3>\n        <p style=\"color:var(--ink-soft);font-size:0.9375rem;line-height:1.7;\">Our work is grounded in faith — not as a barrier, but as a foundation for measurable outcomes and accountability.</p>\n      </div>\n      <div class=\"step-card\" tabindex=\"0\" style=\"text-align:center;\">\n        <div style=\"width:64px;height:64px;border-radius:20px;background:var(--brand-tint);display:flex;align-items:center;justify-content:center;margin:0 auto 1.5rem;\"><svg width=\"32\" height=\"32\" viewBox=\"0 0 24 24\" fill=\"none\"><circle cx=\"12\" cy=\"12\" r=\"10\" stroke=\"var(--brand)\" stroke-width=\"2\"/><path d=\"M12 6V12L16 14\" stroke=\"var(--brand)\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></div>\n        <h3 style=\"font-size:1.25rem;margin-bottom:0.75rem;color:var(--ink);\">Community-Designed</h3>\n        <p style=\"color:var(--ink-soft);font-size:0.9375rem;line-height:1.7;\">Health and education initiatives are designed with communities, not just for them — ensuring lasting, locally-owned change.</p>\n      </div>\n    </div>\n  </div>\n</section>"
+                "html": "\n<section style=\"padding:6rem 1.5rem;background:var(--surface-2);\">\n  <div style=\"max-width:1200px;margin:0 auto;\">\n    <div style=\"text-align:center;margin-bottom:3.5rem;\">\n      <p class=\"section-label\" style=\"margin-bottom:0.75rem;\">Trust &amp; Transparency</p>\n      <h2 style=\"font-size:clamp(2rem,4vw,3rem);color:var(--ink);margin-bottom:1rem;\">Clarity and accountability</h2>\n    </div>\n    <div style=\"max-width:720px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;\">\n      <div style=\"display:flex;align-items:flex-start;gap:1rem;background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:1.5rem;\">\n        <div style=\"width:36px;height:36px;border-radius:10px;background:var(--brand-tint);display:flex;align-items:center;justify-content:center;flex-shrink:0;\"><svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\"><path d=\"M9 12L11 14L15 10M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z\" stroke=\"var(--brand)\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></div>\n        <p style=\"font-size:0.9375rem;color:var(--ink-soft);line-height:1.6;font-weight:500;\">Clear separation of funds</p>\n      </div>\n      <div style=\"display:flex;align-items:flex-start;gap:1rem;background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:1.5rem;\">\n        <div style=\"width:36px;height:36px;border-radius:10px;background:var(--brand-tint);display:flex;align-items:center;justify-content:center;flex-shrink:0;\"><svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\"><path d=\"M9 12L11 14L15 10M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z\" stroke=\"var(--brand)\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></div>\n        <p style=\"font-size:0.9375rem;color:var(--ink-soft);line-height:1.6;font-weight:500;\">Independent financial oversight</p>\n      </div>\n      <div style=\"display:flex;align-items:flex-start;gap:1rem;background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:1.5rem;\">\n        <div style=\"width:36px;height:36px;border-radius:10px;background:var(--brand-tint);display:flex;align-items:center;justify-content:center;flex-shrink:0;\"><svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\"><path d=\"M9 12L11 14L15 10M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z\" stroke=\"var(--brand)\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></div>\n        <p style=\"font-size:0.9375rem;color:var(--ink-soft);line-height:1.6;font-weight:500;\">Transparent reporting of funds received and distributed</p>\n      </div>\n      <div style=\"display:flex;align-items:flex-start;gap:1rem;background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:1.5rem;\">\n        <div style=\"width:36px;height:36px;border-radius:10px;background:var(--brand-tint);display:flex;align-items:center;justify-content:center;flex-shrink:0;\"><svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\"><path d=\"M9 12L11 14L15 10M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z\" stroke=\"var(--brand)\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></div>\n        <p style=\"font-size:0.9375rem;color:var(--ink-soft);line-height:1.6;font-weight:500;\">Annual independent auditing</p>\n      </div>\n    </div>\n  </div>\n</section>"
               },
               "elements": []
             }
@@ -420,7 +420,7 @@
       ]
     },
     {
-      "id": "eee85d2b",
+      "id": "5af7a32a",
       "elType": "section",
       "isInner": false,
       "settings": {
@@ -444,7 +444,7 @@
       },
       "elements": [
         {
-          "id": "c01ed90b",
+          "id": "3d8c25ac",
           "elType": "column",
           "settings": {
             "_column_size": 100,
@@ -459,7 +459,7 @@
           },
           "elements": [
             {
-              "id": "d09b74cd",
+              "id": "d9c53e39",
               "elType": "widget",
               "widgetType": "html",
               "settings": {

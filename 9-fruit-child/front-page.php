@@ -263,7 +263,7 @@ get_header();
       <p class="section-label" style="margin-bottom:0.75rem;">Trust &amp; Transparency</p>
       <h2 style="font-size:clamp(2rem,4vw,3rem);color:var(--ink);margin-bottom:1rem;">Clarity and accountability</h2>
     </div>
-    <div style="max-width:720px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;">
+    <div class="trust-grid" style="max-width:720px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;">
       <div style="display:flex;align-items:flex-start;gap:1rem;background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:1.5rem;">
         <div style="width:36px;height:36px;border-radius:10px;background:var(--brand-tint);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M9 12L11 14L15 10M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="var(--brand)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>

@@ -329,18 +329,22 @@ h1, h2, h3, h4, h5, h6 {
   gap: 3rem;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 900px) {
   .two-col-grid    { grid-template-columns: 1fr !important; gap: 2rem !important; }
-  .three-col-grid  { grid-template-columns: 1fr !important; }
   .footer-grid     { grid-template-columns: 1fr 1fr !important; gap: 2rem !important; }
+}
+@media (max-width: 767px) {
+  .three-col-grid  { grid-template-columns: 1fr !important; }
   .desktop-nav     { display: none !important; }
   .hamburger       { display: flex !important; }
 }
 @media (max-width: 640px) {
   .alongside-grid  { grid-template-columns: 1fr !important; }
+  .trust-grid      { grid-template-columns: 1fr !important; }
   .hidden-mobile   { display: none !important; }
+  section          { padding-left: 1.25rem !important; padding-right: 1.25rem !important; }
 }
-@media (min-width: 641px) and (max-width: 767px) {
+@media (min-width: 641px) and (max-width: 900px) {
   .alongside-grid  { grid-template-columns: 1fr 1fr !important; }
 }
 @media (max-width: 480px) {

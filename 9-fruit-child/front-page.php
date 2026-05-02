@@ -32,7 +32,7 @@ get_header();
       <p style="font-size:0.75rem;color:var(--ink-muted);line-height:1.6;">100% pass-through for designated gifts &nbsp;•&nbsp; Transparent reporting &nbsp;•&nbsp; Annual independent auditing</p>
     </div>
     <div style="position:relative;z-index:2;border-radius:28px;overflow:hidden;box-shadow:0 8px 16px rgba(0,0,0,0.1),0 32px 64px rgba(0,0,0,0.15);">
-      <img src="<?php echo esc_url( $theme ); ?>/assets/american kids.avif" alt="Children smiling and reaching out together" style="width:100%;height:460px;object-fit:cover;display:block;" />
+      <img src="<?php echo esc_url( $theme ); ?>/assets/american-kids.jpeg" alt="Children smiling and reaching out together" style="width:100%;height:460px;object-fit:cover;display:block;" />
       <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0) 40%,rgba(0,0,0,0.55) 100%);"></div>
       <div style="position:absolute;bottom:1.25rem;left:1.25rem;background:rgba(255,255,255,0.96);backdrop-filter:blur(12px);border-radius:12px;padding:0.625rem 0.875rem;box-shadow:0 4px 16px rgba(0,0,0,0.15);width:fit-content;">
         <div style="font-size:1.125rem;font-weight:800;font-family:'Playfair Display',serif;color:var(--ink);">$109</div>
@@ -167,7 +167,7 @@ get_header();
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:2rem;">
       <article class="fund-card" tabindex="0">
         <div style="position:relative;overflow:hidden;">
-          <img src="<?php echo esc_url( $theme ); ?>/assets/health.avif" alt="Healthcare professional with stethoscope and laptop" style="width:100%;height:280px;object-fit:cover;display:block;" />
+          <img src="<?php echo esc_url( $theme ); ?>/assets/health2.jpeg" alt="Healthcare professional with stethoscope and laptop" style="width:100%;height:280px;object-fit:cover;display:block;" />
           <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0.05) 0%,rgba(0,0,0,0.6) 100%);"></div>
           <div style="position:absolute;inset:0;background:rgba(82,169,63,0.15);mix-blend-mode:multiply;"></div>
           <div style="position:absolute;top:1.25rem;left:1.25rem;"><span style="background:rgba(255,255,255,0.9);color:var(--brand);font-size:0.75rem;font-weight:700;padding:0.3rem 0.75rem;border-radius:9999px;letter-spacing:0.05em;">HEALTH</span></div>
@@ -184,7 +184,7 @@ get_header();
       </article>
       <article class="fund-card" tabindex="0">
         <div style="position:relative;overflow:hidden;">
-          <img src="<?php echo esc_url( $theme ); ?>/assets/education2.avif" alt="Books, apple and ABC blocks on a school desk" style="width:100%;height:280px;object-fit:cover;display:block;" />
+          <img src="<?php echo esc_url( $theme ); ?>/assets/education2.jpeg" alt="Books, apple and ABC blocks on a school desk" style="width:100%;height:280px;object-fit:cover;display:block;" />
           <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0.05) 0%,rgba(0,0,0,0.6) 100%);"></div>
           <div style="position:absolute;inset:0;background:rgba(82,169,63,0.15);mix-blend-mode:multiply;"></div>
           <div style="position:absolute;top:1.25rem;left:1.25rem;"><span style="background:rgba(255,255,255,0.9);color:var(--brand);font-size:0.75rem;font-weight:700;padding:0.3rem 0.75rem;border-radius:9999px;letter-spacing:0.05em;">EDUCATION</span></div>
@@ -208,7 +208,7 @@ get_header();
   <div class="two-col-grid" style="max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;">
     <div style="position:relative;">
       <div style="position:relative;border-radius:28px;overflow:hidden;box-shadow:0 8px 16px rgba(0,0,0,0.1),0 32px 64px rgba(0,0,0,0.12);">
-        <img src="<?php echo esc_url( $theme ); ?>/assets/kids.avif" alt="Children smiling and playing together in a community" style="width:100%;height:480px;object-fit:cover;display:block;" />
+        <img src="<?php echo esc_url( $theme ); ?>/assets/kids.jpeg" alt="Children smiling and playing together in a community" style="width:100%;height:480px;object-fit:cover;display:block;" />
         <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0) 50%,rgba(0,0,0,0.55) 100%);"></div>
         <div style="position:absolute;inset:0;background:rgba(82,169,63,0.1);mix-blend-mode:multiply;"></div>
         <div style="position:absolute;bottom:1.75rem;right:1.75rem;background:rgba(255,255,255,0.96);backdrop-filter:blur(12px);border-radius:16px;padding:1rem 1.25rem;box-shadow:0 8px 24px rgba(0,0,0,0.18);min-width:150px;">
@@ -295,7 +295,7 @@ get_header();
 <!-- ═══ READY TO MAKE A DIFFERENCE ═══ -->
 <section style="position:relative;overflow:hidden;padding:7rem 1.5rem;">
   <div style="position:absolute;inset:0;z-index:0;">
-    <img src="<?php echo esc_url( $theme ); ?>/assets/children.avif" alt="" aria-hidden="true" style="width:100%;height:100%;object-fit:cover;object-position:center;display:block;" />
+    <img src="<?php echo esc_url( $theme ); ?>/assets/children.jpeg" alt="" aria-hidden="true" style="width:100%;height:100%;object-fit:cover;object-position:center;display:block;" />
     <div style="position:absolute;inset:0;background:rgba(18,28,60,0.72);"></div>
   </div>
   <div style="max-width:720px;margin:0 auto;text-align:center;position:relative;z-index:2;">

@@ -257,7 +257,7 @@ get_header();
 </section>
 
 <!-- ═══ TRUST & TRANSPARENCY ═══ -->
-<section style="padding:6rem 1.5rem;background:var(--surface-2);">
+<section style="padding:6rem 1.5rem;background:var(--brand-light);">
   <div style="max-width:1200px;margin:0 auto;">
     <div style="text-align:center;margin-bottom:3.5rem;">
       <p class="section-label" style="margin-bottom:0.75rem;">Trust &amp; Transparency</p>
@@ -300,13 +300,13 @@ get_header();
   </div>
   <div style="max-width:720px;margin:0 auto;text-align:center;position:relative;z-index:2;">
     <p style="font-size:0.75rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.6);margin-bottom:0.875rem;">Make a Difference Today</p>
-    <h2 style="font-size:clamp(2rem,4.5vw,3.25rem);font-family:'Playfair Display',serif;font-weight:800;letter-spacing:-0.03em;color:#fff;line-height:1.15;margin-bottom:1.25rem;">Ready to Make a Difference?</h2>
+    <h2 style="font-size:clamp(2rem,4.5vw,3.25rem);font-family:'Playfair Display',serif;font-weight:800;letter-spacing:-0.03em;color:#fff;line-height:1.15;margin-bottom:1.25rem;">Multiply your impact through simple, transparent giving</h2>
     <p style="font-size:1.125rem;color:rgba(255,255,255,0.78);line-height:1.75;margin-bottom:2.5rem;max-width:540px;margin-left:auto;margin-right:auto;">Your generosity, combined with our matching commitment, creates lasting change for children around the world.</p>
     <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:1rem;">
       <a href="#donate" style="display:inline-flex;align-items:center;gap:0.5rem;background:var(--brand);color:#fff;font-family:'Inter',sans-serif;font-weight:700;font-size:1rem;padding:0.875rem 2rem;border-radius:9999px;text-decoration:none;box-shadow:0 4px 20px rgba(82,169,63,0.4);transition:transform 0.2s cubic-bezier(0.34,1.56,0.64,1),background 0.15s ease;">Give Now <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
       <a href="#how-it-works" style="display:inline-flex;align-items:center;gap:0.5rem;background:transparent;color:#fff;font-family:'Inter',sans-serif;font-weight:600;font-size:1rem;padding:0.875rem 2rem;border-radius:9999px;text-decoration:none;border:2px solid rgba(255,255,255,0.4);transition:border-color 0.2s ease,transform 0.2s cubic-bezier(0.34,1.56,0.64,1);">Learn How It Works</a>
     </div>
-    <p style="font-size:0.8125rem;color:rgba(255,255,255,0.45);margin-top:1.5rem;">501(c)(3) Tax-deductible · 100% Transparent · Verified Nonprofit</p>
+    <p style="font-size:0.8125rem;color:rgba(255,255,255,0.45);margin-top:1.5rem;">9 Fruit: with Love, by Faith</p>
   </div>
 </section>
 

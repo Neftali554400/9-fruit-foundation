@@ -439,7 +439,7 @@
 <!-- ═══════════════════════════════════════
      HERO
 ════════════════════════════════════════ -->
-<section class="hero-bg grain hero-section" style="position:relative;overflow:hidden;padding:5rem 1.5rem 4rem;">
+<section class="hero-bg grain hero-section" style="position:relative;overflow:hidden;padding:5rem 1.5rem 7rem;">
   <div class="two-col-grid" style="max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;">
     <!-- Text -->
     <div style="position:relative;z-index:2;">
@@ -455,7 +455,7 @@
         Eligible donations receive a 9% match.
       </p>
       <div style="display:flex;flex-wrap:wrap;gap:0.875rem;margin-bottom:1rem;">
-        <a href="donate.html" class="btn-primary" style="padding:0.9rem 2.25rem;font-size:1rem;background:#3D8F2C;box-shadow:0 6px 16px rgba(61,143,44,0.4),0 2px 4px rgba(61,143,44,0.3);">
+        <a href="donate.html" class="btn-primary" style="padding:1.125rem 2.875rem;font-size:1.0625rem;background:#3D8F2C;box-shadow:0 6px 16px rgba(61,143,44,0.4),0 2px 4px rgba(61,143,44,0.3);">
           Give Now
           <svg width="17" height="17" viewBox="0 0 24 24" fill="none"><path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </a>
@@ -752,44 +752,6 @@
         Matching is applied subject to available funds and program limits.
       </p>
 
-      <!-- Match examples -->
-      <div style="display:flex;flex-direction:column;gap:0.75rem;margin-bottom:2rem;">
-        <div class="match-row">
-          <div>
-            <div style="font-size:0.75rem;color:var(--ink-muted);font-weight:500;margin-bottom:0.125rem;">You give</div>
-            <div style="font-size:1.125rem;font-weight:700;color:var(--ink);">$50</div>
-          </div>
-          <span class="arrow-right">→</span>
-          <div style="text-align:right;">
-            <div style="font-size:0.75rem;color:var(--brand);font-weight:600;margin-bottom:0.125rem;">Children receive</div>
-            <div style="font-size:1.25rem;font-weight:800;color:var(--brand);">$54.50</div>
-          </div>
-        </div>
-        <div class="match-row">
-          <div>
-            <div style="font-size:0.75rem;color:var(--ink-muted);font-weight:500;margin-bottom:0.125rem;">You give</div>
-            <div style="font-size:1.125rem;font-weight:700;color:var(--ink);">$100</div>
-          </div>
-          <span class="arrow-right">→</span>
-          <div style="text-align:right;">
-            <div style="font-size:0.75rem;color:var(--brand);font-weight:600;margin-bottom:0.125rem;">Children receive</div>
-            <div style="font-size:1.25rem;font-weight:800;color:var(--brand);">$109.00</div>
-          </div>
-        </div>
-        <div class="match-row">
-          <div>
-            <div style="font-size:0.75rem;color:var(--ink-muted);font-weight:500;margin-bottom:0.125rem;">You give</div>
-            <div style="font-size:1.125rem;font-weight:700;color:var(--ink);">$500</div>
-          </div>
-          <span class="arrow-right">→</span>
-          <div style="text-align:right;">
-            <div style="font-size:0.75rem;color:var(--brand);font-weight:600;margin-bottom:0.125rem;">Children receive</div>
-            <div style="font-size:1.25rem;font-weight:800;color:var(--brand);">$545.00</div>
-          </div>
-        </div>
-      </div>
-
-      <a href="donate.html" class="btn-primary">See Your Impact</a>
     </div>
   </div>
 </section>
@@ -806,10 +768,9 @@
       Every donation is matched by 9%. Pick an amount below and watch your impact grow.
     </p>
 
-    <!-- One-time / Monthly toggle -->
+    <!-- Monthly label -->
     <div style="display:inline-flex;background:var(--surface);border:1px solid var(--border);border-radius:9999px;padding:0.25rem;margin-bottom:2rem;">
-      <button class="toggle-btn active" id="toggle-onetime" onclick="setToggle('onetime')" aria-pressed="true">One-Time</button>
-      <button class="toggle-btn inactive" id="toggle-monthly" onclick="setToggle('monthly')" aria-pressed="false">Monthly</button>
+      <button class="toggle-btn active" id="toggle-monthly" aria-pressed="true">Monthly</button>
     </div>
 
     <!-- Amount grid -->
@@ -852,7 +813,7 @@
   <div style="max-width:1200px;margin:0 auto;">
     <div style="text-align:center;margin-bottom:3.5rem;">
       <p class="section-label" style="margin-bottom:0.75rem;">Trust &amp; Transparency</p>
-      <h2 style="font-size:clamp(2rem,4vw,3rem);color:var(--ink);margin-bottom:1rem;">Clarity and accountability</h2>
+      <h2 style="font-size:clamp(2rem,4vw,3rem);color:var(--ink);margin-bottom:1rem;">Clarity and Accountability</h2>
     </div>
 
     <div class="trust-grid" style="max-width:720px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;">
@@ -1018,19 +979,6 @@
     const cta = document.querySelector('#donate .btn-primary');
     cta.textContent = '';
     cta.innerHTML = `Donate $${amt} Now — $${matched[amt]} Reaches Children <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
-  }
-
-  // Frequency toggle
-  function setToggle(type) {
-    const ot = document.getElementById('toggle-onetime');
-    const mo = document.getElementById('toggle-monthly');
-    if (type === 'onetime') {
-      ot.classList.replace('inactive', 'active'); ot.setAttribute('aria-pressed', 'true');
-      mo.classList.replace('active', 'inactive'); mo.setAttribute('aria-pressed', 'false');
-    } else {
-      mo.classList.replace('inactive', 'active'); mo.setAttribute('aria-pressed', 'true');
-      ot.classList.replace('active', 'inactive'); ot.setAttribute('aria-pressed', 'false');
-    }
   }
 
   // Smooth scroll for anchor links

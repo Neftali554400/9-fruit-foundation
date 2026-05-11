@@ -28,17 +28,33 @@ const server = http.createServer((req, res) => {
 
   const filePath = path.join(__dirname, decodeURIComponent(urlPath));
   const ext = path.extname(filePath).toLowerCase();
-  const contentType = mime[ext] || 'application/octet-stream';
 
-  fs.readFile(filePath, (err, data) => {
-    if (err) {
-      res.writeHead(404, { 'Content-Type': 'text/plain' });
-      res.end('Not found');
-      return;
-    }
-    res.writeHead(200, { 'Content-Type': contentType });
-    res.end(data);
-  });
+  const serve = (fp, ct) => {
+    fs.readFile(fp, (err, data) => {
+      if (err) {
+        res.writeHead(404, { 'Content-Type': 'text/plain' });
+        res.end('Not found');
+        return;
+      }
+      res.writeHead(200, { 'Content-Type': ct });
+      res.end(data);
+    });
+  };
+
+  if (!ext) {
+    // No extension — try .html fallback
+    const htmlPath = filePath + '.html';
+    fs.access(htmlPath, fs.constants.F_OK, (err) => {
+      if (!err) {
+        serve(htmlPath, 'text/html');
+      } else {
+        res.writeHead(404, { 'Content-Type': 'text/plain' });
+        res.end('Not found');
+      }
+    });
+  } else {
+    serve(filePath, mime[ext] || 'application/octet-stream');
+  }
 });
 
 server.listen(PORT, () => {

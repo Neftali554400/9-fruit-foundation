@@ -159,6 +159,8 @@
       .hamburger { display: flex !important; }
       .steps-grid { grid-template-columns: 1fr !important; }
       .match-cols { grid-template-columns: 1fr !important; }
+      .match-cards { grid-template-columns: 1fr !important; }
+      .card-featured { transform: translateY(0) !important; }
     }
     @media (min-width: 768px) {
       .hamburger { display: none !important; }
@@ -166,6 +168,8 @@
     @media (max-width: 640px) {
       section { padding-left: 1.25rem !important; padding-right: 1.25rem !important; }
       .footer-grid { grid-template-columns: 1fr 1fr !important; gap: 2rem !important; }
+      .flow-row { flex-direction: column !important; gap: 0.5rem !important; align-items: center !important; }
+      .flow-arrow { padding: 0.125rem 0 !important; margin-bottom: 0 !important; transform: rotate(90deg) scale(0.8) !important; }
     }
     @media (max-width: 480px) {
       .footer-grid { grid-template-columns: 1fr !important; }
@@ -294,7 +298,7 @@
     </div>
 
     <!-- Flow icons row -->
-    <div style="display:flex;align-items:center;justify-content:center;gap:0;margin-bottom:3rem;">
+    <div class="flow-row" style="display:flex;align-items:center;justify-content:center;gap:0;margin-bottom:3rem;">
 
       <!-- Step: Donor gives -->
       <div style="display:flex;flex-direction:column;align-items:center;gap:0.625rem;">
@@ -309,7 +313,7 @@
       </div>
 
       <!-- Arrow -->
-      <div style="display:flex;align-items:center;padding:0 0.75rem;margin-bottom:1.25rem;">
+      <div class="flow-arrow" style="display:flex;align-items:center;padding:0 0.75rem;margin-bottom:1.25rem;">
         <svg width="48" height="16" viewBox="0 0 48 16" fill="none">
           <line x1="0" y1="8" x2="38" y2="8" stroke="var(--brand)" stroke-width="2" stroke-dasharray="4 3"/>
           <path d="M38 3L46 8L38 13" stroke="var(--brand)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -325,7 +329,7 @@
       </div>
 
       <!-- Arrow -->
-      <div style="display:flex;align-items:center;padding:0 0.75rem;margin-bottom:1.25rem;">
+      <div class="flow-arrow" style="display:flex;align-items:center;padding:0 0.75rem;margin-bottom:1.25rem;">
         <svg width="48" height="16" viewBox="0 0 48 16" fill="none">
           <line x1="0" y1="8" x2="38" y2="8" stroke="var(--brand)" stroke-width="2" stroke-dasharray="4 3"/>
           <path d="M38 3L46 8L38 13" stroke="var(--brand)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -344,7 +348,7 @@
       </div>
 
       <!-- Arrow -->
-      <div style="display:flex;align-items:center;padding:0 0.75rem;margin-bottom:1.25rem;">
+      <div class="flow-arrow" style="display:flex;align-items:center;padding:0 0.75rem;margin-bottom:1.25rem;">
         <svg width="48" height="16" viewBox="0 0 48 16" fill="none">
           <line x1="0" y1="8" x2="38" y2="8" stroke="var(--brand)" stroke-width="2" stroke-dasharray="4 3"/>
           <path d="M38 3L46 8L38 13" stroke="var(--brand)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -368,7 +372,7 @@
     </div>
 
     <!-- Matching cards -->
-    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;">
+    <div class="match-cards" style="display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;">
 
       <!-- $25 card -->
       <div style="background:var(--surface);border:1px solid var(--border);border-radius:20px;padding:2rem 1.5rem;box-shadow:0 2px 8px rgba(0,0,0,0.04),0 8px 24px rgba(0,0,0,0.06);display:flex;flex-direction:column;gap:1rem;">
@@ -395,7 +399,7 @@
       </div>
 
       <!-- $50 card (featured) -->
-      <div style="background:var(--brand);border-radius:20px;padding:2rem 1.5rem;box-shadow:0 6px 16px rgba(82,169,63,0.3),0 16px 40px rgba(82,169,63,0.15);display:flex;flex-direction:column;gap:1rem;transform:translateY(-8px);">
+      <div class="card-featured" style="background:var(--brand);border-radius:20px;padding:2rem 1.5rem;box-shadow:0 6px 16px rgba(82,169,63,0.3),0 16px 40px rgba(82,169,63,0.15);display:flex;flex-direction:column;gap:1rem;transform:translateY(-8px);">
         <div style="display:flex;align-items:center;justify-content:center;gap:0.5rem;background:rgba(255,255,255,0.2);border-radius:10px;padding:0.5rem 0.75rem;">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="rgba(255,255,255,0.8)" stroke-width="2"/><path d="M12 7V12L15 15" stroke="rgba(255,255,255,0.8)" stroke-width="2" stroke-linecap="round"/></svg>
           <span style="font-size:0.7rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:rgba(255,255,255,0.8);">Gift</span>

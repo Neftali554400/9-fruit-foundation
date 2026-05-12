@@ -6,6 +6,9 @@
   <title>9 Fruit Foundation — Simple, fruitful giving for children</title>
   <link rel="icon" type="image/png" href="design assest/logo.png" />
   <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   <style>
     :root {
@@ -471,7 +474,7 @@
 
     <!-- Hero Image -->
     <div style="position:relative;z-index:2;border-radius:28px;overflow:hidden;box-shadow:0 8px 16px rgba(0,0,0,0.1),0 32px 64px rgba(0,0,0,0.15);">
-      <img src="design assest/american-kids.jpeg"
+      <img fetchpriority="high" src="design assest/american-kids.jpeg"
            alt="Children smiling and reaching out together"
            style="width:100%;height:460px;object-fit:cover;display:block;" />
       <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0) 40%,rgba(0,0,0,0.55) 100%);"></div>
@@ -716,7 +719,7 @@
       <!-- Health -->
       <article class="fund-card" tabindex="0">
         <div style="position:relative;overflow:hidden;">
-          <img src="design assest/health2.jpeg"
+          <img loading="lazy" src="design assest/health2.jpeg"
                alt="Healthcare professional with stethoscope and laptop"
                style="width:100%;height:280px;object-fit:cover;display:block;" />
           <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0.05) 0%,rgba(0,0,0,0.6) 100%);"></div>
@@ -742,7 +745,7 @@
       <!-- Education -->
       <article class="fund-card" tabindex="0">
         <div style="position:relative;overflow:hidden;">
-          <img src="design assest/education2.jpeg"
+          <img loading="lazy" src="design assest/education2.jpeg"
                alt="Books, apple and ABC blocks on a school desk"
                style="width:100%;height:280px;object-fit:cover;display:block;" />
           <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0.05) 0%,rgba(0,0,0,0.6) 100%);"></div>
@@ -777,7 +780,7 @@
     <!-- Image side -->
     <div style="position:relative;">
       <div style="position:relative;border-radius:28px;overflow:hidden;box-shadow:0 8px 16px rgba(0,0,0,0.1),0 32px 64px rgba(0,0,0,0.12);">
-        <img src="design assest/kids.jpeg"
+        <img loading="lazy" src="design assest/kids.jpeg"
              alt="Children smiling and playing together in a community"
              style="width:100%;height:480px;object-fit:cover;display:block;" />
         <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0) 50%,rgba(0,0,0,0.55) 100%);"></div>
@@ -902,7 +905,7 @@
 <section style="position:relative;overflow:hidden;padding:7rem 1.5rem;">
   <!-- Hero photo background -->
   <div style="position:absolute;inset:0;z-index:0;">
-    <img src="design assest/children.jpeg"
+    <img loading="lazy" src="design assest/children.jpeg"
          alt=""
          aria-hidden="true"
          style="width:100%;height:100%;object-fit:cover;object-position:center;display:block;" />

@@ -8,7 +8,6 @@
   <script src="https://cdn.tailwindcss.com" defer></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   <style>
     :root {
@@ -24,149 +23,56 @@
       --surface-3:    #F5F5F4;
       --border:       #E7E5E4;
     }
-
     * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Inter', sans-serif; color: var(--ink); background: var(--surface); line-height: 1.7; -webkit-font-smoothing: antialiased; }
+    h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; letter-spacing: -0.03em; line-height: 1.15; }
 
-    body {
-      font-family: 'Inter', sans-serif;
-      color: var(--ink);
-      background: var(--surface);
-      line-height: 1.7;
-      -webkit-font-smoothing: antialiased;
-    }
-
-    h1, h2, h3, h4 {
-      font-family: 'Playfair Display', Georgia, serif;
-      letter-spacing: -0.03em;
-      line-height: 1.15;
-    }
-
-    .nav-link {
-      font-size: 0.875rem;
-      font-weight: 500;
-      color: var(--ink-soft);
-      text-decoration: none;
-      padding: 0.25rem 0;
-      position: relative;
-      transition: color 0.2s cubic-bezier(0.34,1.56,0.64,1);
-    }
-    .nav-link::after {
-      content: '';
-      position: absolute;
-      bottom: -2px; left: 0; right: 0;
-      height: 2px;
-      background: var(--brand);
-      transform: scaleX(0);
-      transform-origin: left;
-      transition: transform 0.25s cubic-bezier(0.34,1.56,0.64,1);
-    }
+    .nav-link { font-size: 0.875rem; font-weight: 500; color: var(--ink-soft); text-decoration: none; padding: 0.25rem 0; position: relative; transition: color 0.2s cubic-bezier(0.34,1.56,0.64,1); }
+    .nav-link::after { content: ''; position: absolute; bottom: -2px; left: 0; right: 0; height: 2px; background: var(--brand); transform: scaleX(0); transform-origin: left; transition: transform 0.25s cubic-bezier(0.34,1.56,0.64,1); }
     .nav-link:hover { color: var(--brand); }
     .nav-link:hover::after { transform: scaleX(1); }
     .nav-link.active { color: var(--brand); }
     .nav-link.active::after { transform: scaleX(1); }
     .nav-link:focus-visible { outline: 2px solid var(--brand); outline-offset: 4px; border-radius: 2px; }
 
-    .btn-primary {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      background: var(--brand);
-      color: #fff;
-      font-family: 'Inter', sans-serif;
-      font-weight: 600;
-      font-size: 0.9375rem;
-      padding: 0.75rem 1.75rem;
-      border-radius: 9999px;
-      border: none;
-      cursor: pointer;
-      text-decoration: none;
-      box-shadow: 0 4px 6px -1px rgba(82,169,63,0.35), 0 8px 20px -4px rgba(82,169,63,0.2);
-      transition: transform 0.2s cubic-bezier(0.34,1.56,0.64,1), background 0.15s ease, box-shadow 0.2s ease;
-    }
-    .btn-primary:hover {
-      background: var(--brand-dark);
-      transform: translateY(-2px);
-      box-shadow: 0 6px 12px -2px rgba(82,169,63,0.45), 0 12px 28px -4px rgba(82,169,63,0.25);
-    }
+    .btn-primary { display: inline-flex; align-items: center; gap: 0.5rem; background: var(--brand); color: #fff; font-family: 'Inter', sans-serif; font-weight: 600; font-size: 0.9375rem; padding: 0.75rem 1.75rem; border-radius: 9999px; border: none; cursor: pointer; text-decoration: none; box-shadow: 0 4px 6px -1px rgba(82,169,63,0.35), 0 8px 20px -4px rgba(82,169,63,0.2); transition: transform 0.2s cubic-bezier(0.34,1.56,0.64,1), background 0.15s ease, box-shadow 0.2s ease; }
+    .btn-primary:hover { background: var(--brand-dark); transform: translateY(-2px); box-shadow: 0 6px 12px -2px rgba(82,169,63,0.45), 0 12px 28px -4px rgba(82,169,63,0.25); }
     .btn-primary:active { transform: translateY(0); }
     .btn-primary:focus-visible { outline: 3px solid var(--brand); outline-offset: 3px; }
 
-    .section-label {
-      font-size: 0.75rem;
-      font-weight: 700;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--brand);
-    }
+    .section-label { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--brand); }
 
-    .partner-logo-card {
-      background: var(--surface);
-      border: 1.5px dashed var(--border);
-      border-radius: 16px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      gap: 0.75rem;
-      padding: 2rem 1.5rem;
-      min-height: 140px;
-      transition: border-color 0.2s ease, box-shadow 0.2s ease;
-    }
-    .partner-logo-card:hover {
-      border-color: var(--brand);
-      box-shadow: 0 4px 16px rgba(82,169,63,0.1);
-    }
+    .org-card { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 1.5rem; box-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 4px 12px rgba(0,0,0,0.04); transition: transform 0.2s cubic-bezier(0.34,1.56,0.64,1), box-shadow 0.2s ease; }
+    .org-card:hover { transform: translateY(-3px); box-shadow: 0 4px 8px rgba(82,169,63,0.08), 0 12px 28px rgba(0,0,0,0.08); }
 
-    footer {
-      background: var(--ink);
-      color: rgba(255,255,255,0.65);
-    }
-    footer a {
-      color: rgba(255,255,255,0.55);
-      text-decoration: none;
-      font-size: 0.875rem;
-      transition: color 0.2s ease;
-    }
+    .city-card { background: var(--surface); border: 1px solid var(--border); border-radius: 20px; padding: 2rem; box-shadow: 0 2px 4px rgba(0,0,0,0.04), 0 8px 24px rgba(0,0,0,0.06); transition: transform 0.25s cubic-bezier(0.34,1.56,0.64,1), box-shadow 0.25s ease; }
+    .city-card:hover { transform: translateY(-4px); box-shadow: 0 4px 8px rgba(82,169,63,0.08), 0 16px 40px rgba(0,0,0,0.1); }
+
+    footer { background: var(--ink); color: rgba(255,255,255,0.65); }
+    footer a { color: rgba(255,255,255,0.55); text-decoration: none; font-size: 0.875rem; transition: color 0.2s ease; }
     footer a:hover { color: #fff; }
     footer a:focus-visible { outline: 2px solid var(--brand); outline-offset: 3px; }
 
-    #mobile-menu {
-      display: none;
-      flex-direction: column;
-      gap: 0.25rem;
-      padding: 1rem 1.5rem 1.5rem;
-      border-top: 1px solid var(--border);
-    }
+    #mobile-menu { display: none; flex-direction: column; gap: 0.25rem; padding: 1rem 1.5rem 1.5rem; border-top: 1px solid var(--border); }
     #mobile-menu.open { display: flex; }
-    #mobile-menu a {
-      font-size: 1rem;
-      font-weight: 500;
-      color: var(--ink-soft);
-      text-decoration: none;
-      padding: 0.5rem 0;
-    }
+    #mobile-menu a { font-size: 1rem; font-weight: 500; color: var(--ink-soft); text-decoration: none; padding: 0.5rem 0; }
     #mobile-menu a:hover { color: var(--brand); }
 
     @media (max-width: 767px) {
       .desktop-nav { display: none !important; }
       .hamburger { display: flex !important; }
+      .cities-grid { grid-template-columns: 1fr !important; }
+      .orgs-2col { grid-template-columns: 1fr !important; }
+      .orgs-3col { grid-template-columns: 1fr !important; }
+      .trust-grid { grid-template-columns: 1fr !important; }
     }
-    @media (min-width: 768px) {
-      .hamburger { display: none !important; }
-    }
-    @media (max-width: 900px) {
-      .about-grid { grid-template-columns: 1fr !important; gap: 3rem !important; }
-    }
+    @media (min-width: 768px) { .hamburger { display: none !important; } }
+    @media (max-width: 900px) { .orgs-3col { grid-template-columns: 1fr 1fr !important; } }
     @media (max-width: 640px) {
       section { padding-left: 1.25rem !important; padding-right: 1.25rem !important; }
       .footer-grid { grid-template-columns: 1fr 1fr !important; gap: 2rem !important; }
-      .partner-grid { grid-template-columns: repeat(2, 1fr) !important; }
-      .priority-grid { grid-template-columns: 1fr !important; }
     }
-    @media (max-width: 480px) {
-      .footer-grid { grid-template-columns: 1fr !important; }
-      .partner-grid { grid-template-columns: 1fr 1fr !important; }
-    }
+    @media (max-width: 480px) { .footer-grid { grid-template-columns: 1fr !important; } }
   </style>
 </head>
 <body>
@@ -183,28 +89,25 @@
         <span style="font-family:'Inter',sans-serif;font-size:0.6875rem;font-weight:500;color:var(--ink-muted);letter-spacing:0.02em;line-height:1;">With Love, by Faith</span>
       </div>
     </a>
-
     <div class="desktop-nav" style="display:flex;align-items:center;gap:1.75rem;">
       <a href="/about" class="nav-link">About</a>
       <a href="/how-it-works" class="nav-link">How Matching Works</a>
       <a href="/what-we-fund" class="nav-link active">Our Charity Partners</a>
-      <a href="/our-impact" class="nav-link">Trust & Transparency</a>
+      <a href="/our-impact" class="nav-link">Trust &amp; Transparency</a>
       <a href="/faq" class="nav-link">FAQ</a>
       <a href="/donate" class="btn-primary" style="padding:0.6rem 1.375rem;font-size:0.875rem;">Donate Now</a>
     </div>
-
     <button class="hamburger" id="hamburger-btn" aria-label="Open menu" style="background:none;border:none;cursor:pointer;padding:0.5rem;display:none;flex-direction:column;gap:5px;" onclick="document.getElementById('mobile-menu').classList.toggle('open')">
       <span style="display:block;width:22px;height:2px;background:var(--ink);border-radius:2px;"></span>
       <span style="display:block;width:22px;height:2px;background:var(--ink);border-radius:2px;"></span>
       <span style="display:block;width:22px;height:2px;background:var(--ink);border-radius:2px;"></span>
     </button>
   </nav>
-
   <div id="mobile-menu">
     <a href="/about">About</a>
     <a href="/how-it-works">How Matching Works</a>
     <a href="/what-we-fund">Our Charity Partners</a>
-    <a href="/our-impact">Trust & Transparency</a>
+    <a href="/our-impact">Trust &amp; Transparency</a>
     <a href="/faq">FAQ</a>
     <a href="/donate" class="btn-primary" style="margin-top:0.5rem;justify-content:center;">Donate Now</a>
   </div>
@@ -214,19 +117,17 @@
 <!-- ═══════════════════════════════════════
      HERO
 ════════════════════════════════════════ -->
-<section style="position:relative;overflow:hidden;height:480px;">
-  <img loading="lazy" src="/design assest/Our Charity Partners/youth meeting.jpg" alt="Youth community gathering" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 30%;" />
-  <div style="position:absolute;inset:0;background:linear-gradient(to bottom,rgba(0,0,0,0.45) 0%,rgba(0,0,0,0.6) 100%);z-index:1;"></div>
+<section style="position:relative;overflow:hidden;height:500px;">
+  <img src="/design assest/Our Charity Partners/youth meeting.jpg" alt="Youth community gathering" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 30%;" fetchpriority="high" />
+  <div style="position:absolute;inset:0;background:linear-gradient(to bottom,rgba(0,0,0,0.42) 0%,rgba(0,0,0,0.62) 100%);z-index:1;"></div>
   <div style="position:relative;z-index:2;height:100%;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:0 1.5rem;">
     <p style="font-family:'Inter',sans-serif;font-size:0.8125rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.85);margin-bottom:1rem;">Our Charity Partners</p>
-    <h1 style="font-family:'Playfair Display',serif;font-size:clamp(2.5rem,5vw,3.75rem);font-weight:800;color:#fff;margin-bottom:1.5rem;line-height:1.15;text-shadow:0 2px 12px rgba(0,0,0,0.4);">
-      Our Charity Partners
-    </h1>
-    <p style="font-size:1.125rem;color:rgba(255,255,255,0.9);line-height:1.8;max-width:560px;text-shadow:0 1px 6px rgba(0,0,0,0.35);margin-bottom:0.75rem;">
-      9 Fruit partners with established charitable organizations already serving communities faithfully and effectively.
+    <h1 style="font-family:'Playfair Display',serif;font-size:clamp(2.25rem,5vw,3.5rem);font-weight:800;color:#fff;margin-bottom:1.5rem;line-height:1.15;text-shadow:0 2px 12px rgba(0,0,0,0.4);">Our Charity Partners</h1>
+    <p style="font-size:1.0625rem;color:rgba(255,255,255,0.92);line-height:1.8;max-width:640px;text-shadow:0 1px 6px rgba(0,0,0,0.35);margin-bottom:0.875rem;">
+      9 Fruit supports carefully reviewed charitable organizations serving children and young adults through health and education initiatives.
     </p>
-    <p style="font-size:1.125rem;color:#7ed464;font-family:'Playfair Display',serif;font-weight:700;font-style:italic;line-height:1.6;text-shadow:0 1px 6px rgba(0,0,0,0.3);">
-      We do not replace local charitable work. We strengthen it.
+    <p style="font-size:1rem;color:rgba(255,255,255,0.72);line-height:1.8;max-width:620px;text-shadow:0 1px 6px rgba(0,0,0,0.3);">
+      We walk alongside established organizations already creating measurable impact, helping strengthen trusted work through donor-directed giving and thoughtful stewardship.
     </p>
   </div>
 </section>
@@ -241,78 +142,87 @@
 
 
 <!-- ═══════════════════════════════════════
-     PARTNER LOGO GRID
+     SECTION 1 — OUR CURRENT FOCUS
 ════════════════════════════════════════ -->
-<section style="padding:5rem 1.5rem;background:var(--surface);border-bottom:1px solid var(--border);">
+<section style="padding:5.5rem 1.5rem;background:var(--surface-2);border-top:1px solid var(--border);border-bottom:1px solid var(--border);">
+  <div style="max-width:760px;margin:0 auto;text-align:center;">
+    <p class="section-label" style="margin-bottom:0.75rem;">Section 1</p>
+    <h2 style="font-size:clamp(1.875rem,3.5vw,2.5rem);color:var(--ink);margin-bottom:1.5rem;">Our Current Focus</h2>
+    <p style="font-size:1.0625rem;color:var(--ink-soft);line-height:1.85;margin-bottom:1.25rem;">
+      9 Fruit is currently strengthening carefully reviewed charitable organizations serving children and young adults across communities in the United States, while thoughtfully supporting select international mission-aligned organizations advancing child health and education worldwide.
+    </p>
+    <p style="font-size:1.0625rem;color:var(--ink-soft);line-height:1.85;">
+      As 9 Fruit grows, partnership opportunities may expand thoughtfully in alignment with our charitable mission, stewardship standards, and donor-centered values.
+    </p>
+  </div>
+</section>
+
+<div aria-hidden="true" style="position:relative;height:0;display:flex;justify-content:center;z-index:10;">
+  <div style="position:absolute;top:-18px;background:var(--surface);border:1px solid var(--border);border-radius:100px;padding:0.4rem 1.125rem;display:flex;align-items:center;gap:0.625rem;box-shadow:0 2px 8px rgba(0,0,0,0.07);">
+    <svg width="14" height="18" viewBox="0 0 14 18" fill="none"><path d="M7 1C7 1 1 5.5 1 11C1 14.9 3.7 18 7 18C10.3 18 13 14.9 13 11C13 5.5 7 1 7 1Z" fill="var(--brand-tint)" stroke="var(--brand)" stroke-width="1.3"/><line x1="7" y1="2" x2="7" y2="18" stroke="var(--brand)" stroke-width="1" stroke-dasharray="2 2.5"/></svg>
+    <div style="width:5px;height:5px;border-radius:50%;background:var(--brand);flex-shrink:0;"></div>
+    <svg width="14" height="18" viewBox="0 0 14 18" fill="none" style="transform:scaleX(-1);"><path d="M7 1C7 1 1 5.5 1 11C1 14.9 3.7 18 7 18C10.3 18 13 14.9 13 11C13 5.5 7 1 7 1Z" fill="var(--brand-tint)" stroke="var(--brand)" stroke-width="1.3"/><line x1="7" y1="2" x2="7" y2="18" stroke="var(--brand)" stroke-width="1" stroke-dasharray="2 2.5"/></svg>
+  </div>
+</div>
+
+
+<!-- ═══════════════════════════════════════
+     SECTION 2 — COMMUNITY LAUNCH REGIONS
+════════════════════════════════════════ -->
+<section style="padding:5.5rem 1.5rem;background:var(--surface);">
   <div style="max-width:1100px;margin:0 auto;">
-    <div style="text-align:center;margin-bottom:3rem;">
-      <p class="section-label" style="margin-bottom:0.75rem;">Partner Organizations</p>
-      <h2 style="font-size:clamp(1.75rem,3.5vw,2.25rem);color:var(--ink);margin-bottom:0.75rem;">Trusted Partners</h2>
-      <p style="font-size:1rem;color:var(--ink-muted);max-width:480px;margin:0 auto;line-height:1.7;">Organizations selected for their integrity, transparency, and proven community impact.</p>
+    <div style="text-align:center;margin-bottom:3.5rem;">
+      <p class="section-label" style="margin-bottom:0.75rem;">Community Regions</p>
+      <h2 style="font-size:clamp(1.875rem,3.5vw,2.5rem);color:var(--ink);margin-bottom:1.25rem;">Current Community Launch Regions</h2>
+      <p style="font-size:1.0625rem;color:var(--ink-soft);line-height:1.8;max-width:680px;margin:0 auto 0.875rem;">
+        9 Fruit is beginning by highlighting charitable organizations serving children and young adults across three initial U.S. community regions.
+      </p>
+      <p style="font-size:0.9375rem;color:var(--ink-muted);line-height:1.75;max-width:580px;margin:0 auto;">
+        Featured charitable organizations within these communities will be introduced as partnerships are thoughtfully reviewed and highlighted.
+      </p>
     </div>
 
-    <div class="partner-grid" style="display:grid;grid-template-columns:repeat(4,1fr);gap:1.25rem;">
+    <div class="cities-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;">
 
-      <div class="partner-logo-card" aria-label="Partner organization placeholder">
-        <div style="width:56px;height:56px;border-radius:12px;background:var(--surface-3);display:flex;align-items:center;justify-content:center;">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M3 9L12 3L21 9V20C21 20.6 20.6 21 20 21H4C3.4 21 3 20.6 3 20V9Z" stroke="var(--border)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M9 21V12H15V21" stroke="var(--border)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <!-- Philadelphia -->
+      <div class="city-card">
+        <div style="width:44px;height:44px;border-radius:12px;background:var(--brand-tint);display:flex;align-items:center;justify-content:center;margin-bottom:1.25rem;">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M12 2C8.7 2 6 4.7 6 8C6 12.9 12 22 12 22C12 22 18 12.9 18 8C18 4.7 15.3 2 12 2Z" stroke="var(--brand)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="12" cy="8" r="2.5" stroke="var(--brand)" stroke-width="2"/>
+          </svg>
         </div>
-        <span style="font-size:0.8125rem;font-weight:500;color:var(--ink-muted);">Partner Name</span>
+        <h3 style="font-size:1.25rem;color:var(--ink);margin-bottom:0.75rem;">Philadelphia</h3>
+        <p style="font-size:0.9375rem;color:var(--ink-soft);line-height:1.75;">Supporting educational growth, literacy, and youth development that strengthens long-term opportunity and flourishing.</p>
       </div>
 
-      <div class="partner-logo-card" aria-label="Partner organization placeholder">
-        <div style="width:56px;height:56px;border-radius:12px;background:var(--surface-3);display:flex;align-items:center;justify-content:center;">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M3 9L12 3L21 9V20C21 20.6 20.6 21 20 21H4C3.4 21 3 20.6 3 20V9Z" stroke="var(--border)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M9 21V12H15V21" stroke="var(--border)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <!-- New York City / Connecticut -->
+      <div class="city-card" style="border-color:rgba(82,169,63,0.3);background:var(--brand-light);">
+        <div style="width:44px;height:44px;border-radius:12px;background:var(--brand-tint);display:flex;align-items:center;justify-content:center;margin-bottom:1.25rem;">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M12 2C8.7 2 6 4.7 6 8C6 12.9 12 22 12 22C12 22 18 12.9 18 8C18 4.7 15.3 2 12 2Z" stroke="var(--brand)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="12" cy="8" r="2.5" stroke="var(--brand)" stroke-width="2"/>
+          </svg>
         </div>
-        <span style="font-size:0.8125rem;font-weight:500;color:var(--ink-muted);">Partner Name</span>
+        <h3 style="font-size:1.25rem;color:var(--ink);margin-bottom:0.75rem;">New York City / Connecticut</h3>
+        <p style="font-size:0.9375rem;color:var(--ink-soft);line-height:1.75;">Supporting child wellness, mentorship, educational access, and healthy development throughout surrounding communities.</p>
       </div>
 
-      <div class="partner-logo-card" aria-label="Partner organization placeholder">
-        <div style="width:56px;height:56px;border-radius:12px;background:var(--surface-3);display:flex;align-items:center;justify-content:center;">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M3 9L12 3L21 9V20C21 20.6 20.6 21 20 21H4C3.4 21 3 20.6 3 20V9Z" stroke="var(--border)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M9 21V12H15V21" stroke="var(--border)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <!-- Los Angeles / San Diego -->
+      <div class="city-card">
+        <div style="width:44px;height:44px;border-radius:12px;background:var(--brand-tint);display:flex;align-items:center;justify-content:center;margin-bottom:1.25rem;">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M12 2C8.7 2 6 4.7 6 8C6 12.9 12 22 12 22C12 22 18 12.9 18 8C18 4.7 15.3 2 12 2Z" stroke="var(--brand)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="12" cy="8" r="2.5" stroke="var(--brand)" stroke-width="2"/>
+          </svg>
         </div>
-        <span style="font-size:0.8125rem;font-weight:500;color:var(--ink-muted);">Partner Name</span>
-      </div>
-
-      <div class="partner-logo-card" aria-label="Partner organization placeholder">
-        <div style="width:56px;height:56px;border-radius:12px;background:var(--surface-3);display:flex;align-items:center;justify-content:center;">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M3 9L12 3L21 9V20C21 20.6 20.6 21 20 21H4C3.4 21 3 20.6 3 20V9Z" stroke="var(--border)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M9 21V12H15V21" stroke="var(--border)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </div>
-        <span style="font-size:0.8125rem;font-weight:500;color:var(--ink-muted);">Partner Name</span>
-      </div>
-
-      <div class="partner-logo-card" aria-label="Partner organization placeholder">
-        <div style="width:56px;height:56px;border-radius:12px;background:var(--surface-3);display:flex;align-items:center;justify-content:center;">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M3 9L12 3L21 9V20C21 20.6 20.6 21 20 21H4C3.4 21 3 20.6 3 20V9Z" stroke="var(--border)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M9 21V12H15V21" stroke="var(--border)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </div>
-        <span style="font-size:0.8125rem;font-weight:500;color:var(--ink-muted);">Partner Name</span>
-      </div>
-
-      <div class="partner-logo-card" aria-label="Partner organization placeholder">
-        <div style="width:56px;height:56px;border-radius:12px;background:var(--surface-3);display:flex;align-items:center;justify-content:center;">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M3 9L12 3L21 9V20C21 20.6 20.6 21 20 21H4C3.4 21 3 20.6 3 20V9Z" stroke="var(--border)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M9 21V12H15V21" stroke="var(--border)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </div>
-        <span style="font-size:0.8125rem;font-weight:500;color:var(--ink-muted);">Partner Name</span>
-      </div>
-
-      <div class="partner-logo-card" aria-label="Partner organization placeholder">
-        <div style="width:56px;height:56px;border-radius:12px;background:var(--surface-3);display:flex;align-items:center;justify-content:center;">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M3 9L12 3L21 9V20C21 20.6 20.6 21 20 21H4C3.4 21 3 20.6 3 20V9Z" stroke="var(--border)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M9 21V12H15V21" stroke="var(--border)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </div>
-        <span style="font-size:0.8125rem;font-weight:500;color:var(--ink-muted);">Partner Name</span>
-      </div>
-
-      <div class="partner-logo-card" aria-label="Partner organization placeholder">
-        <div style="width:56px;height:56px;border-radius:12px;background:var(--surface-3);display:flex;align-items:center;justify-content:center;">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M3 9L12 3L21 9V20C21 20.6 20.6 21 20 21H4C3.4 21 3 20.6 3 20V9Z" stroke="var(--border)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M9 21V12H15V21" stroke="var(--border)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </div>
-        <span style="font-size:0.8125rem;font-weight:500;color:var(--ink-muted);">Partner Name</span>
+        <h3 style="font-size:1.25rem;color:var(--ink);margin-bottom:0.75rem;">Los Angeles / San Diego</h3>
+        <p style="font-size:0.9375rem;color:var(--ink-soft);line-height:1.75;">Supporting children and young adults through literacy, mental wellness, education, and healthy growth initiatives.</p>
       </div>
 
     </div>
   </div>
 </section>
-
 
 <div aria-hidden="true" style="position:relative;height:0;display:flex;justify-content:center;z-index:10;">
   <div style="position:absolute;top:-18px;background:var(--surface);border:1px solid var(--border);border-radius:100px;padding:0.4rem 1.125rem;display:flex;align-items:center;gap:0.625rem;box-shadow:0 2px 8px rgba(0,0,0,0.07);">
@@ -322,209 +232,227 @@
   </div>
 </div>
 
-<!-- ═══════════════════════════════════════
-     HOW ORGANIZATIONS ARE REVIEWED
-════════════════════════════════════════ -->
-<section style="padding:5rem 1.5rem;background:var(--surface-2);border-top:1px solid var(--border);border-bottom:1px solid var(--border);">
-  <div style="max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1.6fr 1fr;gap:5rem;align-items:center;" class="about-grid">
-
-    <!-- Text + criteria -->
-    <div>
-    <p class="section-label" style="margin-bottom:0.75rem;">Our Standards</p>
-    <h2 style="font-size:clamp(1.875rem,3.5vw,2.5rem);color:var(--ink);margin-bottom:1.25rem;">How Organizations Are Reviewed</h2>
-    <p style="font-size:1.0625rem;color:var(--ink-soft);line-height:1.8;margin-bottom:2rem;">
-      Partner organizations are reviewed periodically for continued alignment with 9 Fruit's stewardship and transparency principles. Evaluation includes consideration of:
-    </p>
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;">
-
-      <div style="display:flex;align-items:flex-start;gap:1rem;padding:1.25rem 1.5rem;background:var(--surface);border:1px solid var(--border);border-radius:14px;">
-        <div style="width:36px;height:36px;border-radius:10px;background:var(--brand-tint);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 21C12 21 4 16 4 10C4 7.8 5.8 6 8 6C9.5 6 10.8 6.8 11.5 8C11.7 8.4 12.3 8.4 12.5 8C13.2 6.8 14.5 6 16 6C18.2 6 20 7.8 20 10C20 16 12 21 12 21Z" stroke="var(--brand)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </div>
-        <p style="font-size:0.9375rem;color:var(--ink-soft);line-height:1.6;font-weight:500;">Mission alignment</p>
-      </div>
-
-      <div style="display:flex;align-items:flex-start;gap:1rem;padding:1.25rem 1.5rem;background:var(--surface);border:1px solid var(--border);border-radius:14px;">
-        <div style="width:36px;height:36px;border-radius:10px;background:var(--brand-tint);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" stroke="var(--brand)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </div>
-        <p style="font-size:0.9375rem;color:var(--ink-soft);line-height:1.6;font-weight:500;">Financial stewardship</p>
-      </div>
-
-      <div style="display:flex;align-items:flex-start;gap:1rem;padding:1.25rem 1.5rem;background:var(--surface);border:1px solid var(--border);border-radius:14px;">
-        <div style="width:36px;height:36px;border-radius:10px;background:var(--brand-tint);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="var(--brand)" stroke-width="1.8"/><path d="M12 8V12L15 15" stroke="var(--brand)" stroke-width="1.8" stroke-linecap="round"/></svg>
-        </div>
-        <p style="font-size:0.9375rem;color:var(--ink-soft);line-height:1.6;font-weight:500;">Transparency practices</p>
-      </div>
-
-      <div style="display:flex;align-items:flex-start;gap:1rem;padding:1.25rem 1.5rem;background:var(--surface);border:1px solid var(--border);border-radius:14px;">
-        <div style="width:36px;height:36px;border-radius:10px;background:var(--brand-tint);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 22C17.5 22 22 17.5 22 12C22 6.5 17.5 2 12 2C6.5 2 2 6.5 2 12C2 17.5 6.5 22 12 22Z" stroke="var(--brand)" stroke-width="1.8"/><path d="M9 12L11 14L15 10" stroke="var(--brand)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </div>
-        <p style="font-size:0.9375rem;color:var(--ink-soft);line-height:1.6;font-weight:500;">Organizational integrity</p>
-      </div>
-
-      <div style="display:flex;align-items:flex-start;gap:1rem;padding:1.25rem 1.5rem;background:var(--brand-tint);border:1px solid rgba(82,169,63,0.25);border-radius:14px;">
-        <div style="width:36px;height:36px;border-radius:10px;background:rgba(82,169,63,0.15);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M3 3H5L5.4 5M5.4 5H21L17 13H7M5.4 5L7 13M7 13L4.7 15.3C4.3 15.7 4.6 16.4 5.1 16.4H17M17 16.4C16.2 16.4 15.5 17.1 15.5 17.9C15.5 18.7 16.2 19.4 17 19.4C17.8 19.4 18.5 18.7 18.5 17.9C18.5 17.1 17.8 16.4 17 16.4ZM9 17.9C9 18.7 8.3 19.4 7.5 19.4C6.7 19.4 6 18.7 6 17.9C6 17.1 6.7 16.4 7.5 16.4C8.3 16.4 9 17.1 9 17.9Z" stroke="var(--brand)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </div>
-        <p style="font-size:0.9375rem;color:var(--ink-soft);line-height:1.6;font-weight:500;">Demonstrated community impact</p>
-      </div>
-
-    </div>
-    </div>
-
-    <!-- Image -->
-    <div style="display:flex;align-items:center;justify-content:center;">
-      <img loading="lazy" src="/design assest/Our Charity Partners/community 2.jpg" alt="Community meeting and review" style="width:100%;height:500px;object-fit:cover;object-position:center;border-radius:20px;box-shadow:0 8px 24px rgba(0,0,0,0.12),0 2px 6px rgba(0,0,0,0.08);display:block;" />
-    </div>
-
-  </div>
-</section>
-
-
-<div aria-hidden="true" style="position:relative;height:0;display:flex;justify-content:center;z-index:10;">
-  <div style="position:absolute;top:-18px;background:var(--surface);border:1px solid var(--border);border-radius:100px;padding:0.4rem 1.125rem;display:flex;align-items:center;gap:0.625rem;box-shadow:0 2px 8px rgba(0,0,0,0.07);">
-    <svg width="14" height="18" viewBox="0 0 14 18" fill="none"><path d="M7 1C7 1 1 5.5 1 11C1 14.9 3.7 18 7 18C10.3 18 13 14.9 13 11C13 5.5 7 1 7 1Z" fill="var(--brand-tint)" stroke="var(--brand)" stroke-width="1.3"/><line x1="7" y1="2" x2="7" y2="18" stroke="var(--brand)" stroke-width="1" stroke-dasharray="2 2.5"/></svg>
-    <div style="width:5px;height:5px;border-radius:50%;background:var(--brand);flex-shrink:0;"></div>
-    <svg width="14" height="18" viewBox="0 0 14 18" fill="none" style="transform:scaleX(-1);"><path d="M7 1C7 1 1 5.5 1 11C1 14.9 3.7 18 7 18C10.3 18 13 14.9 13 11C13 5.5 7 1 7 1Z" fill="var(--brand-tint)" stroke="var(--brand)" stroke-width="1.3"/><line x1="7" y1="2" x2="7" y2="18" stroke="var(--brand)" stroke-width="1" stroke-dasharray="2 2.5"/></svg>
-  </div>
-</div>
 
 <!-- ═══════════════════════════════════════
-     WHAT WE PRIORITIZE
+     SECTION 3 — GLOBAL MISSION ALIGNMENT
 ════════════════════════════════════════ -->
-<section style="padding:5rem 1.5rem;background:var(--surface);">
-  <div style="max-width:1000px;margin:0 auto;">
-    <p class="section-label" style="margin-bottom:0.75rem;">Focus Areas</p>
-    <h2 style="font-size:clamp(1.875rem,3.5vw,2.5rem);color:var(--ink);margin-bottom:0.75rem;">What We Prioritize</h2>
-    <p style="font-size:1.0625rem;color:var(--ink-soft);line-height:1.8;margin-bottom:3rem;">
-      We prioritize organizations serving children and young adults through:
-    </p>
+<section style="padding:5.5rem 1.5rem;background:var(--surface-2);border-top:1px solid var(--border);border-bottom:1px solid var(--border);">
+  <div style="max-width:1100px;margin:0 auto;">
 
-    <div class="priority-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:2rem;">
-
-      <!-- Health -->
-      <div style="background:var(--surface-2);border:1px solid var(--border);border-radius:24px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.04),0 8px 24px rgba(0,0,0,0.04);">
-        <div style="position:relative;height:200px;overflow:hidden;">
-          <img loading="lazy" src="/design assest/Our Charity Partners/fruits.jpg" alt="Fresh fruits representing health and nutrition" style="width:100%;height:100%;object-fit:cover;object-position:center;display:block;" />
-          <div style="position:absolute;inset:0;background:linear-gradient(to bottom,rgba(0,0,0,0.1) 0%,rgba(0,0,0,0.45) 100%);"></div>
-          <div style="position:absolute;bottom:1.25rem;left:1.5rem;display:flex;align-items:center;gap:0.75rem;">
-            <div style="width:40px;height:40px;border-radius:10px;background:rgba(255,255,255,0.15);backdrop-filter:blur(8px);display:flex;align-items:center;justify-content:center;">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M22 12H18L15 21L9 3L6 12H2" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </div>
-            <h3 style="font-size:1.5rem;color:#fff;font-family:'Playfair Display',serif;text-shadow:0 1px 6px rgba(0,0,0,0.4);">Health</h3>
-          </div>
-        </div>
-        <div style="padding:2rem 2.5rem 2.5rem;">
-        <div style="display:flex;flex-direction:column;gap:0.75rem;">
-          <div style="display:flex;align-items:center;gap:0.875rem;padding:0.875rem 1.125rem;background:var(--surface);border:1px solid var(--border);border-radius:12px;">
-            <span style="width:6px;height:6px;border-radius:50%;background:var(--brand);flex-shrink:0;"></span>
-            <span style="font-size:0.9375rem;color:var(--ink-soft);">Physical health</span>
-          </div>
-          <div style="display:flex;align-items:center;gap:0.875rem;padding:0.875rem 1.125rem;background:var(--surface);border:1px solid var(--border);border-radius:12px;">
-            <span style="width:6px;height:6px;border-radius:50%;background:var(--brand);flex-shrink:0;"></span>
-            <span style="font-size:0.9375rem;color:var(--ink-soft);">Mental and psychological wellness</span>
-          </div>
-          <div style="display:flex;align-items:center;gap:0.875rem;padding:0.875rem 1.125rem;background:var(--surface);border:1px solid var(--border);border-radius:12px;">
-            <span style="width:6px;height:6px;border-radius:50%;background:var(--brand);flex-shrink:0;"></span>
-            <span style="font-size:0.9375rem;color:var(--ink-soft);">Nutrition and food access</span>
-          </div>
-          <div style="display:flex;align-items:center;gap:0.875rem;padding:0.875rem 1.125rem;background:var(--surface);border:1px solid var(--border);border-radius:12px;">
-            <span style="width:6px;height:6px;border-radius:50%;background:var(--brand);flex-shrink:0;"></span>
-            <span style="font-size:0.9375rem;color:var(--ink-soft);">Healthy development and exercise</span>
-          </div>
-        </div>
-        </div>
-      </div>
-
-      <!-- Education -->
-      <div style="background:var(--surface-2);border:1px solid var(--border);border-radius:24px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.04),0 8px 24px rgba(0,0,0,0.04);">
-        <div style="position:relative;height:200px;overflow:hidden;">
-          <img loading="lazy" src="/design assest/Our Charity Partners/photo-1577896851231-70ef18881754.jpg" alt="Classroom education scene" style="width:100%;height:100%;object-fit:cover;object-position:center 30%;display:block;" />
-          <div style="position:absolute;inset:0;background:linear-gradient(to bottom,rgba(0,0,0,0.1) 0%,rgba(0,0,0,0.45) 100%);"></div>
-          <div style="position:absolute;bottom:1.25rem;left:1.5rem;display:flex;align-items:center;gap:0.75rem;">
-            <div style="width:40px;height:40px;border-radius:10px;background:rgba(255,255,255,0.15);backdrop-filter:blur(8px);display:flex;align-items:center;justify-content:center;">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M2 3H8C9.1 3 10.1 3.4 10.8 4.2C11.5 5 12 6 12 7V21C12 20 11.6 19.2 10.8 18.5C10 17.8 9.1 17.5 8 17.5H2V3Z" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M22 3H16C14.9 3 13.9 3.4 13.2 4.2C12.5 5 12 6 12 7V21C12 20 12.4 19.2 13.2 18.5C14 17.8 14.9 17.5 16 17.5H22V3Z" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </div>
-            <h3 style="font-size:1.5rem;color:#fff;font-family:'Playfair Display',serif;text-shadow:0 1px 6px rgba(0,0,0,0.4);">Education</h3>
-          </div>
-        </div>
-        <div style="padding:2rem 2.5rem 2.5rem;">
-        <div style="display:flex;flex-direction:column;gap:0.75rem;">
-          <div style="display:flex;align-items:center;gap:0.875rem;padding:0.875rem 1.125rem;background:var(--surface);border:1px solid var(--border);border-radius:12px;">
-            <span style="width:6px;height:6px;border-radius:50%;background:var(--brand);flex-shrink:0;"></span>
-            <span style="font-size:0.9375rem;color:var(--ink-soft);">Books and learning access</span>
-          </div>
-          <div style="display:flex;align-items:center;gap:0.875rem;padding:0.875rem 1.125rem;background:var(--surface);border:1px solid var(--border);border-radius:12px;">
-            <span style="width:6px;height:6px;border-radius:50%;background:var(--brand);flex-shrink:0;"></span>
-            <span style="font-size:0.9375rem;color:var(--ink-soft);">Mentorship and development</span>
-          </div>
-          <div style="display:flex;align-items:center;gap:0.875rem;padding:0.875rem 1.125rem;background:var(--surface);border:1px solid var(--border);border-radius:12px;">
-            <span style="width:6px;height:6px;border-radius:50%;background:var(--brand);flex-shrink:0;"></span>
-            <span style="font-size:0.9375rem;color:var(--ink-soft);">Educational research</span>
-          </div>
-          <div style="display:flex;align-items:center;gap:0.875rem;padding:0.875rem 1.125rem;background:var(--surface);border:1px solid var(--border);border-radius:12px;">
-            <span style="width:6px;height:6px;border-radius:50%;background:var(--brand);flex-shrink:0;"></span>
-            <span style="font-size:0.9375rem;color:var(--ink-soft);">Teacher and program support</span>
-          </div>
-        </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-
-<div aria-hidden="true" style="position:relative;height:0;display:flex;justify-content:center;z-index:10;">
-  <div style="position:absolute;top:-18px;background:var(--surface);border:1px solid var(--border);border-radius:100px;padding:0.4rem 1.125rem;display:flex;align-items:center;gap:0.625rem;box-shadow:0 2px 8px rgba(0,0,0,0.07);">
-    <svg width="14" height="18" viewBox="0 0 14 18" fill="none"><path d="M7 1C7 1 1 5.5 1 11C1 14.9 3.7 18 7 18C10.3 18 13 14.9 13 11C13 5.5 7 1 7 1Z" fill="var(--brand-tint)" stroke="var(--brand)" stroke-width="1.3"/><line x1="7" y1="2" x2="7" y2="18" stroke="var(--brand)" stroke-width="1" stroke-dasharray="2 2.5"/></svg>
-    <div style="width:5px;height:5px;border-radius:50%;background:var(--brand);flex-shrink:0;"></div>
-    <svg width="14" height="18" viewBox="0 0 14 18" fill="none" style="transform:scaleX(-1);"><path d="M7 1C7 1 1 5.5 1 11C1 14.9 3.7 18 7 18C10.3 18 13 14.9 13 11C13 5.5 7 1 7 1Z" fill="var(--brand-tint)" stroke="var(--brand)" stroke-width="1.3"/><line x1="7" y1="2" x2="7" y2="18" stroke="var(--brand)" stroke-width="1" stroke-dasharray="2 2.5"/></svg>
-  </div>
-</div>
-
-<!-- ═══════════════════════════════════════
-     WHY PARTNERSHIPS MATTER + DONOR ALIGNMENT
-════════════════════════════════════════ -->
-<section style="padding:5rem 1.5rem;background:var(--surface-2);border-top:1px solid var(--border);border-bottom:1px solid var(--border);">
-  <div style="max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1.4fr;gap:5rem;align-items:center;" class="about-grid">
-
-    <!-- Image -->
-    <div style="display:flex;align-items:center;justify-content:center;">
-      <img loading="lazy" src="/design assest/Our Charity Partners/community 3.jpg" alt="Community group activity" style="width:100%;height:480px;object-fit:cover;object-position:center;border-radius:20px;box-shadow:0 8px 24px rgba(0,0,0,0.12),0 2px 6px rgba(0,0,0,0.08);display:block;" />
+    <div style="max-width:760px;margin:0 auto 3rem;text-align:center;">
+      <p class="section-label" style="margin-bottom:0.75rem;">Global Mission</p>
+      <h2 style="font-size:clamp(1.875rem,3.5vw,2.5rem);color:var(--ink);margin-bottom:1.25rem;">Global Mission Alignment</h2>
+      <p style="font-size:1.0625rem;color:var(--ink-soft);line-height:1.85;margin-bottom:1rem;">
+        Alongside current U.S. community initiatives, 9 Fruit also highlights select international charitable organizations whose work reflects our broader mission to strengthen children's health, education, and healthy development worldwide.
+      </p>
+      <p style="font-size:1rem;color:var(--ink-muted);line-height:1.75;margin-bottom:0.875rem;">
+        These organizations are selected for demonstrated impact, responsible stewardship, and meaningful mission alignment.
+      </p>
+      <p style="font-size:1rem;color:var(--ink-muted);line-height:1.75;">
+        As 9 Fruit grows, global mission support may expand thoughtfully in service of children and young adults worldwide.
+      </p>
     </div>
 
-    <!-- Text -->
-    <div>
-      <div style="margin-bottom:2.5rem;">
-        <p class="section-label" style="margin-bottom:0.75rem;">Why It Matters</p>
-        <h2 style="font-size:clamp(1.875rem,3.5vw,2.5rem);color:var(--ink);margin-bottom:1.25rem;">Why These Partnerships Matter</h2>
-        <p style="font-size:1.0625rem;color:var(--ink-soft);line-height:1.8;">
-          By supporting trusted organizations already producing measurable impact, generosity reaches communities more effectively and responsibly.
-        </p>
-      </div>
-
-      <div style="padding:2rem 2.5rem;background:var(--surface);border:1px solid var(--border);border-radius:20px;box-shadow:0 2px 8px rgba(0,0,0,0.04),0 8px 24px rgba(0,0,0,0.06);">
-        <div style="display:flex;align-items:flex-start;gap:1.25rem;">
-          <div style="width:44px;height:44px;border-radius:12px;background:var(--brand-tint);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:0.125rem;">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17L4 12" stroke="var(--brand)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    <!-- NORTH AMERICA -->
+    <div style="display:flex;align-items:center;gap:1rem;margin:0 0 1.5rem;">
+      <div style="flex:1;height:1px;background:var(--border);"></div>
+      <span style="font-size:0.6875rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:var(--ink-muted);white-space:nowrap;padding:0 0.375rem;">NORTH AMERICA</span>
+      <div style="flex:1;height:1px;background:var(--border);"></div>
+    </div>
+    <div style="max-width:520px;margin:0 auto;">
+      <div class="org-card">
+        <div style="display:flex;align-items:flex-start;gap:0.875rem;margin-bottom:1rem;">
+          <div style="width:38px;height:38px;border-radius:10px;background:var(--brand-tint);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="var(--brand)" stroke-width="1.8"/><path d="M2 12H22" stroke="var(--brand)" stroke-width="1.8" stroke-linecap="round"/><path d="M12 3C9 6 7.5 9 7.5 12C7.5 15 9 18 12 21" stroke="var(--brand)" stroke-width="1.8" stroke-linecap="round"/><path d="M12 3C15 6 16.5 9 16.5 12C16.5 15 15 18 12 21" stroke="var(--brand)" stroke-width="1.8" stroke-linecap="round"/></svg>
           </div>
           <div>
-            <p style="font-size:0.75rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--brand);margin-bottom:0.5rem;">Donor Alignment</p>
-            <p style="font-size:1.0625rem;color:var(--ink-soft);line-height:1.8;">
-              Every gift remains aligned with the donor's intent and the charitable organization's mission.
+            <h4 style="font-size:1.0625rem;color:var(--ink);margin-bottom:0.25rem;">UNICEF USA</h4>
+            <p style="font-size:0.8125rem;color:var(--ink-muted);display:flex;align-items:center;gap:0.375rem;">
+              <svg width="10" height="13" viewBox="0 0 10 13" fill="none" aria-hidden="true"><path d="M5 0.5C2.8 0.5 1 2.3 1 4.5C1 7.5 5 12.5 5 12.5C5 12.5 9 7.5 9 4.5C9 2.3 7.2 0.5 5 0.5Z" fill="var(--ink-muted)"/><circle cx="5" cy="4.5" r="1.25" fill="white"/></svg>
+              New York City, New York, USA
             </p>
           </div>
         </div>
+        <div style="border-top:1px solid var(--border);padding-top:0.875rem;">
+          <p style="font-size:0.875rem;color:var(--ink-soft);line-height:1.75;">Chosen by 9 Fruit for globally trusted leadership advancing child health, education, protection, and emergency support.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- LATIN AMERICA -->
+    <div style="display:flex;align-items:center;gap:1rem;margin:2.75rem 0 1.5rem;">
+      <div style="flex:1;height:1px;background:var(--border);"></div>
+      <span style="font-size:0.6875rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:var(--ink-muted);white-space:nowrap;padding:0 0.375rem;">LATIN AMERICA</span>
+      <div style="flex:1;height:1px;background:var(--border);"></div>
+    </div>
+    <div class="orgs-2col" style="display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;">
+      <div class="org-card">
+        <div style="display:flex;align-items:flex-start;gap:0.875rem;margin-bottom:1rem;">
+          <div style="width:38px;height:38px;border-radius:10px;background:var(--brand-tint);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="var(--brand)" stroke-width="1.8"/><path d="M2 12H22" stroke="var(--brand)" stroke-width="1.8" stroke-linecap="round"/><path d="M12 3C9 6 7.5 9 7.5 12C7.5 15 9 18 12 21" stroke="var(--brand)" stroke-width="1.8" stroke-linecap="round"/><path d="M12 3C15 6 16.5 9 16.5 12C16.5 15 15 18 12 21" stroke="var(--brand)" stroke-width="1.8" stroke-linecap="round"/></svg>
+          </div>
+          <div>
+            <h4 style="font-size:1.0625rem;color:var(--ink);margin-bottom:0.25rem;">Glasswing International</h4>
+            <p style="font-size:0.8125rem;color:var(--ink-muted);display:flex;align-items:center;gap:0.375rem;">
+              <svg width="10" height="13" viewBox="0 0 10 13" fill="none" aria-hidden="true"><path d="M5 0.5C2.8 0.5 1 2.3 1 4.5C1 7.5 5 12.5 5 12.5C5 12.5 9 7.5 9 4.5C9 2.3 7.2 0.5 5 0.5Z" fill="var(--ink-muted)"/><circle cx="5" cy="4.5" r="1.25" fill="white"/></svg>
+              San Salvador, El Salvador
+            </p>
+          </div>
+        </div>
+        <div style="border-top:1px solid var(--border);padding-top:0.875rem;">
+          <p style="font-size:0.875rem;color:var(--ink-soft);line-height:1.75;">Chosen for strengthening youth education, mental wellness, and measurable long-term community impact.</p>
+        </div>
+      </div>
+      <div class="org-card">
+        <div style="display:flex;align-items:flex-start;gap:0.875rem;margin-bottom:1rem;">
+          <div style="width:38px;height:38px;border-radius:10px;background:var(--brand-tint);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="var(--brand)" stroke-width="1.8"/><path d="M2 12H22" stroke="var(--brand)" stroke-width="1.8" stroke-linecap="round"/><path d="M12 3C9 6 7.5 9 7.5 12C7.5 15 9 18 12 21" stroke="var(--brand)" stroke-width="1.8" stroke-linecap="round"/><path d="M12 3C15 6 16.5 9 16.5 12C16.5 15 15 18 12 21" stroke="var(--brand)" stroke-width="1.8" stroke-linecap="round"/></svg>
+          </div>
+          <div>
+            <h4 style="font-size:1.0625rem;color:var(--ink);margin-bottom:0.25rem;">Fundación Escuela Nueva</h4>
+            <p style="font-size:0.8125rem;color:var(--ink-muted);display:flex;align-items:center;gap:0.375rem;">
+              <svg width="10" height="13" viewBox="0 0 10 13" fill="none" aria-hidden="true"><path d="M5 0.5C2.8 0.5 1 2.3 1 4.5C1 7.5 5 12.5 5 12.5C5 12.5 9 7.5 9 4.5C9 2.3 7.2 0.5 5 0.5Z" fill="var(--ink-muted)"/><circle cx="5" cy="4.5" r="1.25" fill="white"/></svg>
+              Bogotá, Colombia
+            </p>
+          </div>
+        </div>
+        <div style="border-top:1px solid var(--border);padding-top:0.875rem;">
+          <p style="font-size:0.875rem;color:var(--ink-soft);line-height:1.75;">Chosen for globally respected educational innovation helping children flourish through improved learning opportunity.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- WESTERN EUROPE -->
+    <div style="display:flex;align-items:center;gap:1rem;margin:2.75rem 0 1.5rem;">
+      <div style="flex:1;height:1px;background:var(--border);"></div>
+      <span style="font-size:0.6875rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:var(--ink-muted);white-space:nowrap;padding:0 0.375rem;">WESTERN EUROPE</span>
+      <div style="flex:1;height:1px;background:var(--border);"></div>
+    </div>
+    <div class="orgs-3col" style="display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;">
+      <div class="org-card">
+        <div style="display:flex;align-items:flex-start;gap:0.875rem;margin-bottom:1rem;">
+          <div style="width:38px;height:38px;border-radius:10px;background:var(--brand-tint);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="var(--brand)" stroke-width="1.8"/><path d="M2 12H22" stroke="var(--brand)" stroke-width="1.8" stroke-linecap="round"/><path d="M12 3C9 6 7.5 9 7.5 12C7.5 15 9 18 12 21" stroke="var(--brand)" stroke-width="1.8" stroke-linecap="round"/><path d="M12 3C15 6 16.5 9 16.5 12C16.5 15 15 18 12 21" stroke="var(--brand)" stroke-width="1.8" stroke-linecap="round"/></svg>
+          </div>
+          <div>
+            <h4 style="font-size:1.0625rem;color:var(--ink);margin-bottom:0.25rem;">Save the Children</h4>
+            <p style="font-size:0.8125rem;color:var(--ink-muted);display:flex;align-items:center;gap:0.375rem;">
+              <svg width="10" height="13" viewBox="0 0 10 13" fill="none" aria-hidden="true"><path d="M5 0.5C2.8 0.5 1 2.3 1 4.5C1 7.5 5 12.5 5 12.5C5 12.5 9 7.5 9 4.5C9 2.3 7.2 0.5 5 0.5Z" fill="var(--ink-muted)"/><circle cx="5" cy="4.5" r="1.25" fill="white"/></svg>
+              London, England, United Kingdom
+            </p>
+          </div>
+        </div>
+        <div style="border-top:1px solid var(--border);padding-top:0.875rem;">
+          <p style="font-size:0.875rem;color:var(--ink-soft);line-height:1.75;">Chosen for trusted global leadership advancing child health, education, and protection.</p>
+        </div>
+      </div>
+      <div class="org-card">
+        <div style="display:flex;align-items:flex-start;gap:0.875rem;margin-bottom:1rem;">
+          <div style="width:38px;height:38px;border-radius:10px;background:var(--brand-tint);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="var(--brand)" stroke-width="1.8"/><path d="M2 12H22" stroke="var(--brand)" stroke-width="1.8" stroke-linecap="round"/><path d="M12 3C9 6 7.5 9 7.5 12C7.5 15 9 18 12 21" stroke="var(--brand)" stroke-width="1.8" stroke-linecap="round"/><path d="M12 3C15 6 16.5 9 16.5 12C16.5 15 15 18 12 21" stroke="var(--brand)" stroke-width="1.8" stroke-linecap="round"/></svg>
+          </div>
+          <div>
+            <h4 style="font-size:1.0625rem;color:var(--ink);margin-bottom:0.25rem;">Malaria Consortium</h4>
+            <p style="font-size:0.8125rem;color:var(--ink-muted);display:flex;align-items:center;gap:0.375rem;">
+              <svg width="10" height="13" viewBox="0 0 10 13" fill="none" aria-hidden="true"><path d="M5 0.5C2.8 0.5 1 2.3 1 4.5C1 7.5 5 12.5 5 12.5C5 12.5 9 7.5 9 4.5C9 2.3 7.2 0.5 5 0.5Z" fill="var(--ink-muted)"/><circle cx="5" cy="4.5" r="1.25" fill="white"/></svg>
+              London, England, United Kingdom
+            </p>
+          </div>
+        </div>
+        <div style="border-top:1px solid var(--border);padding-top:0.875rem;">
+          <p style="font-size:0.875rem;color:var(--ink-soft);line-height:1.75;">Chosen for evidence-based child health interventions delivering measurable life-saving outcomes.</p>
+        </div>
+      </div>
+      <div class="org-card">
+        <div style="display:flex;align-items:flex-start;gap:0.875rem;margin-bottom:1rem;">
+          <div style="width:38px;height:38px;border-radius:10px;background:var(--brand-tint);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="var(--brand)" stroke-width="1.8"/><path d="M2 12H22" stroke="var(--brand)" stroke-width="1.8" stroke-linecap="round"/><path d="M12 3C9 6 7.5 9 7.5 12C7.5 15 9 18 12 21" stroke="var(--brand)" stroke-width="1.8" stroke-linecap="round"/><path d="M12 3C15 6 16.5 9 16.5 12C16.5 15 15 18 12 21" stroke="var(--brand)" stroke-width="1.8" stroke-linecap="round"/></svg>
+          </div>
+          <div>
+            <h4 style="font-size:1.0625rem;color:var(--ink);margin-bottom:0.25rem;">SOS Children's Villages</h4>
+            <p style="font-size:0.8125rem;color:var(--ink-muted);display:flex;align-items:center;gap:0.375rem;">
+              <svg width="10" height="13" viewBox="0 0 10 13" fill="none" aria-hidden="true"><path d="M5 0.5C2.8 0.5 1 2.3 1 4.5C1 7.5 5 12.5 5 12.5C5 12.5 9 7.5 9 4.5C9 2.3 7.2 0.5 5 0.5Z" fill="var(--ink-muted)"/><circle cx="5" cy="4.5" r="1.25" fill="white"/></svg>
+              Vienna, Austria
+            </p>
+          </div>
+        </div>
+        <div style="border-top:1px solid var(--border);padding-top:0.875rem;">
+          <p style="font-size:0.875rem;color:var(--ink-soft);line-height:1.75;">Chosen for strengthening child stability, development, and educational opportunity worldwide.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- AFRICA -->
+    <div style="display:flex;align-items:center;gap:1rem;margin:2.75rem 0 1.5rem;">
+      <div style="flex:1;height:1px;background:var(--border);"></div>
+      <span style="font-size:0.6875rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:var(--ink-muted);white-space:nowrap;padding:0 0.375rem;">AFRICA</span>
+      <div style="flex:1;height:1px;background:var(--border);"></div>
+    </div>
+    <div style="max-width:520px;margin:0 auto;">
+      <div class="org-card">
+        <div style="display:flex;align-items:flex-start;gap:0.875rem;margin-bottom:1rem;">
+          <div style="width:38px;height:38px;border-radius:10px;background:var(--brand-tint);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="var(--brand)" stroke-width="1.8"/><path d="M2 12H22" stroke="var(--brand)" stroke-width="1.8" stroke-linecap="round"/><path d="M12 3C9 6 7.5 9 7.5 12C7.5 15 9 18 12 21" stroke="var(--brand)" stroke-width="1.8" stroke-linecap="round"/><path d="M12 3C15 6 16.5 9 16.5 12C16.5 15 15 18 12 21" stroke="var(--brand)" stroke-width="1.8" stroke-linecap="round"/></svg>
+          </div>
+          <div>
+            <h4 style="font-size:1.0625rem;color:var(--ink);margin-bottom:0.25rem;">Malaika</h4>
+            <p style="font-size:0.8125rem;color:var(--ink-muted);display:flex;align-items:center;gap:0.375rem;">
+              <svg width="10" height="13" viewBox="0 0 10 13" fill="none" aria-hidden="true"><path d="M5 0.5C2.8 0.5 1 2.3 1 4.5C1 7.5 5 12.5 5 12.5C5 12.5 9 7.5 9 4.5C9 2.3 7.2 0.5 5 0.5Z" fill="var(--ink-muted)"/><circle cx="5" cy="4.5" r="1.25" fill="white"/></svg>
+              Kalebuka, Democratic Republic of the Congo
+            </p>
+          </div>
+        </div>
+        <div style="border-top:1px solid var(--border);padding-top:0.875rem;">
+          <p style="font-size:0.875rem;color:var(--ink-soft);line-height:1.75;">Chosen for empowering children through education, leadership development, and life-changing opportunity.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ASIA -->
+    <div style="display:flex;align-items:center;gap:1rem;margin:2.75rem 0 1.5rem;">
+      <div style="flex:1;height:1px;background:var(--border);"></div>
+      <span style="font-size:0.6875rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:var(--ink-muted);white-space:nowrap;padding:0 0.375rem;">ASIA</span>
+      <div style="flex:1;height:1px;background:var(--border);"></div>
+    </div>
+    <div class="orgs-2col" style="display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;">
+      <div class="org-card">
+        <div style="display:flex;align-items:flex-start;gap:0.875rem;margin-bottom:1rem;">
+          <div style="width:38px;height:38px;border-radius:10px;background:var(--brand-tint);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="var(--brand)" stroke-width="1.8"/><path d="M2 12H22" stroke="var(--brand)" stroke-width="1.8" stroke-linecap="round"/><path d="M12 3C9 6 7.5 9 7.5 12C7.5 15 9 18 12 21" stroke="var(--brand)" stroke-width="1.8" stroke-linecap="round"/><path d="M12 3C15 6 16.5 9 16.5 12C16.5 15 15 18 12 21" stroke="var(--brand)" stroke-width="1.8" stroke-linecap="round"/></svg>
+          </div>
+          <div>
+            <h4 style="font-size:1.0625rem;color:var(--ink);margin-bottom:0.25rem;">Pratham</h4>
+            <p style="font-size:0.8125rem;color:var(--ink-muted);display:flex;align-items:center;gap:0.375rem;">
+              <svg width="10" height="13" viewBox="0 0 10 13" fill="none" aria-hidden="true"><path d="M5 0.5C2.8 0.5 1 2.3 1 4.5C1 7.5 5 12.5 5 12.5C5 12.5 9 7.5 9 4.5C9 2.3 7.2 0.5 5 0.5Z" fill="var(--ink-muted)"/><circle cx="5" cy="4.5" r="1.25" fill="white"/></svg>
+              Mumbai, India
+            </p>
+          </div>
+        </div>
+        <div style="border-top:1px solid var(--border);padding-top:0.875rem;">
+          <p style="font-size:0.875rem;color:var(--ink-soft);line-height:1.75;">Chosen for world-class educational advancement helping children thrive through measurable literacy outcomes.</p>
+        </div>
+      </div>
+      <div class="org-card">
+        <div style="display:flex;align-items:flex-start;gap:0.875rem;margin-bottom:1rem;">
+          <div style="width:38px;height:38px;border-radius:10px;background:var(--brand-tint);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="var(--brand)" stroke-width="1.8"/><path d="M2 12H22" stroke="var(--brand)" stroke-width="1.8" stroke-linecap="round"/><path d="M12 3C9 6 7.5 9 7.5 12C7.5 15 9 18 12 21" stroke="var(--brand)" stroke-width="1.8" stroke-linecap="round"/><path d="M12 3C15 6 16.5 9 16.5 12C16.5 15 15 18 12 21" stroke="var(--brand)" stroke-width="1.8" stroke-linecap="round"/></svg>
+          </div>
+          <div>
+            <h4 style="font-size:1.0625rem;color:var(--ink);margin-bottom:0.25rem;">Magic Bus India Foundation</h4>
+            <p style="font-size:0.8125rem;color:var(--ink-muted);display:flex;align-items:center;gap:0.375rem;">
+              <svg width="10" height="13" viewBox="0 0 10 13" fill="none" aria-hidden="true"><path d="M5 0.5C2.8 0.5 1 2.3 1 4.5C1 7.5 5 12.5 5 12.5C5 12.5 9 7.5 9 4.5C9 2.3 7.2 0.5 5 0.5Z" fill="var(--ink-muted)"/><circle cx="5" cy="4.5" r="1.25" fill="white"/></svg>
+              Mumbai, India
+            </p>
+          </div>
+        </div>
+        <div style="border-top:1px solid var(--border);padding-top:0.875rem;">
+          <p style="font-size:0.875rem;color:var(--ink-soft);line-height:1.75;">Chosen for helping young people transition from education toward lifelong opportunity.</p>
+        </div>
       </div>
     </div>
 
   </div>
 </section>
-
 
 <div aria-hidden="true" style="position:relative;height:0;display:flex;justify-content:center;z-index:10;">
   <div style="position:absolute;top:-18px;background:var(--surface);border:1px solid var(--border);border-radius:100px;padding:0.4rem 1.125rem;display:flex;align-items:center;gap:0.625rem;box-shadow:0 2px 8px rgba(0,0,0,0.07);">
@@ -533,23 +461,170 @@
     <svg width="14" height="18" viewBox="0 0 14 18" fill="none" style="transform:scaleX(-1);"><path d="M7 1C7 1 1 5.5 1 11C1 14.9 3.7 18 7 18C10.3 18 13 14.9 13 11C13 5.5 7 1 7 1Z" fill="var(--brand-tint)" stroke="var(--brand)" stroke-width="1.3"/><line x1="7" y1="2" x2="7" y2="18" stroke="var(--brand)" stroke-width="1" stroke-dasharray="2 2.5"/></svg>
   </div>
 </div>
+
+
+<!-- ═══════════════════════════════════════
+     SECTION 4 — WHY THESE ORGANIZATIONS
+════════════════════════════════════════ -->
+<section style="padding:5.5rem 1.5rem;background:var(--surface);">
+  <div style="max-width:720px;margin:0 auto;">
+    <p class="section-label" style="margin-bottom:0.75rem;">Selection Criteria</p>
+    <h2 style="font-size:clamp(1.875rem,3.5vw,2.5rem);color:var(--ink);margin-bottom:1rem;">Why These Organizations</h2>
+    <p style="font-size:1.0625rem;color:var(--ink-soft);line-height:1.8;margin-bottom:2rem;">9 Fruit highlights organizations demonstrating:</p>
+    <div style="display:flex;flex-direction:column;gap:0.75rem;">
+      <div style="display:flex;align-items:center;gap:1rem;padding:1rem 1.375rem;background:var(--surface-2);border:1px solid var(--border);border-radius:14px;">
+        <span style="width:7px;height:7px;border-radius:50%;background:var(--brand);flex-shrink:0;"></span>
+        <span style="font-size:0.9375rem;color:var(--ink-soft);">measurable impact for children and young adults</span>
+      </div>
+      <div style="display:flex;align-items:center;gap:1rem;padding:1rem 1.375rem;background:var(--surface-2);border:1px solid var(--border);border-radius:14px;">
+        <span style="width:7px;height:7px;border-radius:50%;background:var(--brand);flex-shrink:0;"></span>
+        <span style="font-size:0.9375rem;color:var(--ink-soft);">financial responsibility</span>
+      </div>
+      <div style="display:flex;align-items:center;gap:1rem;padding:1rem 1.375rem;background:var(--surface-2);border:1px solid var(--border);border-radius:14px;">
+        <span style="width:7px;height:7px;border-radius:50%;background:var(--brand);flex-shrink:0;"></span>
+        <span style="font-size:0.9375rem;color:var(--ink-soft);">mission alignment</span>
+      </div>
+      <div style="display:flex;align-items:center;gap:1rem;padding:1rem 1.375rem;background:var(--surface-2);border:1px solid var(--border);border-radius:14px;">
+        <span style="width:7px;height:7px;border-radius:50%;background:var(--brand);flex-shrink:0;"></span>
+        <span style="font-size:0.9375rem;color:var(--ink-soft);">organizational integrity</span>
+      </div>
+      <div style="display:flex;align-items:center;gap:1rem;padding:1rem 1.375rem;background:var(--brand-tint);border:1px solid rgba(82,169,63,0.25);border-radius:14px;">
+        <span style="width:7px;height:7px;border-radius:50%;background:var(--brand);flex-shrink:0;"></span>
+        <span style="font-size:0.9375rem;color:var(--ink-soft);">transparent stewardship practices</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════
+     SECTION 5 — STEWARDSHIP COMMITMENT
+════════════════════════════════════════ -->
+<section style="padding:5.5rem 1.5rem;background:var(--surface-2);border-top:1px solid var(--border);border-bottom:1px solid var(--border);">
+  <div style="max-width:720px;margin:0 auto;">
+    <p class="section-label" style="margin-bottom:0.75rem;">Stewardship</p>
+    <h2 style="font-size:clamp(1.875rem,3.5vw,2.5rem);color:var(--ink);margin-bottom:2rem;">Stewardship Commitment</h2>
+    <div style="display:flex;flex-direction:column;gap:1rem;">
+      <div style="display:flex;gap:1.125rem;padding:1.25rem 1.5rem;background:var(--surface);border:1px solid var(--border);border-radius:14px;">
+        <div style="width:26px;height:26px;border-radius:50%;background:var(--brand-tint);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:0.1rem;">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20 6L9 17L4 12" stroke="var(--brand)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <p style="font-size:0.9375rem;color:var(--ink-soft);line-height:1.75;">9 Fruit maintains clear separation between donor-designated gifts, matching support, and operational resources.</p>
+      </div>
+      <div style="display:flex;gap:1.125rem;padding:1.25rem 1.5rem;background:var(--surface);border:1px solid var(--border);border-radius:14px;">
+        <div style="width:26px;height:26px;border-radius:50%;background:var(--brand-tint);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:0.1rem;">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20 6L9 17L4 12" stroke="var(--brand)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <p style="font-size:0.9375rem;color:var(--ink-soft);line-height:1.75;"><strong style="color:var(--ink);font-weight:600;">100% of donor-designated gifts</strong> are distributed in alignment with donor intent.</p>
+      </div>
+      <div style="display:flex;gap:1.125rem;padding:1.25rem 1.5rem;background:var(--surface);border:1px solid var(--border);border-radius:14px;">
+        <div style="width:26px;height:26px;border-radius:50%;background:var(--brand-tint);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:0.1rem;">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20 6L9 17L4 12" stroke="var(--brand)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <p style="font-size:0.9375rem;color:var(--ink-soft);line-height:1.75;"><strong style="color:var(--ink);font-weight:600;">100% of eligible matching funds</strong> are distributed exclusively for their designated matching purpose, subject to program guidelines and availability.</p>
+      </div>
+      <div style="display:flex;gap:1.125rem;padding:1.25rem 1.5rem;background:var(--surface);border:1px solid var(--border);border-radius:14px;">
+        <div style="width:26px;height:26px;border-radius:50%;background:var(--brand-tint);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:0.1rem;">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20 6L9 17L4 12" stroke="var(--brand)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <p style="font-size:0.9375rem;color:var(--ink-soft);line-height:1.75;">Operational and administrative support is maintained separately. A limited portion of independently raised administrative resources may periodically support carefully reviewed charitable initiatives aligned with 9 Fruit's broader mission.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════
+     SECTION 6 — PARTNERSHIP DISCLOSURE
+════════════════════════════════════════ -->
+<section style="padding:5.5rem 1.5rem;background:var(--surface);">
+  <div style="max-width:720px;margin:0 auto;">
+    <p class="section-label" style="margin-bottom:0.75rem;">Disclosure</p>
+    <h2 style="font-size:clamp(1.875rem,3.5vw,2.5rem);color:var(--ink);margin-bottom:2rem;">Partnership Disclosure</h2>
+    <div style="background:var(--surface-2);border:1px solid var(--border);border-radius:20px;padding:2.5rem;display:flex;flex-direction:column;gap:1.375rem;">
+      <p style="font-size:0.9375rem;color:var(--ink-soft);line-height:1.8;">
+        Organizations identified as "9 Fruit Partners" are independently selected charitable organizations whose missions align with 9 Fruit's charitable purpose.
+      </p>
+      <div style="height:1px;background:var(--border);"></div>
+      <p style="font-size:0.9375rem;color:var(--ink-soft);line-height:1.8;">
+        Unless expressly stated otherwise, inclusion does not indicate formal contractual partnership, endorsement, sponsorship, agency relationship, or official affiliation with 9 Fruit.
+      </p>
+      <div style="height:1px;background:var(--border);"></div>
+      <p style="font-size:0.9375rem;color:var(--ink-soft);line-height:1.8;">
+        9 Fruit independently raises awareness and charitable support for these organizations to help strengthen work they are already faithfully carrying out in their communities.
+      </p>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════
+     TRUST BOX + CLOSING LINE
+════════════════════════════════════════ -->
+<section style="padding:4rem 1.5rem 5.5rem;background:var(--surface-2);border-top:1px solid var(--border);">
+  <div style="max-width:860px;margin:0 auto;">
+
+    <div style="background:var(--surface);border:2px solid rgba(82,169,63,0.22);border-radius:20px;padding:2.25rem 2.5rem;box-shadow:0 4px 16px rgba(82,169,63,0.07),0 2px 6px rgba(0,0,0,0.04);">
+      <div style="display:flex;align-items:center;gap:0.875rem;margin-bottom:1.75rem;">
+        <div style="width:40px;height:40px;border-radius:12px;background:var(--brand-tint);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2L4 6V12C4 16.4 7.4 20.5 12 22C16.6 20.5 20 16.4 20 12V6L12 2Z" stroke="var(--brand)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M9 12L11 14L15 10" stroke="var(--brand)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <h3 style="font-size:1.1875rem;color:var(--ink);">Your Gift Stays Directed</h3>
+      </div>
+
+      <div class="trust-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;">
+
+        <div style="text-align:center;padding:1.5rem 1rem;background:var(--brand-light);border:1px solid rgba(82,169,63,0.2);border-radius:14px;">
+          <div style="width:36px;height:36px;border-radius:10px;background:var(--brand-tint);display:flex;align-items:center;justify-content:center;margin:0 auto 0.875rem;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 21C12 21 4 16 4 10C4 7.8 5.8 6 8 6C9.5 6 10.8 6.8 11.5 8C11.7 8.4 12.3 8.4 12.5 8C13.2 6.8 14.5 6 16 6C18.2 6 20 7.8 20 10C20 16 12 21 12 21Z" stroke="var(--brand)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <div style="font-size:0.6875rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--brand);margin-bottom:0.5rem;">Donor Gifts</div>
+          <div style="font-size:2rem;font-weight:800;font-family:'Playfair Display',serif;color:var(--ink);line-height:1;margin-bottom:0.5rem;">100%</div>
+          <div style="font-size:0.8125rem;color:var(--ink-soft);line-height:1.6;">distributed as designated</div>
+        </div>
+
+        <div style="text-align:center;padding:1.5rem 1rem;background:var(--brand);border-radius:14px;">
+          <div style="width:36px;height:36px;border-radius:10px;background:rgba(255,255,255,0.2);display:flex;align-items:center;justify-content:center;margin:0 auto 0.875rem;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 16L3 12L7 8" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M17 8L21 12L17 16" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><line x1="3" y1="12" x2="21" y2="12" stroke="white" stroke-width="2" stroke-linecap="round"/></svg>
+          </div>
+          <div style="font-size:0.6875rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.8);margin-bottom:0.5rem;">Matching Funds</div>
+          <div style="font-size:2rem;font-weight:800;font-family:'Playfair Display',serif;color:#fff;line-height:1;margin-bottom:0.5rem;">100%</div>
+          <div style="font-size:0.8125rem;color:rgba(255,255,255,0.85);line-height:1.6;">reserved for matching support</div>
+        </div>
+
+        <div style="text-align:center;padding:1.5rem 1rem;background:var(--surface-3);border:1px solid var(--border);border-radius:14px;">
+          <div style="width:36px;height:36px;border-radius:10px;background:var(--surface);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;margin:0 auto 0.875rem;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="3" width="8" height="8" rx="2" stroke="var(--ink-muted)" stroke-width="1.8"/><rect x="13" y="3" width="8" height="8" rx="2" stroke="var(--ink-muted)" stroke-width="1.8"/><rect x="3" y="13" width="8" height="8" rx="2" stroke="var(--ink-muted)" stroke-width="1.8"/><rect x="13" y="13" width="8" height="8" rx="2" stroke="var(--ink-muted)" stroke-width="1.8"/></svg>
+          </div>
+          <div style="font-size:0.6875rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink-muted);margin-bottom:0.75rem;">Administrative Support</div>
+          <div style="font-size:0.8125rem;color:var(--ink-soft);line-height:1.65;">Maintained separately to sustain operations and selective mission expansion</div>
+        </div>
+
+      </div>
+    </div>
+
+    <p style="text-align:center;font-family:'Playfair Display',serif;font-style:italic;font-weight:700;font-size:1.0625rem;color:var(--ink-muted);margin-top:2.5rem;letter-spacing:-0.01em;line-height:1.7;">
+      Every designated gift remains aligned with the donor's intent and the charitable organization's mission.
+    </p>
+
+  </div>
+</section>
+
 
 <!-- ═══════════════════════════════════════
      CLOSING CTA
 ════════════════════════════════════════ -->
 <section style="padding:5rem 1.5rem;background:#1E4A16;text-align:center;">
   <div style="max-width:560px;margin:0 auto;">
-    <h2 style="font-size:clamp(1.75rem,3.5vw,2.5rem);color:#fff;margin-bottom:1.25rem;">
-      Ready to give with confidence?
-    </h2>
+    <h2 style="font-size:clamp(1.75rem,3.5vw,2.5rem);color:#fff;margin-bottom:1.25rem;">Ready to give with confidence?</h2>
     <p style="font-size:1rem;color:rgba(255,255,255,0.8);line-height:1.75;margin-bottom:2.5rem;">
       Choose your vetted charity of choice and let your gift go further.
     </p>
     <a href="/donate" class="btn-primary" style="font-size:1rem;padding:1rem 2.5rem;background:#fff;color:var(--brand);box-shadow:0 4px 16px rgba(0,0,0,0.15);">
       Give Now
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="var(--brand)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="var(--brand)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
     </a>
-    <p style="font-family:'Playfair Display',serif;font-size:1.125rem;font-style:italic;font-weight:700;color:rgba(255,255,255,0.6);margin-top:2rem;letter-spacing:-0.01em;">
+    <p style="font-family:'Playfair Display',serif;font-size:1.125rem;font-style:italic;font-weight:700;color:rgba(255,255,255,0.55);margin-top:2rem;letter-spacing:-0.01em;">
       Faithful partnerships strengthen lasting impact.
     </p>
   </div>
@@ -574,18 +649,17 @@
           Give to your vetted charity of choice. Eligible donations receive a 9% match — with love, by faith.
         </p>
         <div style="margin-top:1.5rem;display:flex;gap:0.75rem;">
-          <a href="#" aria-label="Twitter" style="width:36px;height:36px;border-radius:9999px;border:1px solid rgba(255,255,255,0.15);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,0.55);transition:color 0.2s ease;">
+          <a href="#" aria-label="Twitter" style="width:36px;height:36px;border-radius:9999px;border:1px solid rgba(255,255,255,0.15);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,0.55);">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
           </a>
-          <a href="#" aria-label="Facebook" style="width:36px;height:36px;border-radius:9999px;border:1px solid rgba(255,255,255,0.15);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,0.55);transition:color 0.2s ease;">
+          <a href="#" aria-label="Facebook" style="width:36px;height:36px;border-radius:9999px;border:1px solid rgba(255,255,255,0.15);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,0.55);">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
           </a>
-          <a href="#" aria-label="Instagram" style="width:36px;height:36px;border-radius:9999px;border:1px solid rgba(255,255,255,0.15);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,0.55);transition:color 0.2s ease;">
+          <a href="#" aria-label="Instagram" style="width:36px;height:36px;border-radius:9999px;border:1px solid rgba(255,255,255,0.15);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,0.55);">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
           </a>
         </div>
       </div>
-
       <div>
         <h4 style="font-size:0.75rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.4);margin-bottom:1.125rem;font-family:'Inter',sans-serif;">Organization</h4>
         <ul style="list-style:none;display:flex;flex-direction:column;gap:0.625rem;">
@@ -595,7 +669,6 @@
           <li><a href="#">Annual Reports</a></li>
         </ul>
       </div>
-
       <div>
         <h4 style="font-size:0.75rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.4);margin-bottom:1.125rem;font-family:'Inter',sans-serif;">Programs</h4>
         <ul style="list-style:none;display:flex;flex-direction:column;gap:0.625rem;">
@@ -605,7 +678,6 @@
           <li><a href="#">Success Stories</a></li>
         </ul>
       </div>
-
       <div>
         <h4 style="font-size:0.75rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.4);margin-bottom:1.125rem;font-family:'Inter',sans-serif;">Connect</h4>
         <ul style="list-style:none;display:flex;flex-direction:column;gap:0.625rem;">
@@ -616,14 +688,9 @@
         </ul>
       </div>
     </div>
-
     <div style="border-top:1px solid rgba(255,255,255,0.1);padding-top:2rem;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:1rem;">
-      <p style="font-size:0.8125rem;color:rgba(255,255,255,0.35);">
-        EIN: 00-0000000 &nbsp;·&nbsp; 501(c)(3) Nonprofit &nbsp;·&nbsp; Open Financial Reports
-      </p>
-      <p style="font-size:0.8125rem;color:rgba(255,255,255,0.35);">
-        © 2026 9 Fruit Foundation. All rights reserved.
-      </p>
+      <p style="font-size:0.8125rem;color:rgba(255,255,255,0.35);">EIN: 00-0000000 &nbsp;·&nbsp; 501(c)(3) Nonprofit &nbsp;·&nbsp; Open Financial Reports</p>
+      <p style="font-size:0.8125rem;color:rgba(255,255,255,0.35);">© 2026 9 Fruit Foundation. All rights reserved.</p>
     </div>
   </div>
 </footer>

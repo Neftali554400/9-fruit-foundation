@@ -161,6 +161,7 @@
       .footer-grid { grid-template-columns: 1fr !important; }
       .three-col { grid-template-columns: 1fr !important; }
       .pillar-grid { grid-template-columns: repeat(2,1fr) !important; }
+      .pillar-grid > *:last-child:nth-child(odd) { grid-column: 1 / -1; justify-self: center; width: calc(50% - 0.375rem); }
     }
   </style>
 </head>

@@ -6,7 +6,6 @@
   <title>9 Fruit Foundation — Simple, fruitful giving for children</title>
   <link rel="icon" type="image/png" href="design assest/logo.png" />
   <link rel="preload" as="image" href="design assest/american-kids.jpeg" fetchpriority="high">
-  <script src="https://cdn.tailwindcss.com" defer></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
@@ -48,6 +47,7 @@
       position: absolute;
       inset: 0;
       background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+      background-size: 256px 256px;
       pointer-events: none;
       z-index: 1;
     }
@@ -396,11 +396,11 @@
 <!-- ═══════════════════════════════════════
      NAVBAR
 ════════════════════════════════════════ -->
-<header style="position:sticky;top:0;z-index:50;background:rgba(255,255,255,0.92);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--border);">
+<header style="position:sticky;top:0;z-index:50;background:#fff;border-bottom:1px solid var(--border);will-change:transform;">
   <nav style="max-width:1200px;margin:0 auto;padding:0 1.5rem;height:68px;display:flex;align-items:center;justify-content:space-between;">
     <!-- Logo -->
     <a href="/" style="display:flex;align-items:center;gap:0.75rem;text-decoration:none;flex-shrink:0;" aria-label="9 Fruit home">
-      <img src="design assest/logo.png" alt="9 Fruit logo" style="width:42px;height:42px;object-fit:contain;border-radius:8px;" />
+      <img decoding="async" src="design assest/logo.png" alt="9 Fruit logo" style="width:42px;height:42px;object-fit:contain;border-radius:8px;" />
       <div style="display:flex;flex-direction:column;gap:0;">
         <span style="font-family:'Playfair Display',serif;font-size:1.125rem;font-weight:700;color:var(--ink);letter-spacing:-0.02em;line-height:1.2;">9 Fruit</span>
         <span style="font-family:'Inter',sans-serif;font-size:0.6875rem;font-weight:500;color:var(--ink-muted);letter-spacing:0.02em;line-height:1;">With Love, by Faith</span>
@@ -473,7 +473,7 @@
            style="width:100%;height:460px;object-fit:cover;display:block;" />
       <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0) 40%,rgba(0,0,0,0.55) 100%);"></div>
       <!-- Floating stat card -->
-      <div style="position:absolute;bottom:1.25rem;left:1.25rem;background:rgba(255,255,255,0.96);backdrop-filter:blur(12px);border-radius:12px;padding:0.625rem 0.875rem;box-shadow:0 4px 16px rgba(0,0,0,0.15);width:fit-content;">
+      <div style="position:absolute;bottom:1.25rem;left:1.25rem;background:#fff;border-radius:12px;padding:0.625rem 0.875rem;box-shadow:0 4px 16px rgba(0,0,0,0.15);width:fit-content;">
         <div style="font-size:1.125rem;font-weight:800;font-family:'Playfair Display',serif;color:var(--ink);">$109</div>
         <div style="font-size:0.6875rem;color:var(--ink-muted);font-weight:500;margin-top:0.1rem;white-space:nowrap;">per $100 you give</div>
         <div style="font-size:0.625rem;color:var(--brand);font-weight:700;margin-top:0.2rem;letter-spacing:0.04em;">+9% MATCHED</div>
@@ -549,7 +549,7 @@
 
     <!-- Logo -->
     <div style="display:flex;align-items:center;justify-content:center;">
-      <img src="design assest/logo.png" alt="9 Fruit Foundation logo" style="width:100%;max-width:320px;height:auto;opacity:0.92;" />
+      <img decoding="async" src="design assest/logo.png" alt="9 Fruit Foundation logo" style="width:100%;max-width:320px;height:auto;opacity:0.92;" />
     </div>
 
     <!-- Text -->
@@ -667,7 +667,7 @@
     <!-- three trust pillars -->
     <div class="alongside-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;">
 
-      <div style="background:rgba(255,255,255,0.7);border:1px solid rgba(82,169,63,0.2);border-radius:16px;padding:1.5rem 1.25rem;backdrop-filter:blur(8px);box-shadow:0 2px 8px rgba(82,169,63,0.08),0 0 0 1px rgba(255,255,255,0.6);">
+      <div style="background:#fff;border:1px solid rgba(82,169,63,0.2);border-radius:16px;padding:1.5rem 1.25rem;box-shadow:0 2px 8px rgba(82,169,63,0.08),0 0 0 1px rgba(255,255,255,0.6);">
         <div style="width:40px;height:40px;border-radius:10px;background:var(--brand);display:flex;align-items:center;justify-content:center;margin:0 auto 0.875rem;box-shadow:0 4px 10px rgba(82,169,63,0.3);">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M9 12L11 14L15 10M12 3L13.9 8.26L19.5 8.27L15.1 11.45L16.8 16.73L12 13.77L7.2 16.73L8.9 11.45L4.5 8.27L10.1 8.26L12 3Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </div>
@@ -675,7 +675,7 @@
         <p style="font-size:0.8125rem;color:var(--ink-soft);line-height:1.6;">Every partner charity meets rigorous standards for accountability and proven impact.</p>
       </div>
 
-      <div style="background:rgba(255,255,255,0.7);border:1px solid rgba(82,169,63,0.2);border-radius:16px;padding:1.5rem 1.25rem;backdrop-filter:blur(8px);box-shadow:0 2px 8px rgba(82,169,63,0.08),0 0 0 1px rgba(255,255,255,0.6);">
+      <div style="background:#fff;border:1px solid rgba(82,169,63,0.2);border-radius:16px;padding:1.5rem 1.25rem;box-shadow:0 2px 8px rgba(82,169,63,0.08),0 0 0 1px rgba(255,255,255,0.6);">
         <div style="width:40px;height:40px;border-radius:10px;background:var(--brand);display:flex;align-items:center;justify-content:center;margin:0 auto 0.875rem;box-shadow:0 4px 10px rgba(82,169,63,0.3);">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 22C12 22 4 18 4 12V5L12 2L20 5V12C20 18 12 22 12 22Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </div>
@@ -683,7 +683,7 @@
         <p style="font-size:0.8125rem;color:var(--ink-soft);line-height:1.6;">Partners are independently evaluated for sound financial stewardship before listing.</p>
       </div>
 
-      <div style="background:rgba(255,255,255,0.7);border:1px solid rgba(82,169,63,0.2);border-radius:16px;padding:1.5rem 1.25rem;backdrop-filter:blur(8px);box-shadow:0 2px 8px rgba(82,169,63,0.08),0 0 0 1px rgba(255,255,255,0.6);">
+      <div style="background:#fff;border:1px solid rgba(82,169,63,0.2);border-radius:16px;padding:1.5rem 1.25rem;box-shadow:0 2px 8px rgba(82,169,63,0.08),0 0 0 1px rgba(255,255,255,0.6);">
         <div style="width:40px;height:40px;border-radius:10px;background:var(--brand);display:flex;align-items:center;justify-content:center;margin:0 auto 0.875rem;box-shadow:0 4px 10px rgba(82,169,63,0.3);">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M17 21V19C17 16.79 15.21 15 13 15H5C2.79 15 1 16.79 1 19V21M23 21V19C22.99 17.11 21.7 15.49 20 15.13M16 3.13C17.74 3.57 19 5.15 19 7C19 8.85 17.74 10.43 16 10.87M9 11C11.21 11 13 9.21 13 7C13 4.79 11.21 3 9 3C6.79 3 5 4.79 5 7C5 9.21 6.79 11 9 11Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </div>
@@ -713,11 +713,11 @@
       <!-- Health -->
       <article class="fund-card" tabindex="0">
         <div style="position:relative;overflow:hidden;">
-          <img loading="lazy" src="design assest/health2.jpeg"
+          <img decoding="async" loading="lazy" src="design assest/health2.jpeg"
                alt="Healthcare professional with stethoscope and laptop"
                style="width:100%;height:280px;object-fit:cover;display:block;" />
           <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0.05) 0%,rgba(0,0,0,0.6) 100%);"></div>
-          <div style="position:absolute;inset:0;background:rgba(82,169,63,0.15);mix-blend-mode:multiply;"></div>
+          <div style="position:absolute;inset:0;background:rgba(82,169,63,0.15);"></div>
           <div style="position:absolute;top:1.25rem;left:1.25rem;">
             <span style="background:rgba(255,255,255,0.9);color:var(--brand);font-size:0.75rem;font-weight:700;padding:0.3rem 0.75rem;border-radius:9999px;letter-spacing:0.05em;">HEALTH</span>
           </div>
@@ -739,11 +739,11 @@
       <!-- Education -->
       <article class="fund-card" tabindex="0">
         <div style="position:relative;overflow:hidden;">
-          <img loading="lazy" src="design assest/education2.jpeg"
+          <img decoding="async" loading="lazy" src="design assest/education2.jpeg"
                alt="Books, apple and ABC blocks on a school desk"
                style="width:100%;height:280px;object-fit:cover;display:block;" />
           <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0.05) 0%,rgba(0,0,0,0.6) 100%);"></div>
-          <div style="position:absolute;inset:0;background:rgba(82,169,63,0.15);mix-blend-mode:multiply;"></div>
+          <div style="position:absolute;inset:0;background:rgba(82,169,63,0.15);"></div>
           <div style="position:absolute;top:1.25rem;left:1.25rem;">
             <span style="background:rgba(255,255,255,0.9);color:var(--brand);font-size:0.75rem;font-weight:700;padding:0.3rem 0.75rem;border-radius:9999px;letter-spacing:0.05em;">EDUCATION</span>
           </div>
@@ -774,14 +774,14 @@
     <!-- Image side -->
     <div style="position:relative;">
       <div style="position:relative;border-radius:28px;overflow:hidden;box-shadow:0 8px 16px rgba(0,0,0,0.1),0 32px 64px rgba(0,0,0,0.12);">
-        <img loading="lazy" src="design assest/kids.jpeg"
+        <img decoding="async" loading="lazy" src="design assest/kids.jpeg"
              alt="Children smiling and playing together in a community"
              style="width:100%;height:480px;object-fit:cover;display:block;" />
         <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0) 50%,rgba(0,0,0,0.55) 100%);"></div>
-        <div style="position:absolute;inset:0;background:rgba(82,169,63,0.1);mix-blend-mode:multiply;"></div>
+        <div style="position:absolute;inset:0;background:rgba(82,169,63,0.1);"></div>
 
         <!-- Floating impact card — inside the image -->
-        <div style="position:absolute;bottom:1.75rem;right:1.75rem;background:rgba(255,255,255,0.96);backdrop-filter:blur(12px);border-radius:16px;padding:1rem 1.25rem;box-shadow:0 8px 24px rgba(0,0,0,0.18);min-width:150px;">
+        <div style="position:absolute;bottom:1.75rem;right:1.75rem;background:#fff;border-radius:16px;padding:1rem 1.25rem;box-shadow:0 8px 24px rgba(0,0,0,0.18);min-width:150px;">
           <div style="font-size:1.375rem;font-weight:800;font-family:'Playfair Display',serif;color:var(--brand);">+9%</div>
           <div style="font-size:0.75rem;color:var(--ink-soft);font-weight:500;line-height:1.4;margin-top:0.2rem;">more impact<br>every single gift</div>
         </div>
@@ -899,7 +899,7 @@
 <section style="position:relative;overflow:hidden;padding:7rem 1.5rem;">
   <!-- Hero photo background -->
   <div style="position:absolute;inset:0;z-index:0;">
-    <img loading="lazy" src="design assest/children.jpeg"
+    <img decoding="async" loading="lazy" src="design assest/children.jpeg"
          alt=""
          aria-hidden="true"
          style="width:100%;height:100%;object-fit:cover;object-position:center;display:block;" />
@@ -941,7 +941,7 @@
       <!-- Brand col -->
       <div>
         <a href="/" style="display:flex;align-items:center;gap:0.75rem;text-decoration:none;margin-bottom:1.25rem;">
-          <img src="design assest/logo.png" alt="9 Fruit logo" style="width:40px;height:40px;object-fit:contain;border-radius:8px;flex-shrink:0;" />
+          <img decoding="async" src="design assest/logo.png" alt="9 Fruit logo" style="width:40px;height:40px;object-fit:contain;border-radius:8px;flex-shrink:0;" />
           <div style="display:flex;flex-direction:column;gap:0;">
             <span style="font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;color:#fff;line-height:1.2;">9 Fruit</span>
             <span style="font-family:'Inter',sans-serif;font-size:0.6875rem;font-weight:500;color:rgba(255,255,255,0.45);letter-spacing:0.02em;line-height:1;">With Love, by Faith</span>

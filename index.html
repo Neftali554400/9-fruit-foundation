@@ -815,13 +815,15 @@
       Every donation is matched by 9%. Pick an amount below and watch your impact grow.
     </p>
 
-    <!-- Monthly label -->
+    <!-- Toggle: Monthly / Give Once -->
     <div style="display:inline-flex;background:var(--surface);border:1px solid var(--border);border-radius:9999px;padding:0.25rem;margin-bottom:2rem;">
-      <button class="toggle-btn active" id="toggle-monthly" aria-pressed="true">Monthly</button>
+      <button class="toggle-btn active" id="toggle-monthly" aria-pressed="true" onclick="switchTab('monthly')">Monthly</button>
+      <button class="toggle-btn inactive" id="toggle-once" aria-pressed="false" onclick="switchTab('once')">Give Once</button>
     </div>
 
     <!-- Amount grid -->
-    <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:1rem;margin-bottom:1.5rem;" role="group" aria-label="Select donation amount">
+    <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:1rem;margin-bottom:1rem;" role="group" aria-label="Select donation amount" id="amount-grid">
+      <!-- Monthly amounts (shown by default) -->
       <button class="amount-btn selected" id="amt-25" onclick="selectAmount(25)" aria-pressed="true">
         <div style="font-size:1.5rem;font-weight:800;font-family:'Playfair Display',serif;color:var(--ink);">$25</div>
         <div style="font-size:0.75rem;color:var(--brand);font-weight:600;margin-top:0.25rem;">→ $27.25 matched</div>
@@ -840,9 +842,19 @@
       </button>
     </div>
 
+    <!-- Custom amount input -->
+    <div style="margin-bottom:1.5rem;">
+      <input type="number" id="custom-amount" placeholder="Enter custom amount" min="1"
+        style="width:100%;padding:0.875rem 1.25rem;border:1.5px solid var(--border);border-radius:12px;font-family:'Inter',sans-serif;font-size:1rem;color:var(--ink);background:var(--surface);outline:none;transition:border-color 0.2s ease;"
+        oninput="onCustomAmount(this.value)"
+        onfocus="this.style.borderColor='var(--brand)'"
+        onblur="this.style.borderColor='var(--border)'"
+      />
+    </div>
+
     <!-- Donate CTA -->
-    <a href="#" class="btn-primary" style="width:100%;justify-content:center;padding:1rem 2rem;font-size:1rem;border-radius:14px;">
-      Donate $25 Now — $27.25 Reaches Children
+    <a href="#" class="btn-primary" id="donate-cta" style="width:100%;justify-content:center;padding:1rem 2rem;font-size:1rem;border-radius:14px;">
+      Donate $25/month — $27.25 Reaches Children
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
     </a>
 
@@ -1011,21 +1023,82 @@
 
 
 <script>
-  // Donation amount selection
-  const amounts = [25, 50, 100, 250];
-  const matched = { 25: '27.25', 50: '54.50', 100: '109.00', 250: '272.50' };
-  let selected = 25;
+  // Donation widget
+  const tabAmounts = {
+    monthly:  [25, 50, 100, 250],
+    once:     [50, 100, 250, 500]
+  };
+  const matchedAmounts = {
+    25: '27.25', 50: '54.50', 100: '109.00', 250: '272.50', 500: '545.00'
+  };
+  let currentTab = 'monthly';
+  let selectedAmt = 25;
+
+  function calcMatch(amt) {
+    const m = matchedAmounts[amt];
+    if (m) return m;
+    return (amt * 1.09).toFixed(2);
+  }
+
+  function updateCTA(amt) {
+    const suffix = currentTab === 'monthly' ? '/month' : '';
+    const cta = document.getElementById('donate-cta');
+    cta.innerHTML = `Donate $${amt}${suffix} — $${calcMatch(amt)} Reaches Children <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
+  }
 
   function selectAmount(amt) {
-    selected = amt;
-    amounts.forEach(a => {
+    selectedAmt = amt;
+    document.getElementById('custom-amount').value = '';
+    tabAmounts[currentTab].forEach(a => {
       const btn = document.getElementById('amt-' + a);
-      btn.classList.toggle('selected', a === amt);
-      btn.setAttribute('aria-pressed', a === amt ? 'true' : 'false');
+      if (btn) {
+        btn.classList.toggle('selected', a === amt);
+        btn.setAttribute('aria-pressed', a === amt ? 'true' : 'false');
+      }
     });
-    const cta = document.querySelector('#donate .btn-primary');
-    cta.textContent = '';
-    cta.innerHTML = `Donate $${amt} Now — $${matched[amt]} Reaches Children <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
+    updateCTA(amt);
+  }
+
+  function onCustomAmount(val) {
+    const amt = parseFloat(val);
+    // Deselect all preset buttons
+    ['monthly','once'].forEach(tab => {
+      tabAmounts[tab].forEach(a => {
+        const btn = document.getElementById('amt-' + a);
+        if (btn) { btn.classList.remove('selected'); btn.setAttribute('aria-pressed','false'); }
+      });
+    });
+    if (amt && amt > 0) {
+      selectedAmt = amt;
+      updateCTA(amt);
+    }
+  }
+
+  function switchTab(tab) {
+    currentTab = tab;
+    const isMonthly = tab === 'monthly';
+
+    document.getElementById('toggle-monthly').classList.toggle('active', isMonthly);
+    document.getElementById('toggle-monthly').classList.toggle('inactive', !isMonthly);
+    document.getElementById('toggle-monthly').setAttribute('aria-pressed', isMonthly ? 'true' : 'false');
+    document.getElementById('toggle-once').classList.toggle('active', !isMonthly);
+    document.getElementById('toggle-once').classList.toggle('inactive', isMonthly);
+    document.getElementById('toggle-once').setAttribute('aria-pressed', !isMonthly ? 'true' : 'false');
+
+    const newAmounts = tabAmounts[tab];
+    const defaultAmt = newAmounts[0];
+    selectedAmt = defaultAmt;
+
+    // Rebuild amount grid
+    const grid = document.getElementById('amount-grid');
+    grid.innerHTML = newAmounts.map((a, i) => `
+      <button class="amount-btn${i === 0 ? ' selected' : ''}" id="amt-${a}" onclick="selectAmount(${a})" aria-pressed="${i === 0 ? 'true' : 'false'}">
+        <div style="font-size:1.5rem;font-weight:800;font-family:'Playfair Display',serif;color:var(--ink);">$${a}</div>
+        <div style="font-size:0.75rem;color:var(--brand);font-weight:600;margin-top:0.25rem;">→ $${calcMatch(a)} matched</div>
+      </button>`).join('');
+
+    document.getElementById('custom-amount').value = '';
+    updateCTA(defaultAmt);
   }
 
   // Smooth scroll for anchor links

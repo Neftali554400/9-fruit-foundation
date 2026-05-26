@@ -437,27 +437,36 @@
      DONOR CONFIDENCE + CLOSING
 ════════════════════════════════════════ -->
 <section style="padding:5rem 1.5rem;background:var(--surface);border-bottom:1px solid var(--border);">
-  <div style="max-width:760px;margin:0 auto;display:flex;flex-direction:column;gap:1.5rem;">
+  <div style="max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1.2fr;gap:4rem;align-items:center;">
 
-    <div style="padding:2.5rem;background:var(--brand-tint);border:1px solid rgba(82,169,63,0.25);border-radius:20px;display:flex;align-items:flex-start;gap:1.5rem;">
-      <div style="width:48px;height:48px;border-radius:14px;background:rgba(82,169,63,0.15);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 2L3 7V12C3 16.6 7 20.9 12 22C17 20.9 21 16.6 21 12V7L12 2Z" stroke="var(--brand)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M9 12L11 14L15 10" stroke="var(--brand)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    <!-- Image -->
+    <div style="border-radius:20px;overflow:hidden;box-shadow:0 8px 24px rgba(0,0,0,0.1),0 2px 6px rgba(0,0,0,0.06);">
+      <img decoding="async" loading="lazy" src="/design assest/3 girls smiling.jpg" alt="Three girls smiling" style="width:100%;height:480px;object-fit:cover;object-position:center;display:block;" />
+    </div>
+
+    <!-- Cards -->
+    <div style="display:flex;flex-direction:column;gap:1.5rem;">
+
+      <div style="padding:2.5rem;background:var(--brand-tint);border:1px solid rgba(82,169,63,0.25);border-radius:20px;display:flex;align-items:flex-start;gap:1.5rem;">
+        <div style="width:48px;height:48px;border-radius:14px;background:rgba(82,169,63,0.15);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 2L3 7V12C3 16.6 7 20.9 12 22C17 20.9 21 16.6 21 12V7L12 2Z" stroke="var(--brand)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M9 12L11 14L15 10" stroke="var(--brand)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <div>
+          <p class="section-label" style="margin-bottom:0.5rem;">Donor Confidence</p>
+          <p style="font-size:1.125rem;font-family:'Playfair Display',serif;font-style:italic;font-weight:700;color:var(--ink);line-height:1.6;">
+            "Transparency allows generosity to flourish with confidence."
+          </p>
+        </div>
       </div>
-      <div>
-        <p class="section-label" style="margin-bottom:0.5rem;">Donor Confidence</p>
-        <p style="font-size:1.125rem;font-family:'Playfair Display',serif;font-style:italic;font-weight:700;color:var(--ink);line-height:1.6;">
-          "Transparency allows generosity to flourish with confidence."
+
+      <div style="padding:2rem 2.5rem;background:var(--surface);border:1px solid var(--border);border-radius:20px;box-shadow:0 2px 8px rgba(0,0,0,0.04);display:flex;align-items:center;gap:1.25rem;">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" style="flex-shrink:0;"><path d="M20 6L9 17L4 12" stroke="var(--brand)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <p style="font-size:1rem;color:var(--ink-soft);line-height:1.7;">
+          All giving remains aligned with the donor's intent and the charity's mission.
         </p>
       </div>
-    </div>
 
-    <div style="padding:2rem 2.5rem;background:var(--surface);border:1px solid var(--border);border-radius:20px;box-shadow:0 2px 8px rgba(0,0,0,0.04);display:flex;align-items:center;gap:1.25rem;">
-      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" style="flex-shrink:0;"><path d="M20 6L9 17L4 12" stroke="var(--brand)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      <p style="font-size:1rem;color:var(--ink-soft);line-height:1.7;">
-        All giving remains aligned with the donor's intent and the charity's mission.
-      </p>
     </div>
-
   </div>
 </section>
 

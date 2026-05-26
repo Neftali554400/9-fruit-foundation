@@ -258,6 +258,7 @@
     @media (max-width: 767px) {
       .desktop-nav { display: none !important; }
       .hamburger { display: flex !important; }
+      .fruits-layout { grid-template-columns: 1fr !important; gap: 2rem !important; }
     }
     @media (min-width: 768px) {
       .hamburger { display: none !important; }
@@ -485,7 +486,7 @@
      NINE FRUITS STRIP
 ════════════════════════════════════════ -->
 <section style="padding:2.75rem 1.5rem;background:var(--surface);border-bottom:1px solid var(--border);" aria-label="The nine fruits of the Spirit">
-  <div style="max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;">
+  <div class="fruits-layout" style="max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;">
 
     <!-- Fruits strip -->
     <div style="text-align:center;">

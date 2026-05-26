@@ -155,6 +155,39 @@
       .pillar-grid { grid-template-columns: repeat(2,1fr) !important; }
       .pillar-grid > *:last-child:nth-child(odd) { grid-column: 1 / -1; justify-self: center; width: calc(50% - 0.375rem); }
     }
+
+    /* Fixed Give Now button */
+    #give-now-fixed {
+      position: fixed;
+      top: 14px;
+      right: 1.5rem;
+      z-index: 200;
+      background: #2F6B4F;
+      color: #fff;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.875rem;
+      font-weight: 600;
+      letter-spacing: 0.01em;
+      padding: 0.5rem 1.25rem;
+      border-radius: 9999px;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      box-shadow: 0 2px 8px rgba(47,107,79,0.35), 0 1px 2px rgba(47,107,79,0.2);
+      transition: background 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease;
+      white-space: nowrap;
+    }
+    #give-now-fixed:hover {
+      background: #24563F;
+      transform: translateY(-1px);
+      box-shadow: 0 4px 14px rgba(47,107,79,0.42), 0 1px 3px rgba(47,107,79,0.25);
+    }
+    #give-now-fixed:active { transform: translateY(0); }
+    #give-now-fixed:focus-visible { outline: 2px solid #2F6B4F; outline-offset: 3px; }
+    @media (max-width: 767px) {
+      #give-now-fixed { top: 78px; right: 1rem; font-size: 0.8125rem; padding: 0.45rem 1rem; }
+    }
   </style>
 </head>
 <body>
@@ -178,7 +211,6 @@
       <a href="/our-charity-partners" class="nav-link">Our Charity Partners</a>
       <a href="/trust-and-transparency" class="nav-link active">Trust &amp; Transparency</a>
       <a href="/faq" class="nav-link">FAQ</a>
-      <a href="/donate" class="btn-primary" style="padding:0.6rem 1.375rem;font-size:0.875rem;">Donate Now</a>
     </div>
 
     <button class="hamburger" id="hamburger-btn" aria-label="Open menu" style="background:none;border:none;cursor:pointer;padding:0.5rem;display:none;flex-direction:column;gap:5px;" onclick="this.classList.toggle('active');document.getElementById('mobile-menu').classList.toggle('open');this.setAttribute('aria-label',this.classList.contains('active')?'Close menu':'Open menu')">
@@ -625,5 +657,10 @@
   </div>
 </footer>
 
+
+<a href="/donate" id="give-now-fixed">
+  Give Now
+  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+</a>
 </body>
 </html>

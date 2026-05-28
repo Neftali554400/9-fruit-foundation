@@ -279,8 +279,8 @@
       top: 14px;
       right: 1.5rem;
       z-index: 200;
-      background: #2F6B4F;
-      color: #fff;
+      background: #7ED464;
+      color: #121C3C;
       font-family: 'Inter', sans-serif;
       font-size: 0.875rem;
       font-weight: 600;
@@ -291,17 +291,17 @@
       display: inline-flex;
       align-items: center;
       gap: 0.4rem;
-      box-shadow: 0 2px 8px rgba(47,107,79,0.35), 0 1px 2px rgba(47,107,79,0.2);
+      box-shadow: 0 2px 8px rgba(101,192,78,0.35), 0 1px 2px rgba(101,192,78,0.2);
       transition: background 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease;
       white-space: nowrap;
     }
     #give-now-fixed:hover {
-      background: #24563F;
+      background: #65C04E;
       transform: translateY(-1px);
-      box-shadow: 0 4px 14px rgba(47,107,79,0.42), 0 1px 3px rgba(47,107,79,0.25);
+      box-shadow: 0 4px 14px rgba(101,192,78,0.42), 0 1px 3px rgba(101,192,78,0.25);
     }
     #give-now-fixed:active { transform: translateY(0); }
-    #give-now-fixed:focus-visible { outline: 2px solid #2F6B4F; outline-offset: 3px; }
+    #give-now-fixed:focus-visible { outline: 2px solid #7ED464; outline-offset: 3px; }
     @media (max-width: 767px) {
       #give-now-fixed { display: none !important; }
     }
@@ -441,34 +441,7 @@
   <div style="max-width:640px;margin:0 auto;position:relative;z-index:2;">
 
     <div style="display:inline-flex;align-items:center;justify-content:center;width:72px;height:72px;border-radius:20px;background:var(--surface);border:1px solid var(--border);box-shadow:0 2px 12px rgba(0,0,0,0.06);margin-bottom:2rem;">
-      <svg width="36" height="36" viewBox="0 0 100 100" fill="none" aria-hidden="true">
-        <!-- outer circle -->
-        <circle cx="50" cy="50" r="42" fill="var(--brand-tint)" stroke="var(--brand)" stroke-width="2.2"/>
-        <!-- 9 segment dividers -->
-        <line x1="59" y1="50" x2="92" y2="50" stroke="var(--brand)" stroke-width="1.2" transform="rotate(0 50 50)"/>
-        <line x1="59" y1="50" x2="92" y2="50" stroke="var(--brand)" stroke-width="1.2" transform="rotate(40 50 50)"/>
-        <line x1="59" y1="50" x2="92" y2="50" stroke="var(--brand)" stroke-width="1.2" transform="rotate(80 50 50)"/>
-        <line x1="59" y1="50" x2="92" y2="50" stroke="var(--brand)" stroke-width="1.2" transform="rotate(120 50 50)"/>
-        <line x1="59" y1="50" x2="92" y2="50" stroke="var(--brand)" stroke-width="1.2" transform="rotate(160 50 50)"/>
-        <line x1="59" y1="50" x2="92" y2="50" stroke="var(--brand)" stroke-width="1.2" transform="rotate(200 50 50)"/>
-        <line x1="59" y1="50" x2="92" y2="50" stroke="var(--brand)" stroke-width="1.2" transform="rotate(240 50 50)"/>
-        <line x1="59" y1="50" x2="92" y2="50" stroke="var(--brand)" stroke-width="1.2" transform="rotate(280 50 50)"/>
-        <line x1="59" y1="50" x2="92" y2="50" stroke="var(--brand)" stroke-width="1.2" transform="rotate(320 50 50)"/>
-        <!-- 9 seed dots, one per segment midpoint -->
-        <circle cx="76" cy="50" r="3.2" fill="var(--brand)" opacity="0.8" transform="rotate(20 50 50)"/>
-        <circle cx="76" cy="50" r="3.2" fill="var(--brand)" opacity="0.8" transform="rotate(60 50 50)"/>
-        <circle cx="76" cy="50" r="3.2" fill="var(--brand)" opacity="0.8" transform="rotate(100 50 50)"/>
-        <circle cx="76" cy="50" r="3.2" fill="var(--brand)" opacity="0.8" transform="rotate(140 50 50)"/>
-        <circle cx="76" cy="50" r="3.2" fill="var(--brand)" opacity="0.8" transform="rotate(180 50 50)"/>
-        <circle cx="76" cy="50" r="3.2" fill="var(--brand)" opacity="0.8" transform="rotate(220 50 50)"/>
-        <circle cx="76" cy="50" r="3.2" fill="var(--brand)" opacity="0.8" transform="rotate(260 50 50)"/>
-        <circle cx="76" cy="50" r="3.2" fill="var(--brand)" opacity="0.8" transform="rotate(300 50 50)"/>
-        <circle cx="76" cy="50" r="3.2" fill="var(--brand)" opacity="0.8" transform="rotate(340 50 50)"/>
-        <!-- pith ring -->
-        <circle cx="50" cy="50" r="10" fill="var(--surface)" stroke="var(--brand)" stroke-width="1.8"/>
-        <!-- core dot -->
-        <circle cx="50" cy="50" r="3" fill="var(--brand)"/>
-      </svg>
+      <img src="/design assest/logo.png" alt="9 Fruit logo" style="width:52px;height:52px;object-fit:contain;" />
     </div>
 
     <p class="section-label" style="margin-bottom:1rem;">FAQs</p>
@@ -482,6 +455,7 @@
 </section>
 
 
+
 <!-- ═══════════════════════════════════════
      NINE FRUITS STRIP
 ════════════════════════════════════════ -->
@@ -493,136 +467,159 @@
     <p style="font-size:0.6875rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink-muted);margin-bottom:1.75rem;">The Nine Fruits of the Spirit · Galatians 5:22–23</p>
     <div class="fruits-strip" style="display:flex;flex-wrap:wrap;justify-content:center;gap:1.25rem 2rem;">
 
-      <!-- Love -->
+      <!-- Love → Strawberry -->
       <div style="display:flex;flex-direction:column;align-items:center;gap:0.5rem;">
-        <div style="width:54px;height:54px;border-radius:50%;background:var(--surface);border:1.5px solid rgba(82,169,63,0.3);display:flex;align-items:center;justify-content:center;box-shadow:0 1px 6px rgba(82,169,63,0.08);">
-          <svg width="22" height="28" viewBox="0 0 22 28" fill="none" aria-hidden="true">
-            <path d="M11 2C11 2 2 8 2 17C2 22.5 6 27 11 27C16 27 20 22.5 20 17C20 8 11 2 11 2Z" stroke="var(--brand)" stroke-width="1.4" stroke-linejoin="round"/>
-            <line x1="11" y1="4" x2="11" y2="26" stroke="var(--brand)" stroke-width="0.9" opacity="0.55"/>
-            <path d="M11 11 Q7 13 6.5 16" stroke="var(--brand)" stroke-width="0.75" stroke-linecap="round" opacity="0.5"/>
-            <path d="M11 11 Q15 13 15.5 16" stroke="var(--brand)" stroke-width="0.75" stroke-linecap="round" opacity="0.5"/>
-            <path d="M11 17 Q7.5 19 7 22" stroke="var(--brand)" stroke-width="0.75" stroke-linecap="round" opacity="0.5"/>
-            <path d="M11 17 Q14.5 19 15 22" stroke="var(--brand)" stroke-width="0.75" stroke-linecap="round" opacity="0.5"/>
+        <div style="width:54px;height:54px;border-radius:50%;background:#FFF0F0;border:1.5px solid rgba(229,57,53,0.25);display:flex;align-items:center;justify-content:center;box-shadow:0 1px 6px rgba(229,57,53,0.1);">
+          <svg width="26" height="26" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+            <path d="M12 9 Q10.5 6 9 7 Q10.5 7.5 11.5 10" fill="#388E3C"/>
+            <path d="M14 8 Q14 5 13 4.5 Q13.5 6.5 14 9" fill="#2E7D32"/>
+            <path d="M16 9 Q17.5 6 19 7 Q17.5 7.5 16.5 10" fill="#388E3C"/>
+            <rect x="13.3" y="4" width="1.4" height="2.5" rx="0.7" fill="#5D4037"/>
+            <path d="M5 12 Q5 22 14 27 Q23 22 23 12 Q19 8 14 8.5 Q9 8 5 12Z" fill="#E53935"/>
+            <ellipse cx="10" cy="13" rx="2.5" ry="1.5" fill="white" opacity="0.2"/>
+            <ellipse cx="10.5" cy="15.5" rx="1" ry="1.3" fill="#FFCDD2" transform="rotate(-10 10.5 15.5)"/>
+            <ellipse cx="14" cy="14" rx="1" ry="1.3" fill="#FFCDD2"/>
+            <ellipse cx="17.5" cy="15.5" rx="1" ry="1.3" fill="#FFCDD2" transform="rotate(10 17.5 15.5)"/>
+            <ellipse cx="11.5" cy="20.5" rx="1" ry="1.3" fill="#FFCDD2" transform="rotate(-8 11.5 20.5)"/>
+            <ellipse cx="16.5" cy="20.5" rx="1" ry="1.3" fill="#FFCDD2" transform="rotate(8 16.5 20.5)"/>
           </svg>
         </div>
         <span style="font-size:0.6875rem;font-weight:600;color:var(--ink-soft);letter-spacing:0.02em;">Love</span>
       </div>
 
-      <!-- Joy -->
+      <!-- Joy → Banana -->
       <div style="display:flex;flex-direction:column;align-items:center;gap:0.5rem;">
-        <div style="width:54px;height:54px;border-radius:50%;background:var(--surface);border:1.5px solid rgba(82,169,63,0.3);display:flex;align-items:center;justify-content:center;box-shadow:0 1px 6px rgba(82,169,63,0.08);">
-          <svg width="22" height="28" viewBox="0 0 22 28" fill="none" aria-hidden="true" style="transform:rotate(-8deg);">
-            <path d="M11 2C11 2 2 8 2 17C2 22.5 6 27 11 27C16 27 20 22.5 20 17C20 8 11 2 11 2Z" stroke="var(--brand)" stroke-width="1.4" stroke-linejoin="round"/>
-            <line x1="11" y1="4" x2="11" y2="26" stroke="var(--brand)" stroke-width="0.9" opacity="0.55"/>
-            <path d="M11 11 Q7 13 6.5 16" stroke="var(--brand)" stroke-width="0.75" stroke-linecap="round" opacity="0.5"/>
-            <path d="M11 11 Q15 13 15.5 16" stroke="var(--brand)" stroke-width="0.75" stroke-linecap="round" opacity="0.5"/>
-            <path d="M11 17 Q7.5 19 7 22" stroke="var(--brand)" stroke-width="0.75" stroke-linecap="round" opacity="0.5"/>
-            <path d="M11 17 Q14.5 19 15 22" stroke="var(--brand)" stroke-width="0.75" stroke-linecap="round" opacity="0.5"/>
+        <div style="width:54px;height:54px;border-radius:50%;background:#FFFDE7;border:1.5px solid rgba(253,216,53,0.45);display:flex;align-items:center;justify-content:center;box-shadow:0 1px 6px rgba(249,168,37,0.15);">
+          <svg width="28" height="20" viewBox="0 0 30 22" fill="none" aria-hidden="true">
+            <path d="M4 18 C4 13 6 8 11 5.5 C16 3 23 4 26 7 C27 8.5 26 10 24 10 C20 9 14 7 9 11 C6 14 6.5 19 7.5 21 C6 21.5 4 20 4 18Z" fill="#FDD835"/>
+            <path d="M7 18 C7 14 9 10.5 13 8.5 C17 6.5 21 7 23 9" stroke="#FFF176" stroke-width="1.4" stroke-linecap="round" fill="none" opacity="0.65"/>
+            <path d="M4.5 18.5 C3.5 20.5 4.5 22 6 21.5" stroke="#795548" stroke-width="1.3" stroke-linecap="round" fill="none"/>
+            <path d="M25.5 8.5 C27 8 28 9.5 27 11" stroke="#795548" stroke-width="1.3" stroke-linecap="round" fill="none"/>
           </svg>
         </div>
         <span style="font-size:0.6875rem;font-weight:600;color:var(--ink-soft);letter-spacing:0.02em;">Joy</span>
       </div>
 
-      <!-- Peace -->
+      <!-- Peace → Olive -->
       <div style="display:flex;flex-direction:column;align-items:center;gap:0.5rem;">
-        <div style="width:54px;height:54px;border-radius:50%;background:var(--surface);border:1.5px solid rgba(82,169,63,0.3);display:flex;align-items:center;justify-content:center;box-shadow:0 1px 6px rgba(82,169,63,0.08);">
-          <svg width="22" height="28" viewBox="0 0 22 28" fill="none" aria-hidden="true" style="transform:rotate(10deg);">
-            <path d="M11 2C11 2 2 8 2 17C2 22.5 6 27 11 27C16 27 20 22.5 20 17C20 8 11 2 11 2Z" stroke="var(--brand)" stroke-width="1.4" stroke-linejoin="round"/>
-            <line x1="11" y1="4" x2="11" y2="26" stroke="var(--brand)" stroke-width="0.9" opacity="0.55"/>
-            <path d="M11 11 Q7 13 6.5 16" stroke="var(--brand)" stroke-width="0.75" stroke-linecap="round" opacity="0.5"/>
-            <path d="M11 11 Q15 13 15.5 16" stroke="var(--brand)" stroke-width="0.75" stroke-linecap="round" opacity="0.5"/>
-            <path d="M11 17 Q7.5 19 7 22" stroke="var(--brand)" stroke-width="0.75" stroke-linecap="round" opacity="0.5"/>
-            <path d="M11 17 Q14.5 19 15 22" stroke="var(--brand)" stroke-width="0.75" stroke-linecap="round" opacity="0.5"/>
+        <div style="width:54px;height:54px;border-radius:50%;background:#F1F8E9;border:1.5px solid rgba(85,139,47,0.3);display:flex;align-items:center;justify-content:center;box-shadow:0 1px 6px rgba(85,139,47,0.1);">
+          <svg width="18" height="26" viewBox="0 0 18 28" fill="none" aria-hidden="true">
+            <path d="M9 3 Q9.5 1.5 10.5 1" stroke="#5D4037" stroke-width="1.2" stroke-linecap="round" fill="none"/>
+            <path d="M10 2.5 Q13 1 13.5 3 Q11.5 4 10 2.5" fill="#558B2F"/>
+            <ellipse cx="9" cy="16" rx="7" ry="9" fill="#558B2F"/>
+            <ellipse cx="9" cy="16" rx="3.5" ry="4.5" fill="#33691E" opacity="0.35"/>
+            <ellipse cx="6" cy="12" rx="2" ry="1.5" fill="white" opacity="0.2"/>
           </svg>
         </div>
         <span style="font-size:0.6875rem;font-weight:600;color:var(--ink-soft);letter-spacing:0.02em;">Peace</span>
       </div>
 
-      <!-- Patience -->
+      <!-- Patience → Lemon -->
       <div style="display:flex;flex-direction:column;align-items:center;gap:0.5rem;">
-        <div style="width:54px;height:54px;border-radius:50%;background:var(--surface);border:1.5px solid rgba(82,169,63,0.3);display:flex;align-items:center;justify-content:center;box-shadow:0 1px 6px rgba(82,169,63,0.08);">
-          <svg width="22" height="28" viewBox="0 0 22 28" fill="none" aria-hidden="true" style="transform:rotate(-14deg);">
-            <path d="M11 2C11 2 2 8 2 17C2 22.5 6 27 11 27C16 27 20 22.5 20 17C20 8 11 2 11 2Z" stroke="var(--brand)" stroke-width="1.4" stroke-linejoin="round"/>
-            <line x1="11" y1="4" x2="11" y2="26" stroke="var(--brand)" stroke-width="0.9" opacity="0.55"/>
-            <path d="M11 11 Q7 13 6.5 16" stroke="var(--brand)" stroke-width="0.75" stroke-linecap="round" opacity="0.5"/>
-            <path d="M11 11 Q15 13 15.5 16" stroke="var(--brand)" stroke-width="0.75" stroke-linecap="round" opacity="0.5"/>
-            <path d="M11 17 Q7.5 19 7 22" stroke="var(--brand)" stroke-width="0.75" stroke-linecap="round" opacity="0.5"/>
-            <path d="M11 17 Q14.5 19 15 22" stroke="var(--brand)" stroke-width="0.75" stroke-linecap="round" opacity="0.5"/>
+        <div style="width:54px;height:54px;border-radius:50%;background:#FFFDE7;border:1.5px solid rgba(253,216,53,0.45);display:flex;align-items:center;justify-content:center;box-shadow:0 1px 6px rgba(249,168,37,0.12);">
+          <svg width="22" height="26" viewBox="0 0 22 28" fill="none" aria-hidden="true">
+            <path d="M11 2 Q18 5 18.5 14 Q18 23 11 26 Q4 23 3.5 14 Q4 5 11 2Z" fill="#FDD835"/>
+            <path d="M11 2 Q12.5 0 14 1" stroke="#F9A825" stroke-width="1" stroke-linecap="round" fill="none"/>
+            <path d="M10 1 Q11 -0.5 11 2" stroke="#5D4037" stroke-width="1.1" stroke-linecap="round" fill="none"/>
+            <path d="M11 26 Q9.5 28 10.5 28" stroke="#F9A825" stroke-width="1" stroke-linecap="round" fill="none"/>
+            <ellipse cx="8" cy="9" rx="3" ry="2" fill="white" opacity="0.25" transform="rotate(-20 8 9)"/>
           </svg>
         </div>
         <span style="font-size:0.6875rem;font-weight:600;color:var(--ink-soft);letter-spacing:0.02em;">Patience</span>
       </div>
 
-      <!-- Kindness -->
+      <!-- Kindness → Pomegranate -->
       <div style="display:flex;flex-direction:column;align-items:center;gap:0.5rem;">
-        <div style="width:54px;height:54px;border-radius:50%;background:var(--surface);border:1.5px solid rgba(82,169,63,0.3);display:flex;align-items:center;justify-content:center;box-shadow:0 1px 6px rgba(82,169,63,0.08);">
-          <svg width="22" height="28" viewBox="0 0 22 28" fill="none" aria-hidden="true">
-            <path d="M11 2C11 2 2 8 2 17C2 22.5 6 27 11 27C16 27 20 22.5 20 17C20 8 11 2 11 2Z" stroke="var(--brand)" stroke-width="1.4" stroke-linejoin="round"/>
-            <line x1="11" y1="4" x2="11" y2="26" stroke="var(--brand)" stroke-width="0.9" opacity="0.55"/>
-            <path d="M11 11 Q7 13 6.5 16" stroke="var(--brand)" stroke-width="0.75" stroke-linecap="round" opacity="0.5"/>
-            <path d="M11 11 Q15 13 15.5 16" stroke="var(--brand)" stroke-width="0.75" stroke-linecap="round" opacity="0.5"/>
-            <path d="M11 17 Q7.5 19 7 22" stroke="var(--brand)" stroke-width="0.75" stroke-linecap="round" opacity="0.5"/>
-            <path d="M11 17 Q14.5 19 15 22" stroke="var(--brand)" stroke-width="0.75" stroke-linecap="round" opacity="0.5"/>
+        <div style="width:54px;height:54px;border-radius:50%;background:#FFF0F0;border:1.5px solid rgba(198,40,40,0.25);display:flex;align-items:center;justify-content:center;box-shadow:0 1px 6px rgba(198,40,40,0.1);">
+          <svg width="26" height="26" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+            <path d="M11 10 Q9.5 7 8.5 8 Q10 8.5 11 11" fill="#388E3C"/>
+            <path d="M14 9 Q14 6 13 5.5 Q13.5 7.5 14 10" fill="#2E7D32"/>
+            <path d="M17 10 Q18.5 7 19.5 8 Q18 8.5 17 11" fill="#388E3C"/>
+            <rect x="13.2" y="5" width="1.6" height="3" rx="0.8" fill="#5D4037"/>
+            <circle cx="14" cy="18" r="9" fill="#C62828"/>
+            <circle cx="14" cy="18" r="6" fill="#B71C1C"/>
+            <circle cx="11.5" cy="15.5" r="1.8" fill="#FF8A80"/>
+            <circle cx="15" cy="14.5" r="1.8" fill="#FF8A80"/>
+            <circle cx="17.5" cy="17" r="1.8" fill="#FFCDD2"/>
+            <circle cx="12.5" cy="19.5" r="1.8" fill="#EF9A9A"/>
+            <circle cx="16" cy="20" r="1.8" fill="#EF9A9A"/>
+            <ellipse cx="9.5" cy="14" rx="2.5" ry="1.8" fill="white" opacity="0.15"/>
           </svg>
         </div>
         <span style="font-size:0.6875rem;font-weight:600;color:var(--ink-soft);letter-spacing:0.02em;">Kindness</span>
       </div>
 
-      <!-- Goodness -->
+      <!-- Goodness → Green Apple -->
       <div style="display:flex;flex-direction:column;align-items:center;gap:0.5rem;">
-        <div style="width:54px;height:54px;border-radius:50%;background:var(--surface);border:1.5px solid rgba(82,169,63,0.3);display:flex;align-items:center;justify-content:center;box-shadow:0 1px 6px rgba(82,169,63,0.08);">
-          <svg width="22" height="28" viewBox="0 0 22 28" fill="none" aria-hidden="true" style="transform:rotate(6deg);">
-            <path d="M11 2C11 2 2 8 2 17C2 22.5 6 27 11 27C16 27 20 22.5 20 17C20 8 11 2 11 2Z" stroke="var(--brand)" stroke-width="1.4" stroke-linejoin="round"/>
-            <line x1="11" y1="4" x2="11" y2="26" stroke="var(--brand)" stroke-width="0.9" opacity="0.55"/>
-            <path d="M11 11 Q7 13 6.5 16" stroke="var(--brand)" stroke-width="0.75" stroke-linecap="round" opacity="0.5"/>
-            <path d="M11 11 Q15 13 15.5 16" stroke="var(--brand)" stroke-width="0.75" stroke-linecap="round" opacity="0.5"/>
-            <path d="M11 17 Q7.5 19 7 22" stroke="var(--brand)" stroke-width="0.75" stroke-linecap="round" opacity="0.5"/>
-            <path d="M11 17 Q14.5 19 15 22" stroke="var(--brand)" stroke-width="0.75" stroke-linecap="round" opacity="0.5"/>
+        <div style="width:54px;height:54px;border-radius:50%;background:#F1F8EE;border:1.5px solid rgba(82,169,63,0.3);display:flex;align-items:center;justify-content:center;box-shadow:0 1px 6px rgba(82,169,63,0.1);">
+          <svg width="26" height="26" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+            <path d="M14 4 Q14 2 15 1" stroke="#5D4037" stroke-width="1.2" stroke-linecap="round" fill="none"/>
+            <path d="M15 2 Q18 0.5 19 2.5 Q17 3.5 15 2" fill="#558B2F"/>
+            <path d="M14 7 Q20.5 7 23 14 Q22 22 17 25 Q15.5 26 14 26 Q12.5 26 11 25 Q6 22 5 14 Q7.5 7 14 7Z" fill="#7CB342"/>
+            <path d="M11 7 Q14 4.5 17 7" stroke="#558B2F" stroke-width="1" fill="none" stroke-linecap="round"/>
+            <ellipse cx="10" cy="11" rx="2.5" ry="2" fill="white" opacity="0.25" transform="rotate(-15 10 11)"/>
           </svg>
         </div>
         <span style="font-size:0.6875rem;font-weight:600;color:var(--ink-soft);letter-spacing:0.02em;">Goodness</span>
       </div>
 
-      <!-- Faithfulness -->
+      <!-- Faithfulness → Purple Grapes -->
       <div style="display:flex;flex-direction:column;align-items:center;gap:0.5rem;">
-        <div style="width:54px;height:54px;border-radius:50%;background:var(--surface);border:1.5px solid rgba(82,169,63,0.3);display:flex;align-items:center;justify-content:center;box-shadow:0 1px 6px rgba(82,169,63,0.08);">
-          <svg width="22" height="28" viewBox="0 0 22 28" fill="none" aria-hidden="true" style="transform:rotate(-6deg);">
-            <path d="M11 2C11 2 2 8 2 17C2 22.5 6 27 11 27C16 27 20 22.5 20 17C20 8 11 2 11 2Z" stroke="var(--brand)" stroke-width="1.4" stroke-linejoin="round"/>
-            <line x1="11" y1="4" x2="11" y2="26" stroke="var(--brand)" stroke-width="0.9" opacity="0.55"/>
-            <path d="M11 11 Q7 13 6.5 16" stroke="var(--brand)" stroke-width="0.75" stroke-linecap="round" opacity="0.5"/>
-            <path d="M11 11 Q15 13 15.5 16" stroke="var(--brand)" stroke-width="0.75" stroke-linecap="round" opacity="0.5"/>
-            <path d="M11 17 Q7.5 19 7 22" stroke="var(--brand)" stroke-width="0.75" stroke-linecap="round" opacity="0.5"/>
-            <path d="M11 17 Q14.5 19 15 22" stroke="var(--brand)" stroke-width="0.75" stroke-linecap="round" opacity="0.5"/>
+        <div style="width:54px;height:54px;border-radius:50%;background:#F5F0FF;border:1.5px solid rgba(123,31,162,0.25);display:flex;align-items:center;justify-content:center;box-shadow:0 1px 6px rgba(123,31,162,0.1);">
+          <svg width="24" height="26" viewBox="0 0 26 28" fill="none" aria-hidden="true">
+            <path d="M13 2 Q13 5 13 6" stroke="#5D4037" stroke-width="1.3" stroke-linecap="round" fill="none"/>
+            <path d="M13 4 Q16 2 17 4 Q15 5.5 13 4" fill="#388E3C"/>
+            <circle cx="10" cy="9.5" r="3.8" fill="#7B1FA2"/>
+            <circle cx="16" cy="9.5" r="3.8" fill="#6A1B9A"/>
+            <circle cx="7" cy="15.5" r="3.8" fill="#6A1B9A"/>
+            <circle cx="13" cy="15.5" r="3.8" fill="#7B1FA2"/>
+            <circle cx="19" cy="15.5" r="3.8" fill="#4A148C"/>
+            <circle cx="10" cy="21.5" r="3.8" fill="#4A148C"/>
+            <circle cx="16" cy="21.5" r="3.8" fill="#6A1B9A"/>
+            <circle cx="8.5" cy="8" r="1.1" fill="white" opacity="0.2"/>
+            <circle cx="5.5" cy="14" r="1.1" fill="white" opacity="0.2"/>
+            <circle cx="11.5" cy="14" r="1.1" fill="white" opacity="0.2"/>
           </svg>
         </div>
         <span style="font-size:0.6875rem;font-weight:600;color:var(--ink-soft);letter-spacing:0.02em;">Faithfulness</span>
       </div>
 
-      <!-- Gentleness -->
+      <!-- Gentleness → Orange -->
       <div style="display:flex;flex-direction:column;align-items:center;gap:0.5rem;">
-        <div style="width:54px;height:54px;border-radius:50%;background:var(--surface);border:1.5px solid rgba(82,169,63,0.3);display:flex;align-items:center;justify-content:center;box-shadow:0 1px 6px rgba(82,169,63,0.08);">
-          <svg width="22" height="28" viewBox="0 0 22 28" fill="none" aria-hidden="true" style="transform:rotate(16deg);">
-            <path d="M11 2C11 2 2 8 2 17C2 22.5 6 27 11 27C16 27 20 22.5 20 17C20 8 11 2 11 2Z" stroke="var(--brand)" stroke-width="1.4" stroke-linejoin="round"/>
-            <line x1="11" y1="4" x2="11" y2="26" stroke="var(--brand)" stroke-width="0.9" opacity="0.55"/>
-            <path d="M11 11 Q7 13 6.5 16" stroke="var(--brand)" stroke-width="0.75" stroke-linecap="round" opacity="0.5"/>
-            <path d="M11 11 Q15 13 15.5 16" stroke="var(--brand)" stroke-width="0.75" stroke-linecap="round" opacity="0.5"/>
-            <path d="M11 17 Q7.5 19 7 22" stroke="var(--brand)" stroke-width="0.75" stroke-linecap="round" opacity="0.5"/>
-            <path d="M11 17 Q14.5 19 15 22" stroke="var(--brand)" stroke-width="0.75" stroke-linecap="round" opacity="0.5"/>
+        <div style="width:54px;height:54px;border-radius:50%;background:#FFF3E0;border:1.5px solid rgba(251,140,0,0.3);display:flex;align-items:center;justify-content:center;box-shadow:0 1px 6px rgba(251,140,0,0.12);">
+          <svg width="26" height="26" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+            <path d="M14 3 Q14 1.5 15 1" stroke="#5D4037" stroke-width="1.2" stroke-linecap="round" fill="none"/>
+            <path d="M15 1.5 Q18 0 18.5 2.5 Q16.5 3.5 15 1.5" fill="#558B2F"/>
+            <circle cx="14" cy="15" r="11" fill="#FB8C00"/>
+            <ellipse cx="9.5" cy="10" rx="3" ry="2" fill="white" opacity="0.2"/>
+            <circle cx="14" cy="24.5" r="2" fill="#E65100" opacity="0.4"/>
+            <path d="M14 4.5 L14 15" stroke="#E65100" stroke-width="0.6" opacity="0.25" stroke-linecap="round"/>
+            <path d="M5 11 L14 15" stroke="#E65100" stroke-width="0.6" opacity="0.25" stroke-linecap="round"/>
+            <path d="M23 11 L14 15" stroke="#E65100" stroke-width="0.6" opacity="0.25" stroke-linecap="round"/>
+            <path d="M4.5 16.5 L14 15" stroke="#E65100" stroke-width="0.6" opacity="0.2" stroke-linecap="round"/>
+            <path d="M23.5 16.5 L14 15" stroke="#E65100" stroke-width="0.6" opacity="0.2" stroke-linecap="round"/>
           </svg>
         </div>
         <span style="font-size:0.6875rem;font-weight:600;color:var(--ink-soft);letter-spacing:0.02em;">Gentleness</span>
       </div>
 
-      <!-- Self-control -->
+      <!-- Self-Control → Pineapple -->
       <div style="display:flex;flex-direction:column;align-items:center;gap:0.5rem;">
-        <div style="width:54px;height:54px;border-radius:50%;background:var(--surface);border:1.5px solid rgba(82,169,63,0.3);display:flex;align-items:center;justify-content:center;box-shadow:0 1px 6px rgba(82,169,63,0.08);">
-          <svg width="22" height="28" viewBox="0 0 22 28" fill="none" aria-hidden="true" style="transform:rotate(-10deg);">
-            <path d="M11 2C11 2 2 8 2 17C2 22.5 6 27 11 27C16 27 20 22.5 20 17C20 8 11 2 11 2Z" stroke="var(--brand)" stroke-width="1.4" stroke-linejoin="round"/>
-            <line x1="11" y1="4" x2="11" y2="26" stroke="var(--brand)" stroke-width="0.9" opacity="0.55"/>
-            <path d="M11 11 Q7 13 6.5 16" stroke="var(--brand)" stroke-width="0.75" stroke-linecap="round" opacity="0.5"/>
-            <path d="M11 11 Q15 13 15.5 16" stroke="var(--brand)" stroke-width="0.75" stroke-linecap="round" opacity="0.5"/>
-            <path d="M11 17 Q7.5 19 7 22" stroke="var(--brand)" stroke-width="0.75" stroke-linecap="round" opacity="0.5"/>
-            <path d="M11 17 Q14.5 19 15 22" stroke="var(--brand)" stroke-width="0.75" stroke-linecap="round" opacity="0.5"/>
+        <div style="width:54px;height:54px;border-radius:50%;background:#F9FBE7;border:1.5px solid rgba(164,151,23,0.3);display:flex;align-items:center;justify-content:center;box-shadow:0 1px 6px rgba(164,151,23,0.1);">
+          <svg width="18" height="28" viewBox="0 0 20 30" fill="none" aria-hidden="true">
+            <path d="M10 8 Q8 4.5 7 2.5 Q8.5 5 10 7.5" fill="#388E3C"/>
+            <path d="M10 8 Q10 4 10 2 Q10.5 4.5 10 7.5" fill="#2E7D32"/>
+            <path d="M10 8 Q12 4.5 13 2.5 Q11.5 5 10 7.5" fill="#388E3C"/>
+            <path d="M10 8 Q7 5.5 5.5 4 Q8 6 9.5 9" fill="#43A047"/>
+            <path d="M10 8 Q13 5.5 14.5 4 Q12 6 10.5 9" fill="#43A047"/>
+            <ellipse cx="10" cy="20" rx="7.5" ry="9.5" fill="#FDD835"/>
+            <line x1="10" y1="10.5" x2="10" y2="29.5" stroke="#F9A825" stroke-width="0.7" opacity="0.45"/>
+            <line x1="2.5" y1="17" x2="17.5" y2="17" stroke="#F9A825" stroke-width="0.7" opacity="0.45"/>
+            <line x1="3" y1="13" x2="17" y2="21" stroke="#F9A825" stroke-width="0.55" opacity="0.35"/>
+            <line x1="3" y1="21" x2="17" y2="13" stroke="#F9A825" stroke-width="0.55" opacity="0.35"/>
+            <line x1="3.5" y1="24" x2="16.5" y2="27" stroke="#F9A825" stroke-width="0.5" opacity="0.3"/>
+            <line x1="3.5" y1="27" x2="16.5" y2="24" stroke="#F9A825" stroke-width="0.5" opacity="0.3"/>
+            <ellipse cx="6.5" cy="15.5" rx="2.5" ry="1.8" fill="white" opacity="0.18"/>
           </svg>
         </div>
         <span style="font-size:0.6875rem;font-weight:600;color:var(--ink-soft);letter-spacing:0.02em;">Self-control</span>

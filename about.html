@@ -177,8 +177,8 @@
       top: 14px;
       right: 1.5rem;
       z-index: 200;
-      background: #2F6B4F;
-      color: #fff;
+      background: #7ED464;
+      color: #121C3C;
       font-family: 'Inter', sans-serif;
       font-size: 0.875rem;
       font-weight: 600;
@@ -189,17 +189,17 @@
       display: inline-flex;
       align-items: center;
       gap: 0.4rem;
-      box-shadow: 0 2px 8px rgba(47,107,79,0.35), 0 1px 2px rgba(47,107,79,0.2);
+      box-shadow: 0 2px 8px rgba(101,192,78,0.35), 0 1px 2px rgba(101,192,78,0.2);
       transition: background 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease;
       white-space: nowrap;
     }
     #give-now-fixed:hover {
-      background: #24563F;
+      background: #65C04E;
       transform: translateY(-1px);
-      box-shadow: 0 4px 14px rgba(47,107,79,0.42), 0 1px 3px rgba(47,107,79,0.25);
+      box-shadow: 0 4px 14px rgba(101,192,78,0.42), 0 1px 3px rgba(101,192,78,0.25);
     }
     #give-now-fixed:active { transform: translateY(0); }
-    #give-now-fixed:focus-visible { outline: 2px solid #2F6B4F; outline-offset: 3px; }
+    #give-now-fixed:focus-visible { outline: 2px solid #7ED464; outline-offset: 3px; }
     @media (max-width: 767px) {
       #give-now-fixed { display: none !important; }
     }
@@ -250,13 +250,13 @@
      HERO
 ════════════════════════════════════════ -->
 <section style="position:relative;overflow:hidden;height:480px;">
-  <img decoding="async" loading="lazy" src="/design assest/ABOUT US IMAGES/natural light 1.jpg" alt="Children in natural light" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 20%;" />
+  <img decoding="async" loading="lazy" src="/design assest/ABOUT US IMAGES/kids jumptin.jpg" alt="Kids jumping" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 70%;" />
   <div style="position:relative;z-index:2;height:100%;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:0 1.5rem;">
-    <p style="font-family:'Inter',sans-serif;font-size:0.8125rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.85);margin-bottom:1rem;">About 9 Fruit</p>
+    <p style="font-family:'Inter',sans-serif;font-size:0.8125rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.85);margin-bottom:1rem;text-shadow:0 1px 6px rgba(0,0,0,0.45);">About 9 Fruit</p>
     <h1 style="font-family:'Playfair Display',serif;font-size:clamp(2.5rem,5vw,3.75rem);font-weight:800;color:#fff;margin-bottom:1.5rem;line-height:1.15;text-shadow:0 2px 12px rgba(0,0,0,0.4);">
       Simple, fruitful giving<br>for <span style="color:#7ed464;">children</span>
     </h1>
-    <p style="font-size:1.125rem;color:rgba(255,255,255,0.9);line-height:1.8;max-width:580px;text-shadow:0 1px 6px rgba(0,0,0,0.35);">
+    <p style="font-size:1.125rem;color:rgba(255,255,255,0.9);line-height:1.8;max-width:580px;text-shadow:0 1px 6px rgba(0,0,0,0.45);">
       9 Fruit was created to make charitable giving simpler, clearer, and more aligned with the people and causes donors care about most.
     </p>
   </div>
@@ -267,11 +267,11 @@
      WHY 9 FRUIT EXISTS
 ════════════════════════════════════════ -->
 <section style="padding:6rem 1.5rem;background:var(--surface);">
-  <div class="about-grid" style="max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1.6fr;gap:5rem;align-items:stretch;">
+  <div class="about-grid" style="max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1.3fr 1.3fr;gap:4rem;align-items:stretch;">
 
     <!-- Logo -->
-    <div class="logo-col" style="display:flex;align-items:center;justify-content:center;">
-      <img decoding="async" loading="lazy" src="/design assest/Why We Exist.jpg" alt="Why 9 Fruit Exists" style="width:100%;height:100%;object-fit:cover;object-position:center;border-radius:20px;box-shadow:0 8px 24px rgba(0,0,0,0.12),0 2px 6px rgba(0,0,0,0.08);display:block;" />
+    <div class="logo-col" style="display:flex;align-items:center;justify-content:center;min-height:480px;background:var(--brand-light);border-radius:24px;box-shadow:0 8px 24px rgba(82,169,63,0.10),0 2px 6px rgba(82,169,63,0.06);">
+      <img decoding="async" loading="lazy" src="/design assest/logo.png" alt="9 Fruit logo" style="width:220px;height:auto;object-fit:contain;display:block;" />
     </div>
 
     <!-- Text -->
@@ -308,7 +308,7 @@
     </div>
 
     <!-- Governance Commitment -->
-    <div style="background:var(--surface);border:1px solid var(--border);border-radius:20px;padding:2.5rem;margin-bottom:3.5rem;box-shadow:0 1px 4px rgba(0,0,0,0.04);">
+    <div style="background:var(--brand-light);border:1px solid rgba(82,169,63,0.22);border-radius:20px;padding:2.5rem;margin-bottom:3.5rem;box-shadow:0 1px 4px rgba(82,169,63,0.06);">
       <h3 style="font-family:'Playfair Display',serif;font-size:1.375rem;font-weight:700;color:var(--ink);letter-spacing:-0.02em;margin-bottom:1rem;">Governance Commitment</h3>
       <p style="font-size:1rem;color:var(--ink-soft);line-height:1.8;margin-bottom:0.875rem;">9 Fruit is guided by disciplined oversight designed to preserve transparency, financial responsibility, and faithful stewardship.</p>
       <p style="font-size:1rem;color:var(--ink-soft);line-height:1.8;">Our governance practices help ensure donor-directed giving remains accountable, mission-aligned, and thoughtfully managed in service of children and young adults.</p>
@@ -353,7 +353,7 @@
       <!-- Monique Cole Green -->
       <div style="background:var(--surface);border:1px solid var(--border);border-radius:24px;box-shadow:0 2px 8px rgba(0,0,0,0.04),0 8px 24px rgba(0,0,0,0.06);padding:2rem 2rem 2.25rem;">
         <div style="width:52px;height:52px;border-radius:50%;background:var(--brand-tint);border:1.5px solid rgba(82,169,63,0.25);display:flex;align-items:center;justify-content:center;margin-bottom:1.5rem;">
-          <span style="font-family:'Playfair Display',serif;font-size:1.125rem;font-weight:700;color:var(--brand);letter-spacing:-0.02em;">MC</span>
+          <span style="font-family:'Playfair Display',serif;font-size:1.125rem;font-weight:700;color:var(--brand);letter-spacing:-0.02em;">MCG</span>
         </div>
         <h3 style="font-size:1.25rem;color:var(--ink);margin-bottom:0.3rem;">Monique Cole Green</h3>
         <p style="font-size:0.8125rem;font-weight:600;color:var(--brand);letter-spacing:0.01em;margin-bottom:1.125rem;">Director of Communications & Community Engagement</p>
@@ -455,7 +455,7 @@
      OUR PHILOSOPHY
 ════════════════════════════════════════ -->
 <section style="padding:5rem 1.5rem;background:var(--surface-2);border-top:1px solid var(--border);border-bottom:1px solid var(--border);">
-  <div class="about-grid" style="max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1.4fr 1.2fr;gap:5rem;align-items:center;">
+  <div style="max-width:760px;margin:0 auto;">
 
     <!-- Text -->
     <div>
@@ -484,11 +484,6 @@
           <p style="font-size:1rem;color:var(--ink-soft);line-height:1.7;">Even <strong style="color:var(--ink);">small gifts</strong> can create lasting impact</p>
         </div>
       </div>
-    </div>
-
-    <!-- Image -->
-    <div style="display:flex;align-items:center;justify-content:center;">
-      <img decoding="async" loading="lazy" src="/design assest/ABOUT US IMAGES/young adults hugging .jpg" alt="Young adults hugging" class="about-img" style="width:100%;height:640px;object-fit:cover;object-position:center;border-radius:20px;box-shadow:0 8px 24px rgba(0,0,0,0.12),0 2px 6px rgba(0,0,0,0.08);display:block;" />
     </div>
 
   </div>

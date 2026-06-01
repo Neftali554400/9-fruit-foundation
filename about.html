@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About — 9 Fruit Foundation</title>
+  <title>About Us — 9 Fruit Foundation</title>
   <link rel="icon" type="image/png" href="design assest/ABOUT US IMAGES/new 9fruit logo.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -137,10 +137,13 @@
     .hamburger.active span:nth-child(2) { opacity: 0; transform: scaleX(0); }
     .hamburger.active span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
+    @media (max-width: 900px) {
+      .about-img { height: 400px !important; }
+    }
     @media (max-width: 767px) {
       .desktop-nav { display: none !important; }
       .hamburger { display: flex !important; }
-      .about-img { height: 340px !important; }
+      .about-img { height: 320px !important; }
     }
     @media (min-width: 768px) {
       .hamburger { display: none !important; }
@@ -222,7 +225,7 @@
     </a>
 
     <div class="desktop-nav" style="display:flex;align-items:center;gap:1.75rem;">
-      <a href="/about" class="nav-link active">About</a>
+      <a href="/about" class="nav-link active">About Us</a>
       <a href="/how-matching-works" class="nav-link">How Matching Works</a>
       <a href="/our-charity-partners" class="nav-link">Our Charity Partners</a>
       <a href="/trust-and-transparency" class="nav-link">Trust & Transparency</a>
@@ -254,12 +257,9 @@
   <img decoding="async" loading="lazy" src="/design assest/ABOUT US IMAGES/kids jumptin.jpg" alt="Kids jumping" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 70%;" />
   <div style="position:relative;z-index:2;height:100%;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:0 1.5rem;">
     <p style="font-family:'Inter',sans-serif;font-size:0.8125rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.85);margin-bottom:1rem;text-shadow:0 1px 6px rgba(0,0,0,0.45);">About 9 Fruit</p>
-    <h1 style="font-family:'Playfair Display',serif;font-size:clamp(2.5rem,5vw,3.75rem);font-weight:800;color:#fff;margin-bottom:1.5rem;line-height:1.15;text-shadow:0 2px 12px rgba(0,0,0,0.4);">
+    <h1 style="font-family:'Playfair Display',serif;font-size:clamp(2.5rem,5vw,3.75rem);font-weight:800;color:#fff;margin-bottom:0;line-height:1.15;text-shadow:0 2px 12px rgba(0,0,0,0.4);">
       Simple, fruitful giving<br>for <span style="color:#7ed464;">children</span>
     </h1>
-    <p style="font-size:1.125rem;color:rgba(255,255,255,0.9);line-height:1.8;max-width:580px;text-shadow:0 1px 6px rgba(0,0,0,0.45);">
-      9 Fruit was created to make charitable giving simpler, clearer, and more aligned with the people and causes donors care about most.
-    </p>
   </div>
 </section>
 
@@ -277,8 +277,7 @@
 
     <!-- Text -->
     <div>
-      <p class="section-label" style="margin-bottom:0.75rem;">Opening Statement</p>
-      <h2 style="font-size:clamp(1.875rem,3.5vw,2.5rem);color:var(--ink);margin-bottom:2rem;">About 9 Fruit</h2>
+      <h2 style="font-size:clamp(1.875rem,3.5vw,2.5rem);color:var(--ink);margin-bottom:2rem;">Who We Are</h2>
       <div style="display:flex;flex-direction:column;gap:1.125rem;">
         <p style="font-size:1rem;color:var(--ink-soft);line-height:1.8;">
           9 Fruit was created to make charitable giving simpler, clearer, and more aligned with the people and causes donors care about most.
@@ -306,13 +305,6 @@
       <p style="font-size:1.0625rem;color:var(--ink-soft);max-width:600px;margin:0 auto;line-height:1.75;">
         Providing independent governance, stewardship oversight, and mission-aligned strategic guidance for 9 Fruit's charitable work.
       </p>
-    </div>
-
-    <!-- Governance Commitment -->
-    <div style="background:var(--brand-light);border:1px solid rgba(82,169,63,0.22);border-radius:20px;padding:2.5rem;margin-bottom:3.5rem;box-shadow:0 1px 4px rgba(82,169,63,0.06);">
-      <h3 style="font-family:'Playfair Display',serif;font-size:1.375rem;font-weight:700;color:var(--ink);letter-spacing:-0.02em;margin-bottom:1rem;">Governance Commitment</h3>
-      <p style="font-size:1rem;color:var(--ink-soft);line-height:1.8;margin-bottom:0.875rem;">9 Fruit is guided by disciplined oversight designed to preserve transparency, financial responsibility, and faithful stewardship.</p>
-      <p style="font-size:1rem;color:var(--ink-soft);line-height:1.8;">Our governance practices help ensure donor-directed giving remains accountable, mission-aligned, and thoughtfully managed in service of children and young adults.</p>
     </div>
 
     <!-- Board Governance intro -->
@@ -441,6 +433,13 @@
         </p>
       </div>
 
+    </div>
+
+    <!-- Governance Commitment -->
+    <div style="background:var(--brand-light);border:1px solid rgba(82,169,63,0.22);border-radius:20px;padding:2.5rem;margin-top:3.5rem;box-shadow:0 1px 4px rgba(82,169,63,0.06);">
+      <h3 style="font-family:'Playfair Display',serif;font-size:1.375rem;font-weight:700;color:var(--ink);letter-spacing:-0.02em;margin-bottom:1rem;">Governance Commitment</h3>
+      <p style="font-size:1rem;color:var(--ink-soft);line-height:1.8;margin-bottom:0.875rem;">9 Fruit is guided by disciplined oversight designed to preserve transparency, financial responsibility, and faithful stewardship.</p>
+      <p style="font-size:1rem;color:var(--ink-soft);line-height:1.8;">Our governance practices help ensure donor-directed giving remains accountable, mission-aligned, and thoughtfully managed in service of children and young adults.</p>
     </div>
 
     <!-- Governance closing line -->

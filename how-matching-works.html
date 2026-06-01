@@ -150,6 +150,9 @@
     .hamburger.active span:nth-child(2) { opacity: 0; transform: scaleX(0); }
     .hamburger.active span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
+    @media (min-width: 768px) and (max-width: 900px) {
+      .steps-grid { grid-template-columns: 1fr 1fr !important; }
+    }
     @media (max-width: 767px) {
       .desktop-nav { display: none !important; }
       .hamburger { display: flex !important; }
@@ -222,7 +225,7 @@
     </a>
 
     <div class="desktop-nav" style="display:flex;align-items:center;gap:1.75rem;">
-      <a href="/about" class="nav-link">About</a>
+      <a href="/about" class="nav-link">About Us</a>
       <a href="/how-matching-works" class="nav-link active">How Matching Works</a>
       <a href="/our-charity-partners" class="nav-link">Our Charity Partners</a>
       <a href="/trust-and-transparency" class="nav-link">Trust & Transparency</a>
@@ -237,7 +240,7 @@
   </nav>
 
   <div id="mobile-menu">
-    <a href="/about">About</a>
+    <a href="/about">About Us</a>
     <a href="/how-matching-works">How Matching Works</a>
     <a href="/our-charity-partners">Our Charity Partners</a>
     <a href="/trust-and-transparency">Trust & Transparency</a>
@@ -477,9 +480,12 @@
 
     </div>
 
-    <p style="text-align:center;font-size:0.8125rem;color:var(--ink-muted);line-height:1.6;margin-top:2rem;">
-      Matching is applied subject to available funds and program limits.
-    </p>
+    <div style="display:flex;justify-content:center;margin-top:2rem;">
+      <span style="display:inline-flex;align-items:center;gap:0.5rem;font-size:0.8rem;color:var(--ink-soft);background:var(--surface-3);border:1px solid var(--border);border-radius:100px;padding:0.4rem 1.1rem;">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="var(--ink-muted)" stroke-width="1.8"/><path d="M12 11V16" stroke="var(--ink-muted)" stroke-width="1.8" stroke-linecap="round"/><circle cx="12" cy="8" r="1" fill="var(--ink-muted)"/></svg>
+        Matching is applied subject to available funds and program limits.
+      </span>
+    </div>
 
     <div style="text-align:center;margin-top:2.5rem;">
       <a href="/donate" class="btn-primary" style="font-size:1rem;padding:0.875rem 2.5rem;">

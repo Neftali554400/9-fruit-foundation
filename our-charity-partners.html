@@ -73,7 +73,10 @@
       .section-2-us { padding-top: 3rem !important; padding-bottom: 3rem !important; }
     }
     @media (min-width: 768px) { .hamburger { display: none !important; } }
-    @media (min-width: 768px) and (max-width: 900px) { .orgs-3col { grid-template-columns: 1fr 1fr !important; } }
+    @media (min-width: 768px) and (max-width: 900px) {
+      .orgs-3col { grid-template-columns: 1fr 1fr !important; }
+      .cities-grid { grid-template-columns: 1fr 1fr !important; gap: 1.5rem !important; }
+    }
     @media (max-width: 640px) {
       section { padding-left: 1.25rem !important; padding-right: 1.25rem !important; }
       .footer-grid { grid-template-columns: 1fr 1fr !important; gap: 2rem !important; }
@@ -129,7 +132,7 @@
       </div>
     </a>
     <div class="desktop-nav" style="display:flex;align-items:center;gap:1.75rem;">
-      <a href="/about" class="nav-link">About</a>
+      <a href="/about" class="nav-link">About Us</a>
       <a href="/how-matching-works" class="nav-link">How Matching Works</a>
       <a href="/our-charity-partners" class="nav-link active">Our Charity Partners</a>
       <a href="/trust-and-transparency" class="nav-link">Trust &amp; Transparency</a>
@@ -142,7 +145,7 @@
     </button>
   </nav>
   <div id="mobile-menu">
-    <a href="/about">About</a>
+    <a href="/about">About Us</a>
     <a href="/how-matching-works">How Matching Works</a>
     <a href="/our-charity-partners">Our Charity Partners</a>
     <a href="/trust-and-transparency">Trust &amp; Transparency</a>
@@ -210,7 +213,10 @@
 <section class="section-2-us" style="padding:7.5rem 1.5rem;background:var(--brand-light);border-top:1px solid rgba(82,169,63,0.15);border-bottom:1px solid rgba(82,169,63,0.15);">
   <div style="max-width:1200px;margin:0 auto;">
     <div style="text-align:center;margin-bottom:4.5rem;">
-      <p class="section-label" style="margin-bottom:0.875rem;">Community Regions</p>
+      <div style="display:inline-flex;align-items:center;gap:0.5rem;background:#fff;border:1.5px solid rgba(82,169,63,0.35);border-radius:100px;padding:0.35rem 1rem;margin-bottom:1.25rem;">
+        <span style="font-size:1rem;">🇺🇸</span>
+        <span style="font-size:0.6875rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--brand-dark);">United States · Primary Focus</span>
+      </div>
       <h2 style="font-size:clamp(2.25rem,4.5vw,3.25rem);color:var(--ink);margin-bottom:1.5rem;">Current Community Launch Regions</h2>
       <p style="font-size:1.125rem;color:var(--ink-soft);line-height:1.85;max-width:720px;margin:0 auto 1rem;">
         9 Fruit is beginning by highlighting charitable organizations serving children and young adults across three initial U.S. community regions.
@@ -274,8 +280,38 @@
 <!-- ═══════════════════════════════════════
      SECTION 3 — GLOBAL MISSION ALIGNMENT
 ════════════════════════════════════════ -->
-<section style="padding:5.5rem 1.5rem;background:var(--surface-2);border-top:1px solid var(--border);border-bottom:1px solid var(--border);">
-  <div style="max-width:1100px;margin:0 auto;">
+<section style="padding:5.5rem 1.5rem;background:var(--surface-2);border-top:1px solid var(--border);border-bottom:1px solid var(--border);position:relative;overflow:hidden;">
+  <!-- World map background -->
+  <div aria-hidden="true" style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;pointer-events:none;z-index:0;opacity:0.045;">
+    <svg viewBox="0 0 1000 500" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%;" fill="var(--brand)" stroke="none">
+      <!-- North America -->
+      <path d="M70,55 L110,40 L160,45 L210,55 L240,75 L255,100 L260,130 L250,160 L230,175 L200,180 L175,170 L150,165 L120,155 L95,140 L72,118 L60,95 Z"/>
+      <!-- Greenland -->
+      <path d="M240,20 L275,15 L295,28 L290,50 L265,58 L242,48 Z"/>
+      <!-- South America -->
+      <path d="M175,195 L225,185 L255,200 L265,230 L268,270 L255,315 L235,350 L210,375 L185,380 L163,360 L150,325 L148,280 L155,240 L162,210 Z"/>
+      <!-- Europe -->
+      <path d="M435,40 L480,35 L520,42 L535,58 L528,75 L510,85 L490,82 L468,88 L450,80 L438,65 Z"/>
+      <!-- Scandinavia -->
+      <path d="M460,18 L475,12 L490,20 L488,38 L472,42 L458,35 Z"/>
+      <path d="M492,15 L508,10 L520,22 L516,40 L498,44 L490,30 Z"/>
+      <!-- Africa -->
+      <path d="M448,105 L510,98 L548,110 L570,135 L575,175 L565,220 L555,265 L540,305 L518,335 L495,348 L470,342 L448,318 L432,280 L425,240 L428,195 L435,155 L440,125 Z"/>
+      <!-- Asia (main) -->
+      <path d="M535,30 L630,25 L730,32 L820,42 L890,55 L940,70 L960,90 L950,115 L920,128 L875,130 L830,122 L785,118 L740,112 L695,118 L655,112 L615,105 L580,95 L555,80 L538,62 Z"/>
+      <!-- India -->
+      <path d="M625,140 L680,135 L715,148 L725,175 L715,210 L695,235 L665,248 L638,238 L622,210 L615,178 Z"/>
+      <!-- Southeast Asia -->
+      <path d="M730,140 L790,135 L830,148 L840,168 L825,185 L795,190 L762,182 L742,165 Z"/>
+      <!-- Japan -->
+      <path d="M870,95 L895,88 L910,100 L905,118 L882,122 L866,110 Z"/>
+      <!-- Australia -->
+      <path d="M758,295 L830,278 L882,285 L915,305 L928,335 L920,370 L895,392 L855,400 L808,390 L770,368 L750,340 L745,308 Z"/>
+      <!-- New Zealand -->
+      <path d="M940,368 L958,360 L968,378 L960,395 L942,392 Z"/>
+    </svg>
+  </div>
+  <div style="max-width:1100px;margin:0 auto;position:relative;z-index:1;">
 
     <div class="mission-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;margin-bottom:3rem;">
 
@@ -310,8 +346,11 @@
     <div style="max-width:520px;margin:0 auto;">
       <div class="org-card">
         <div style="display:flex;align-items:flex-start;gap:0.875rem;margin-bottom:1rem;">
-          <div style="width:38px;height:38px;border-radius:10px;background:var(--brand-tint);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="var(--brand)" stroke-width="1.8"/><path d="M2 12H22" stroke="var(--brand)" stroke-width="1.8" stroke-linecap="round"/><path d="M12 3C9 6 7.5 9 7.5 12C7.5 15 9 18 12 21" stroke="var(--brand)" stroke-width="1.8" stroke-linecap="round"/><path d="M12 3C15 6 16.5 9 16.5 12C16.5 15 15 18 12 21" stroke="var(--brand)" stroke-width="1.8" stroke-linecap="round"/></svg>
+          <div style="width:38px;height:38px;border-radius:10px;flex-shrink:0;display:flex;align-items:center;justify-content:center;overflow:hidden;">
+            <img src="https://logo.clearbit.com/unicef.org" alt="UNICEF USA logo"
+                   style="width:38px;height:38px;object-fit:contain;border-radius:8px;background:#fff;padding:2px;"
+                   onerror="this.onerror=null;this.style.display='none';this.nextElementSibling.style.display='flex';" />
+            <div style="display:none;width:38px;height:38px;border-radius:10px;background:var(--brand-tint);align-items:center;justify-content:center;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="var(--brand)" stroke-width="1.8"/><path d="M2 12H22" stroke="var(--brand)" stroke-width="1.8" stroke-linecap="round"/><path d="M12 3C9 6 7.5 9 7.5 12C7.5 15 9 18 12 21" stroke="var(--brand)" stroke-width="1.8" stroke-linecap="round"/><path d="M12 3C15 6 16.5 9 16.5 12C16.5 15 15 18 12 21" stroke="var(--brand)" stroke-width="1.8" stroke-linecap="round"/></svg></div>
           </div>
           <div>
             <h4 style="font-size:1.0625rem;color:var(--ink);margin-bottom:0.25rem;">UNICEF USA</h4>
@@ -323,9 +362,29 @@
         </div>
         <div style="border-top:1px solid var(--border);padding-top:0.875rem;">
           <p style="font-size:0.875rem;color:var(--ink-soft);line-height:1.75;">Chosen by 9 Fruit for globally trusted leadership advancing child health, education, protection, and emergency support.</p>
-        </div>
       </div>
     </div>
+    <div style="max-width:520px;margin:1.25rem auto 0;">
+      <div class="org-card">
+        <div style="display:flex;align-items:flex-start;gap:0.875rem;margin-bottom:1rem;">
+          <div style="width:38px;height:38px;border-radius:10px;flex-shrink:0;display:flex;align-items:center;justify-content:center;overflow:hidden;">
+            <img src="https://logo.clearbit.com/charitywater.org" alt="Charity: water logo"
+                 style="width:38px;height:38px;object-fit:contain;border-radius:8px;background:#fff;padding:2px;"
+                 onerror="this.onerror=null;this.style.display='none';this.nextElementSibling.style.display='flex';" />
+            <div style="display:none;width:38px;height:38px;border-radius:10px;background:var(--brand-tint);align-items:center;justify-content:center;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="var(--brand)" stroke-width="1.8"/><path d="M2 12H22" stroke="var(--brand)" stroke-width="1.8" stroke-linecap="round"/><path d="M12 3C9 6 7.5 9 7.5 12C7.5 15 9 18 12 21" stroke="var(--brand)" stroke-width="1.8" stroke-linecap="round"/><path d="M12 3C15 6 16.5 9 16.5 12C16.5 15 15 18 12 21" stroke="var(--brand)" stroke-width="1.8" stroke-linecap="round"/></svg></div>
+          </div>
+          <div>
+            <h4 style="font-size:1.0625rem;color:var(--ink);margin-bottom:0.25rem;">Charity: water</h4>
+            <p style="font-size:0.8125rem;color:var(--ink-muted);display:flex;align-items:center;gap:0.375rem;">
+              <svg width="10" height="13" viewBox="0 0 10 13" fill="none" aria-hidden="true"><path d="M5 0.5C2.8 0.5 1 2.3 1 4.5C1 7.5 5 12.5 5 12.5C5 12.5 9 7.5 9 4.5C9 2.3 7.2 0.5 5 0.5Z" fill="var(--ink-muted)"/><circle cx="5" cy="4.5" r="1.25" fill="white"/></svg>
+              New York City, New York, USA
+            </p>
+          </div>
+        </div>
+        <div style="border-top:1px solid var(--border);padding-top:0.875rem;">
+          <p style="font-size:0.875rem;color:var(--ink-soft);line-height:1.75;">Chosen for improvements of child health outcomes, school attendance, and gender equity in education.</p>
+        </div>
+      </div>
 
     <!-- LATIN AMERICA -->
     <div style="display:flex;align-items:center;gap:1rem;margin:2.75rem 0 1.5rem;">
@@ -336,8 +395,11 @@
     <div class="orgs-2col" style="display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;">
       <div class="org-card">
         <div style="display:flex;align-items:flex-start;gap:0.875rem;margin-bottom:1rem;">
-          <div style="width:38px;height:38px;border-radius:10px;background:var(--brand-tint);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="var(--brand)" stroke-width="1.8"/><path d="M2 12H22" stroke="var(--brand)" stroke-width="1.8" stroke-linecap="round"/><path d="M12 3C9 6 7.5 9 7.5 12C7.5 15 9 18 12 21" stroke="var(--brand)" stroke-width="1.8" stroke-linecap="round"/><path d="M12 3C15 6 16.5 9 16.5 12C16.5 15 15 18 12 21" stroke="var(--brand)" stroke-width="1.8" stroke-linecap="round"/></svg>
+          <div style="width:38px;height:38px;border-radius:10px;flex-shrink:0;display:flex;align-items:center;justify-content:center;overflow:hidden;">
+            <img src="https://logo.clearbit.com/glasswing.org" alt="Glasswing International logo"
+                   style="width:38px;height:38px;object-fit:contain;border-radius:8px;background:#fff;padding:2px;"
+                   onerror="this.onerror=null;this.style.display='none';this.nextElementSibling.style.display='flex';" />
+            <div style="display:none;width:38px;height:38px;border-radius:10px;background:var(--brand-tint);align-items:center;justify-content:center;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="var(--brand)" stroke-width="1.8"/><path d="M2 12H22" stroke="var(--brand)" stroke-width="1.8" stroke-linecap="round"/><path d="M12 3C9 6 7.5 9 7.5 12C7.5 15 9 18 12 21" stroke="var(--brand)" stroke-width="1.8" stroke-linecap="round"/><path d="M12 3C15 6 16.5 9 16.5 12C16.5 15 15 18 12 21" stroke="var(--brand)" stroke-width="1.8" stroke-linecap="round"/></svg></div>
           </div>
           <div>
             <h4 style="font-size:1.0625rem;color:var(--ink);margin-bottom:0.25rem;">Glasswing International</h4>
@@ -353,8 +415,11 @@
       </div>
       <div class="org-card">
         <div style="display:flex;align-items:flex-start;gap:0.875rem;margin-bottom:1rem;">
-          <div style="width:38px;height:38px;border-radius:10px;background:var(--brand-tint);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="var(--brand)" stroke-width="1.8"/><path d="M2 12H22" stroke="var(--brand)" stroke-width="1.8" stroke-linecap="round"/><path d="M12 3C9 6 7.5 9 7.5 12C7.5 15 9 18 12 21" stroke="var(--brand)" stroke-width="1.8" stroke-linecap="round"/><path d="M12 3C15 6 16.5 9 16.5 12C16.5 15 15 18 12 21" stroke="var(--brand)" stroke-width="1.8" stroke-linecap="round"/></svg>
+          <div style="width:38px;height:38px;border-radius:10px;flex-shrink:0;display:flex;align-items:center;justify-content:center;overflow:hidden;">
+            <img src="https://logo.clearbit.com/escuelanueva.org" alt="Fundación Escuela Nueva logo"
+                   style="width:38px;height:38px;object-fit:contain;border-radius:8px;background:#fff;padding:2px;"
+                   onerror="this.onerror=null;this.style.display='none';this.nextElementSibling.style.display='flex';" />
+            <div style="display:none;width:38px;height:38px;border-radius:10px;background:var(--brand-tint);align-items:center;justify-content:center;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="var(--brand)" stroke-width="1.8"/><path d="M2 12H22" stroke="var(--brand)" stroke-width="1.8" stroke-linecap="round"/><path d="M12 3C9 6 7.5 9 7.5 12C7.5 15 9 18 12 21" stroke="var(--brand)" stroke-width="1.8" stroke-linecap="round"/><path d="M12 3C15 6 16.5 9 16.5 12C16.5 15 15 18 12 21" stroke="var(--brand)" stroke-width="1.8" stroke-linecap="round"/></svg></div>
           </div>
           <div>
             <h4 style="font-size:1.0625rem;color:var(--ink);margin-bottom:0.25rem;">Fundación Escuela Nueva</h4>
@@ -379,8 +444,11 @@
     <div class="orgs-3col" style="display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;">
       <div class="org-card">
         <div style="display:flex;align-items:flex-start;gap:0.875rem;margin-bottom:1rem;">
-          <div style="width:38px;height:38px;border-radius:10px;background:var(--brand-tint);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="var(--brand)" stroke-width="1.8"/><path d="M2 12H22" stroke="var(--brand)" stroke-width="1.8" stroke-linecap="round"/><path d="M12 3C9 6 7.5 9 7.5 12C7.5 15 9 18 12 21" stroke="var(--brand)" stroke-width="1.8" stroke-linecap="round"/><path d="M12 3C15 6 16.5 9 16.5 12C16.5 15 15 18 12 21" stroke="var(--brand)" stroke-width="1.8" stroke-linecap="round"/></svg>
+          <div style="width:38px;height:38px;border-radius:10px;flex-shrink:0;display:flex;align-items:center;justify-content:center;overflow:hidden;">
+            <img src="https://logo.clearbit.com/savethechildren.org" alt="Save the Children logo"
+                   style="width:38px;height:38px;object-fit:contain;border-radius:8px;background:#fff;padding:2px;"
+                   onerror="this.onerror=null;this.style.display='none';this.nextElementSibling.style.display='flex';" />
+            <div style="display:none;width:38px;height:38px;border-radius:10px;background:var(--brand-tint);align-items:center;justify-content:center;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="var(--brand)" stroke-width="1.8"/><path d="M2 12H22" stroke="var(--brand)" stroke-width="1.8" stroke-linecap="round"/><path d="M12 3C9 6 7.5 9 7.5 12C7.5 15 9 18 12 21" stroke="var(--brand)" stroke-width="1.8" stroke-linecap="round"/><path d="M12 3C15 6 16.5 9 16.5 12C16.5 15 15 18 12 21" stroke="var(--brand)" stroke-width="1.8" stroke-linecap="round"/></svg></div>
           </div>
           <div>
             <h4 style="font-size:1.0625rem;color:var(--ink);margin-bottom:0.25rem;">Save the Children</h4>
@@ -396,8 +464,11 @@
       </div>
       <div class="org-card">
         <div style="display:flex;align-items:flex-start;gap:0.875rem;margin-bottom:1rem;">
-          <div style="width:38px;height:38px;border-radius:10px;background:var(--brand-tint);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="var(--brand)" stroke-width="1.8"/><path d="M2 12H22" stroke="var(--brand)" stroke-width="1.8" stroke-linecap="round"/><path d="M12 3C9 6 7.5 9 7.5 12C7.5 15 9 18 12 21" stroke="var(--brand)" stroke-width="1.8" stroke-linecap="round"/><path d="M12 3C15 6 16.5 9 16.5 12C16.5 15 15 18 12 21" stroke="var(--brand)" stroke-width="1.8" stroke-linecap="round"/></svg>
+          <div style="width:38px;height:38px;border-radius:10px;flex-shrink:0;display:flex;align-items:center;justify-content:center;overflow:hidden;">
+            <img src="https://logo.clearbit.com/malariaconsortium.org" alt="Malaria Consortium logo"
+                   style="width:38px;height:38px;object-fit:contain;border-radius:8px;background:#fff;padding:2px;"
+                   onerror="this.onerror=null;this.style.display='none';this.nextElementSibling.style.display='flex';" />
+            <div style="display:none;width:38px;height:38px;border-radius:10px;background:var(--brand-tint);align-items:center;justify-content:center;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="var(--brand)" stroke-width="1.8"/><path d="M2 12H22" stroke="var(--brand)" stroke-width="1.8" stroke-linecap="round"/><path d="M12 3C9 6 7.5 9 7.5 12C7.5 15 9 18 12 21" stroke="var(--brand)" stroke-width="1.8" stroke-linecap="round"/><path d="M12 3C15 6 16.5 9 16.5 12C16.5 15 15 18 12 21" stroke="var(--brand)" stroke-width="1.8" stroke-linecap="round"/></svg></div>
           </div>
           <div>
             <h4 style="font-size:1.0625rem;color:var(--ink);margin-bottom:0.25rem;">Malaria Consortium</h4>
@@ -413,8 +484,11 @@
       </div>
       <div class="org-card">
         <div style="display:flex;align-items:flex-start;gap:0.875rem;margin-bottom:1rem;">
-          <div style="width:38px;height:38px;border-radius:10px;background:var(--brand-tint);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="var(--brand)" stroke-width="1.8"/><path d="M2 12H22" stroke="var(--brand)" stroke-width="1.8" stroke-linecap="round"/><path d="M12 3C9 6 7.5 9 7.5 12C7.5 15 9 18 12 21" stroke="var(--brand)" stroke-width="1.8" stroke-linecap="round"/><path d="M12 3C15 6 16.5 9 16.5 12C16.5 15 15 18 12 21" stroke="var(--brand)" stroke-width="1.8" stroke-linecap="round"/></svg>
+          <div style="width:38px;height:38px;border-radius:10px;flex-shrink:0;display:flex;align-items:center;justify-content:center;overflow:hidden;">
+            <img src="https://logo.clearbit.com/sos-childrensvillages.org" alt="SOS Children's Villages logo"
+                   style="width:38px;height:38px;object-fit:contain;border-radius:8px;background:#fff;padding:2px;"
+                   onerror="this.onerror=null;this.style.display='none';this.nextElementSibling.style.display='flex';" />
+            <div style="display:none;width:38px;height:38px;border-radius:10px;background:var(--brand-tint);align-items:center;justify-content:center;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="var(--brand)" stroke-width="1.8"/><path d="M2 12H22" stroke="var(--brand)" stroke-width="1.8" stroke-linecap="round"/><path d="M12 3C9 6 7.5 9 7.5 12C7.5 15 9 18 12 21" stroke="var(--brand)" stroke-width="1.8" stroke-linecap="round"/><path d="M12 3C15 6 16.5 9 16.5 12C16.5 15 15 18 12 21" stroke="var(--brand)" stroke-width="1.8" stroke-linecap="round"/></svg></div>
           </div>
           <div>
             <h4 style="font-size:1.0625rem;color:var(--ink);margin-bottom:0.25rem;">SOS Children's Villages</h4>
@@ -439,8 +513,11 @@
     <div style="max-width:520px;margin:0 auto;">
       <div class="org-card">
         <div style="display:flex;align-items:flex-start;gap:0.875rem;margin-bottom:1rem;">
-          <div style="width:38px;height:38px;border-radius:10px;background:var(--brand-tint);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="var(--brand)" stroke-width="1.8"/><path d="M2 12H22" stroke="var(--brand)" stroke-width="1.8" stroke-linecap="round"/><path d="M12 3C9 6 7.5 9 7.5 12C7.5 15 9 18 12 21" stroke="var(--brand)" stroke-width="1.8" stroke-linecap="round"/><path d="M12 3C15 6 16.5 9 16.5 12C16.5 15 15 18 12 21" stroke="var(--brand)" stroke-width="1.8" stroke-linecap="round"/></svg>
+          <div style="width:38px;height:38px;border-radius:10px;flex-shrink:0;display:flex;align-items:center;justify-content:center;overflow:hidden;">
+            <img src="https://logo.clearbit.com/malaika.org" alt="Malaika logo"
+                   style="width:38px;height:38px;object-fit:contain;border-radius:8px;background:#fff;padding:2px;"
+                   onerror="this.onerror=null;this.style.display='none';this.nextElementSibling.style.display='flex';" />
+            <div style="display:none;width:38px;height:38px;border-radius:10px;background:var(--brand-tint);align-items:center;justify-content:center;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="var(--brand)" stroke-width="1.8"/><path d="M2 12H22" stroke="var(--brand)" stroke-width="1.8" stroke-linecap="round"/><path d="M12 3C9 6 7.5 9 7.5 12C7.5 15 9 18 12 21" stroke="var(--brand)" stroke-width="1.8" stroke-linecap="round"/><path d="M12 3C15 6 16.5 9 16.5 12C16.5 15 15 18 12 21" stroke="var(--brand)" stroke-width="1.8" stroke-linecap="round"/></svg></div>
           </div>
           <div>
             <h4 style="font-size:1.0625rem;color:var(--ink);margin-bottom:0.25rem;">Malaika</h4>
@@ -465,8 +542,11 @@
     <div class="orgs-2col" style="display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;">
       <div class="org-card">
         <div style="display:flex;align-items:flex-start;gap:0.875rem;margin-bottom:1rem;">
-          <div style="width:38px;height:38px;border-radius:10px;background:var(--brand-tint);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="var(--brand)" stroke-width="1.8"/><path d="M2 12H22" stroke="var(--brand)" stroke-width="1.8" stroke-linecap="round"/><path d="M12 3C9 6 7.5 9 7.5 12C7.5 15 9 18 12 21" stroke="var(--brand)" stroke-width="1.8" stroke-linecap="round"/><path d="M12 3C15 6 16.5 9 16.5 12C16.5 15 15 18 12 21" stroke="var(--brand)" stroke-width="1.8" stroke-linecap="round"/></svg>
+          <div style="width:38px;height:38px;border-radius:10px;flex-shrink:0;display:flex;align-items:center;justify-content:center;overflow:hidden;">
+            <img src="https://logo.clearbit.com/pratham.org" alt="Pratham logo"
+                   style="width:38px;height:38px;object-fit:contain;border-radius:8px;background:#fff;padding:2px;"
+                   onerror="this.onerror=null;this.style.display='none';this.nextElementSibling.style.display='flex';" />
+            <div style="display:none;width:38px;height:38px;border-radius:10px;background:var(--brand-tint);align-items:center;justify-content:center;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="var(--brand)" stroke-width="1.8"/><path d="M2 12H22" stroke="var(--brand)" stroke-width="1.8" stroke-linecap="round"/><path d="M12 3C9 6 7.5 9 7.5 12C7.5 15 9 18 12 21" stroke="var(--brand)" stroke-width="1.8" stroke-linecap="round"/><path d="M12 3C15 6 16.5 9 16.5 12C16.5 15 15 18 12 21" stroke="var(--brand)" stroke-width="1.8" stroke-linecap="round"/></svg></div>
           </div>
           <div>
             <h4 style="font-size:1.0625rem;color:var(--ink);margin-bottom:0.25rem;">Pratham</h4>

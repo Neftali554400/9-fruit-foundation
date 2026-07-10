@@ -1,0 +1,99 @@
+{
+  "foundation": {
+    "annualAllocation": 250000,
+    "remainingAllocation": 217500,
+    "lastUpdated": "2026-07-08T18:14:00.000Z"
+  },
+  "charities": [
+    {
+      "id": "unicef-usa",
+      "campaignId": "101",
+      "name": "UNICEF USA",
+      "active": true,
+      "annualAllocation": 30000,
+      "remainingAllocation": 23400,
+      "lastUpdated": "2026-07-08T18:14:00.000Z"
+    },
+    {
+      "id": "charity-water",
+      "campaignId": "102",
+      "name": "Charity: water",
+      "active": true,
+      "annualAllocation": 25000,
+      "remainingAllocation": 19500,
+      "lastUpdated": "2026-07-08T18:14:00.000Z"
+    },
+    {
+      "id": "glasswing-international",
+      "campaignId": "103",
+      "name": "Glasswing International",
+      "active": true,
+      "annualAllocation": 15000,
+      "remainingAllocation": 3150,
+      "lastUpdated": "2026-07-08T18:14:00.000Z"
+    },
+    {
+      "id": "fundacion-escuela-nueva",
+      "campaignId": "104",
+      "name": "Fundación Escuela Nueva",
+      "active": true,
+      "annualAllocation": 15000,
+      "remainingAllocation": 12750,
+      "lastUpdated": "2026-07-08T18:14:00.000Z"
+    },
+    {
+      "id": "save-the-children",
+      "campaignId": "105",
+      "name": "Save the Children",
+      "active": true,
+      "annualAllocation": 30000,
+      "remainingAllocation": 26100,
+      "lastUpdated": "2026-07-08T18:14:00.000Z"
+    },
+    {
+      "id": "malaria-consortium",
+      "campaignId": "106",
+      "name": "Malaria Consortium",
+      "active": true,
+      "annualAllocation": 20000,
+      "remainingAllocation": 14200,
+      "lastUpdated": "2026-07-08T18:14:00.000Z"
+    },
+    {
+      "id": "sos-childrens-villages",
+      "campaignId": "107",
+      "name": "SOS Children's Villages",
+      "active": true,
+      "annualAllocation": 20000,
+      "remainingAllocation": 0,
+      "lastUpdated": "2026-07-08T18:14:00.000Z"
+    },
+    {
+      "id": "malaika",
+      "campaignId": "108",
+      "name": "Malaika",
+      "active": true,
+      "annualAllocation": 12000,
+      "remainingAllocation": 9960,
+      "lastUpdated": "2026-07-08T18:14:00.000Z"
+    },
+    {
+      "id": "pratham",
+      "campaignId": "109",
+      "name": "Pratham",
+      "active": true,
+      "annualAllocation": 18000,
+      "remainingAllocation": 15300,
+      "lastUpdated": "2026-07-08T18:14:00.000Z"
+    },
+    {
+      "id": "magic-bus-india",
+      "campaignId": "110",
+      "name": "Magic Bus India Foundation",
+      "active": true,
+      "annualAllocation": 12000,
+      "remainingAllocation": 10440,
+      "lastUpdated": "2026-07-08T18:14:00.000Z"
+    }
+  ]
+}

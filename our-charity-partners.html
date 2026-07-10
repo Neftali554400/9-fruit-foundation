@@ -44,6 +44,36 @@
     .org-card { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 1.5rem; box-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 4px 12px rgba(0,0,0,0.04); transition: transform 0.2s cubic-bezier(0.34,1.56,0.64,1), box-shadow 0.2s ease; }
     .org-card:hover { transform: translateY(-3px); box-shadow: 0 4px 8px rgba(82,169,63,0.08), 0 12px 28px rgba(0,0,0,0.08); }
 
+    /* Matching badge — listing view, no percentage (spec section 6) */
+    .matching-badge { display: inline-flex; align-items: center; gap: 0.375rem; font-size: 0.6875rem; font-weight: 700; padding: 0.3rem 0.6875rem; border-radius: 9999px; background: var(--surface-3); border: 1px solid var(--border); color: var(--ink-soft); white-space: nowrap; }
+    .matching-badge .meter-dot { font-size: 0.625rem; }
+
+    /* Per-charity matching status — expandable, native <details> for built-in keyboard/AT support */
+    .matching-toggle { margin-top: 0.875rem; border-top: 1px solid var(--border); padding-top: 0.75rem; }
+    .matching-toggle summary { cursor: pointer; list-style: none; display: inline-flex; align-items: center; gap: 0.375rem; font-size: 0.8125rem; font-weight: 600; color: var(--brand-dark); }
+    .matching-toggle summary::-webkit-details-marker { display: none; }
+    .matching-toggle summary:focus-visible { outline: 2px solid var(--brand); outline-offset: 3px; border-radius: 4px; }
+    .matching-toggle summary .chevron { transition: transform 0.2s cubic-bezier(0.34,1.56,0.64,1); transform-origin: center; }
+    .matching-toggle[open] summary .chevron { transform: rotate(180deg); }
+    .matching-toggle .matching-meter { margin-top: 0.875rem; max-width: none; }
+
+    /* Matching Availability Meter (shared component — see index.html for the canonical copy) */
+    .matching-meter { background: var(--surface-2); border: 1px solid var(--border); border-radius: 14px; padding: 1rem 1.125rem; }
+    .meter-status-line { display: flex; align-items: center; gap: 0.4375rem; margin-bottom: 0.375rem; }
+    .meter-dot { font-size: 0.8125rem; line-height: 1; }
+    .meter-status-label { font-size: 0.6875rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--brand-dark); }
+    .meter-percent { font-family: 'Playfair Display', serif; font-size: 1.375rem; font-weight: 800; color: var(--ink); margin-bottom: 0.625rem; }
+    .meter-track { position: relative; height: 9px; border-radius: 9999px; background: var(--surface-3); border: 1px solid var(--border); overflow: hidden; }
+    .meter-fill { position: relative; height: 100%; width: 100%; border-radius: 9999px; background: linear-gradient(90deg, var(--brand-dark), var(--brand)); transform: scaleX(0); transform-origin: left; transition: transform 0.9s cubic-bezier(0.22,1,0.36,1); overflow: hidden; }
+    .meter-fill::after { content: ''; position: absolute; inset: 0; width: 200%; background-image: repeating-linear-gradient(45deg, rgba(255,255,255,0.4) 0 10px, rgba(255,255,255,0) 10px 20px); transform: translateX(-50%); animation: meter-scan 1.6s linear infinite; }
+    @keyframes meter-scan { from { transform: translateX(-50%); } to { transform: translateX(0%); } }
+    @media (prefers-reduced-motion: reduce) { .meter-fill::after { animation: none; } }
+    .meter-fully-allocated .meter-fill { background: linear-gradient(90deg, var(--ink-muted), var(--ink-muted)); }
+    .meter-updated { display: flex; flex-direction: column; gap: 0.15rem; margin-top: 0.625rem; }
+    .meter-updated-label { font-size: 0.625rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--ink-muted); }
+    .meter-updated-time { font-size: 0.75rem; color: var(--ink-soft); font-weight: 500; }
+    .meter-error { font-size: 0.8125rem; color: var(--ink-muted); font-style: italic; }
+
     .city-card { background: var(--surface); border: 1px solid var(--border); border-radius: 20px; padding: 2rem; box-shadow: 0 2px 4px rgba(0,0,0,0.04), 0 8px 24px rgba(0,0,0,0.06); transition: transform 0.25s cubic-bezier(0.34,1.56,0.64,1), box-shadow 0.25s ease; }
     .city-card:hover { transform: translateY(-4px); box-shadow: 0 4px 8px rgba(82,169,63,0.08), 0 16px 40px rgba(0,0,0,0.1); }
 
@@ -282,8 +312,7 @@
 ════════════════════════════════════════ -->
 <section style="padding:5.5rem 1.5rem;background:var(--surface-2);border-top:1px solid var(--border);border-bottom:1px solid var(--border);position:relative;overflow:hidden;">
   <!-- World map background -->
-  <div aria-hidden="true" style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;pointer-events:none;z-index:0;opacity:0.045;">
-    <svg viewBox="0 0 1000 500" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%;" fill="var(--brand)" stroke="none">
+  <svg aria-hidden="true" viewBox="0 0 1000 500" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" style="position:absolute;top:3rem;left:50%;transform:translateX(-50%);width:92%;max-width:1100px;pointer-events:none;z-index:0;opacity:0.14;stroke:#3E8F2C;fill:none;stroke-width:2;stroke-linejoin:round;stroke-linecap:round;">
       <!-- North America -->
       <path d="M70,55 L110,40 L160,45 L210,55 L240,75 L255,100 L260,130 L250,160 L230,175 L200,180 L175,170 L150,165 L120,155 L95,140 L72,118 L60,95 Z"/>
       <!-- Greenland -->
@@ -310,7 +339,6 @@
       <!-- New Zealand -->
       <path d="M940,368 L958,360 L968,378 L960,395 L942,392 Z"/>
     </svg>
-  </div>
   <div style="max-width:1100px;margin:0 auto;position:relative;z-index:1;">
 
     <div class="mission-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;margin-bottom:3rem;">
@@ -358,10 +386,19 @@
               <svg width="10" height="13" viewBox="0 0 10 13" fill="none" aria-hidden="true"><path d="M5 0.5C2.8 0.5 1 2.3 1 4.5C1 7.5 5 12.5 5 12.5C5 12.5 9 7.5 9 4.5C9 2.3 7.2 0.5 5 0.5Z" fill="var(--ink-muted)"/><circle cx="5" cy="4.5" r="1.25" fill="white"/></svg>
               <span style="flex:1;min-width:0;">New York City, New York, USA</span>
             </p>
+            <div style="margin-top:0.5rem;"><span class="matching-badge" data-charity-id="unicef-usa"></span></div>
           </div>
         </div>
         <div style="border-top:1px solid var(--border);padding-top:0.875rem;">
           <p style="font-size:0.875rem;color:var(--ink-soft);line-height:1.75;">Chosen by 9 Fruit for globally trusted leadership advancing child health, education, protection, and emergency support.</p>
+        </div>
+        <details class="matching-toggle">
+          <summary>
+            <span>View Matching Status</span>
+            <svg class="chevron" width="10" height="10" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </summary>
+          <div class="matching-meter" data-meter-scope="charity" data-charity-id="unicef-usa" aria-live="polite"></div>
+        </details>
       </div>
     </div>
     <div style="max-width:520px;margin:1.25rem auto 0;">
@@ -379,11 +416,19 @@
               <svg width="10" height="13" viewBox="0 0 10 13" fill="none" aria-hidden="true"><path d="M5 0.5C2.8 0.5 1 2.3 1 4.5C1 7.5 5 12.5 5 12.5C5 12.5 9 7.5 9 4.5C9 2.3 7.2 0.5 5 0.5Z" fill="var(--ink-muted)"/><circle cx="5" cy="4.5" r="1.25" fill="white"/></svg>
               <span style="flex:1;min-width:0;">New York City, New York, USA</span>
             </p>
+            <div style="margin-top:0.5rem;"><span class="matching-badge" data-charity-id="charity-water"></span></div>
           </div>
         </div>
         <div style="border-top:1px solid var(--border);padding-top:0.875rem;">
           <p style="font-size:0.875rem;color:var(--ink-soft);line-height:1.75;">Chosen for improvements of child health outcomes, school attendance, and gender equity in education.</p>
         </div>
+        <details class="matching-toggle">
+          <summary>
+            <span>View Matching Status</span>
+            <svg class="chevron" width="10" height="10" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </summary>
+          <div class="matching-meter" data-meter-scope="charity" data-charity-id="charity-water" aria-live="polite"></div>
+        </details>
       </div>
 
     <!-- LATIN AMERICA -->
@@ -407,11 +452,19 @@
               <svg width="10" height="13" viewBox="0 0 10 13" fill="none" aria-hidden="true"><path d="M5 0.5C2.8 0.5 1 2.3 1 4.5C1 7.5 5 12.5 5 12.5C5 12.5 9 7.5 9 4.5C9 2.3 7.2 0.5 5 0.5Z" fill="var(--ink-muted)"/><circle cx="5" cy="4.5" r="1.25" fill="white"/></svg>
               <span style="flex:1;min-width:0;">San Salvador, El Salvador</span>
             </p>
+            <div style="margin-top:0.5rem;"><span class="matching-badge" data-charity-id="glasswing-international"></span></div>
           </div>
         </div>
         <div style="border-top:1px solid var(--border);padding-top:0.875rem;">
           <p style="font-size:0.875rem;color:var(--ink-soft);line-height:1.75;">Chosen for strengthening youth education, mental wellness, and measurable long-term community impact.</p>
         </div>
+        <details class="matching-toggle">
+          <summary>
+            <span>View Matching Status</span>
+            <svg class="chevron" width="10" height="10" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </summary>
+          <div class="matching-meter" data-meter-scope="charity" data-charity-id="glasswing-international" aria-live="polite"></div>
+        </details>
       </div>
       <div class="org-card">
         <div style="display:flex;align-items:flex-start;gap:0.875rem;margin-bottom:1rem;">
@@ -427,11 +480,19 @@
               <svg width="10" height="13" viewBox="0 0 10 13" fill="none" aria-hidden="true"><path d="M5 0.5C2.8 0.5 1 2.3 1 4.5C1 7.5 5 12.5 5 12.5C5 12.5 9 7.5 9 4.5C9 2.3 7.2 0.5 5 0.5Z" fill="var(--ink-muted)"/><circle cx="5" cy="4.5" r="1.25" fill="white"/></svg>
               <span style="flex:1;min-width:0;">Bogotá, Colombia</span>
             </p>
+            <div style="margin-top:0.5rem;"><span class="matching-badge" data-charity-id="fundacion-escuela-nueva"></span></div>
           </div>
         </div>
         <div style="border-top:1px solid var(--border);padding-top:0.875rem;">
           <p style="font-size:0.875rem;color:var(--ink-soft);line-height:1.75;">Chosen for globally respected educational innovation helping children flourish through improved learning opportunity.</p>
         </div>
+        <details class="matching-toggle">
+          <summary>
+            <span>View Matching Status</span>
+            <svg class="chevron" width="10" height="10" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </summary>
+          <div class="matching-meter" data-meter-scope="charity" data-charity-id="fundacion-escuela-nueva" aria-live="polite"></div>
+        </details>
       </div>
     </div>
 
@@ -456,11 +517,19 @@
               <svg width="10" height="13" viewBox="0 0 10 13" fill="none" aria-hidden="true"><path d="M5 0.5C2.8 0.5 1 2.3 1 4.5C1 7.5 5 12.5 5 12.5C5 12.5 9 7.5 9 4.5C9 2.3 7.2 0.5 5 0.5Z" fill="var(--ink-muted)"/><circle cx="5" cy="4.5" r="1.25" fill="white"/></svg>
               <span style="flex:1;min-width:0;">London, England, United Kingdom</span>
             </p>
+            <div style="margin-top:0.5rem;"><span class="matching-badge" data-charity-id="save-the-children"></span></div>
           </div>
         </div>
         <div style="border-top:1px solid var(--border);padding-top:0.875rem;">
           <p style="font-size:0.875rem;color:var(--ink-soft);line-height:1.75;">Chosen for trusted global leadership advancing child health, education, and protection.</p>
         </div>
+        <details class="matching-toggle">
+          <summary>
+            <span>View Matching Status</span>
+            <svg class="chevron" width="10" height="10" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </summary>
+          <div class="matching-meter" data-meter-scope="charity" data-charity-id="save-the-children" aria-live="polite"></div>
+        </details>
       </div>
       <div class="org-card">
         <div style="display:flex;align-items:flex-start;gap:0.875rem;margin-bottom:1rem;">
@@ -476,11 +545,19 @@
               <svg width="10" height="13" viewBox="0 0 10 13" fill="none" aria-hidden="true"><path d="M5 0.5C2.8 0.5 1 2.3 1 4.5C1 7.5 5 12.5 5 12.5C5 12.5 9 7.5 9 4.5C9 2.3 7.2 0.5 5 0.5Z" fill="var(--ink-muted)"/><circle cx="5" cy="4.5" r="1.25" fill="white"/></svg>
               <span style="flex:1;min-width:0;">London, England, United Kingdom</span>
             </p>
+            <div style="margin-top:0.5rem;"><span class="matching-badge" data-charity-id="malaria-consortium"></span></div>
           </div>
         </div>
         <div style="border-top:1px solid var(--border);padding-top:0.875rem;">
           <p style="font-size:0.875rem;color:var(--ink-soft);line-height:1.75;">Chosen for evidence-based child health interventions delivering measurable life-saving outcomes.</p>
         </div>
+        <details class="matching-toggle">
+          <summary>
+            <span>View Matching Status</span>
+            <svg class="chevron" width="10" height="10" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </summary>
+          <div class="matching-meter" data-meter-scope="charity" data-charity-id="malaria-consortium" aria-live="polite"></div>
+        </details>
       </div>
       <div class="org-card">
         <div style="display:flex;align-items:flex-start;gap:0.875rem;margin-bottom:1rem;">
@@ -496,11 +573,19 @@
               <svg width="10" height="13" viewBox="0 0 10 13" fill="none" aria-hidden="true"><path d="M5 0.5C2.8 0.5 1 2.3 1 4.5C1 7.5 5 12.5 5 12.5C5 12.5 9 7.5 9 4.5C9 2.3 7.2 0.5 5 0.5Z" fill="var(--ink-muted)"/><circle cx="5" cy="4.5" r="1.25" fill="white"/></svg>
               <span style="flex:1;min-width:0;">Vienna, Austria</span>
             </p>
+            <div style="margin-top:0.5rem;"><span class="matching-badge" data-charity-id="sos-childrens-villages"></span></div>
           </div>
         </div>
         <div style="border-top:1px solid var(--border);padding-top:0.875rem;">
           <p style="font-size:0.875rem;color:var(--ink-soft);line-height:1.75;">Chosen for strengthening child stability, development, and educational opportunity worldwide.</p>
         </div>
+        <details class="matching-toggle">
+          <summary>
+            <span>View Matching Status</span>
+            <svg class="chevron" width="10" height="10" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </summary>
+          <div class="matching-meter" data-meter-scope="charity" data-charity-id="sos-childrens-villages" aria-live="polite"></div>
+        </details>
       </div>
     </div>
 
@@ -525,11 +610,19 @@
               <svg width="10" height="13" viewBox="0 0 10 13" fill="none" aria-hidden="true"><path d="M5 0.5C2.8 0.5 1 2.3 1 4.5C1 7.5 5 12.5 5 12.5C5 12.5 9 7.5 9 4.5C9 2.3 7.2 0.5 5 0.5Z" fill="var(--ink-muted)"/><circle cx="5" cy="4.5" r="1.25" fill="white"/></svg>
               <span style="flex:1;min-width:0;">Kalebuka, Democratic Republic of the Congo</span>
             </p>
+            <div style="margin-top:0.5rem;"><span class="matching-badge" data-charity-id="malaika"></span></div>
           </div>
         </div>
         <div style="border-top:1px solid var(--border);padding-top:0.875rem;">
           <p style="font-size:0.875rem;color:var(--ink-soft);line-height:1.75;">Chosen for empowering children through education, leadership development, and life-changing opportunity.</p>
         </div>
+        <details class="matching-toggle">
+          <summary>
+            <span>View Matching Status</span>
+            <svg class="chevron" width="10" height="10" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </summary>
+          <div class="matching-meter" data-meter-scope="charity" data-charity-id="malaika" aria-live="polite"></div>
+        </details>
       </div>
     </div>
 
@@ -554,11 +647,19 @@
               <svg width="10" height="13" viewBox="0 0 10 13" fill="none" aria-hidden="true"><path d="M5 0.5C2.8 0.5 1 2.3 1 4.5C1 7.5 5 12.5 5 12.5C5 12.5 9 7.5 9 4.5C9 2.3 7.2 0.5 5 0.5Z" fill="var(--ink-muted)"/><circle cx="5" cy="4.5" r="1.25" fill="white"/></svg>
               <span style="flex:1;min-width:0;">Mumbai, India</span>
             </p>
+            <div style="margin-top:0.5rem;"><span class="matching-badge" data-charity-id="pratham"></span></div>
           </div>
         </div>
         <div style="border-top:1px solid var(--border);padding-top:0.875rem;">
           <p style="font-size:0.875rem;color:var(--ink-soft);line-height:1.75;">Chosen for world-class educational advancement helping children thrive through measurable literacy outcomes.</p>
         </div>
+        <details class="matching-toggle">
+          <summary>
+            <span>View Matching Status</span>
+            <svg class="chevron" width="10" height="10" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </summary>
+          <div class="matching-meter" data-meter-scope="charity" data-charity-id="pratham" aria-live="polite"></div>
+        </details>
       </div>
       <div class="org-card">
         <div style="display:flex;align-items:flex-start;gap:0.875rem;margin-bottom:1rem;">
@@ -571,11 +672,19 @@
               <svg width="10" height="13" viewBox="0 0 10 13" fill="none" aria-hidden="true"><path d="M5 0.5C2.8 0.5 1 2.3 1 4.5C1 7.5 5 12.5 5 12.5C5 12.5 9 7.5 9 4.5C9 2.3 7.2 0.5 5 0.5Z" fill="var(--ink-muted)"/><circle cx="5" cy="4.5" r="1.25" fill="white"/></svg>
               <span style="flex:1;min-width:0;">Mumbai, India</span>
             </p>
+            <div style="margin-top:0.5rem;"><span class="matching-badge" data-charity-id="magic-bus-india"></span></div>
           </div>
         </div>
         <div style="border-top:1px solid var(--border);padding-top:0.875rem;">
           <p style="font-size:0.875rem;color:var(--ink-soft);line-height:1.75;">Chosen for helping young people transition from education toward lifelong opportunity.</p>
         </div>
+        <details class="matching-toggle">
+          <summary>
+            <span>View Matching Status</span>
+            <svg class="chevron" width="10" height="10" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </summary>
+          <div class="matching-meter" data-meter-scope="charity" data-charity-id="magic-bus-india" aria-live="polite"></div>
+        </details>
       </div>
     </div>
 
@@ -828,5 +937,82 @@
   Give Now
   <svg width="13" height="13" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
 </a>
+<!-- ═══════════════════════════════════════
+     DEV-ONLY TEST TOOL — simulates a completed Givebutter donation so the
+     Matching Availability meters can be demoed without a live Givebutter
+     account. Delete this whole block (and netlify/functions/simulate-
+     donation.mjs + the /api/simulate-donation route in serve.mjs) before
+     this project ships to production.
+════════════════════════════════════════ -->
+<div id="dev-matching-panel" style="position:fixed;bottom:1rem;right:1rem;z-index:9999;width:280px;max-width:calc(100vw - 2rem);background:#1C1917;color:#fff;border-radius:14px;padding:1rem 1.125rem;box-shadow:0 12px 32px rgba(0,0,0,0.35);font-family:'Inter',sans-serif;">
+  <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:0.625rem;">
+    <strong style="font-size:0.6875rem;letter-spacing:0.06em;text-transform:uppercase;color:#FBBF24;">Dev Test Tool — Simulate Donation</strong>
+    <button type="button" id="dev-panel-toggle" aria-expanded="false" aria-controls="dev-panel-body" style="background:none;border:none;color:#fff;cursor:pointer;font-size:1rem;line-height:1;padding:0.125rem 0.375rem;">+</button>
+  </div>
+  <div id="dev-panel-body" style="display:none;">
+    <p style="font-size:0.75rem;color:rgba(255,255,255,0.55);line-height:1.5;margin-bottom:0.75rem;">Fires the same logic as a real Givebutter webhook, so you can watch the meters update live. Not part of the production site.</p>
+    <label style="display:block;margin-bottom:0.5rem;">
+      <span style="display:block;margin-bottom:0.25rem;font-size:0.75rem;color:rgba(255,255,255,0.7);">Featured Charity</span>
+      <select id="dev-charity-select" style="width:100%;padding:0.4375rem;border-radius:8px;border:1px solid rgba(255,255,255,0.2);background:#292524;color:#fff;font-size:0.8125rem;"></select>
+    </label>
+    <label style="display:block;margin-bottom:0.75rem;">
+      <span style="display:block;margin-bottom:0.25rem;font-size:0.75rem;color:rgba(255,255,255,0.7);">Donation amount ($, matching caps at $100)</span>
+      <input id="dev-amount-input" type="number" min="1" max="500" value="100" style="width:100%;padding:0.4375rem;border-radius:8px;border:1px solid rgba(255,255,255,0.2);background:#292524;color:#fff;font-size:0.8125rem;" />
+    </label>
+    <button type="button" id="dev-simulate-btn" class="btn-primary" style="width:100%;justify-content:center;padding:0.5rem;font-size:0.8125rem;">Simulate Donation</button>
+    <p id="dev-panel-result" role="status" style="margin-top:0.625rem;font-size:0.75rem;color:rgba(255,255,255,0.8);line-height:1.5;min-height:1.2em;"></p>
+  </div>
+</div>
+<script>
+(function () {
+  var select = document.getElementById('dev-charity-select');
+  var amountInput = document.getElementById('dev-amount-input');
+  var simulateBtn = document.getElementById('dev-simulate-btn');
+  var resultEl = document.getElementById('dev-panel-result');
+  var toggleBtn = document.getElementById('dev-panel-toggle');
+  var bodyEl = document.getElementById('dev-panel-body');
+
+  toggleBtn.addEventListener('click', function () {
+    var collapsed = bodyEl.style.display === 'none';
+    bodyEl.style.display = collapsed ? '' : 'none';
+    toggleBtn.textContent = collapsed ? '–' : '+';
+    toggleBtn.setAttribute('aria-expanded', String(collapsed));
+  });
+
+  fetch('/api/matching/charities', { cache: 'no-store' })
+    .then(function (res) { return res.json(); })
+    .then(function (charities) {
+      select.innerHTML = charities.map(function (c) {
+        return '<option value="' + c.campaignId + '">' + c.name + ' (' + c.percentRemaining + '% remaining)</option>';
+      }).join('');
+    })
+    .catch(function () {
+      select.innerHTML = '<option value="">Unable to load charities</option>';
+    });
+
+  simulateBtn.addEventListener('click', function () {
+    resultEl.textContent = 'Sending…';
+    fetch('/api/simulate-donation', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ campaignId: select.value, amount: Number(amountInput.value) }),
+    })
+      .then(function (res) { return res.json(); })
+      .then(function (data) {
+        if (data.matched) {
+          resultEl.textContent = 'Matched $' + data.matchAmount + '. Meters updating…';
+          window.dispatchEvent(new Event('matching:refresh'));
+        } else {
+          resultEl.textContent = 'Not matched: ' + data.reason;
+        }
+      })
+      .catch(function () {
+        resultEl.textContent = 'Request failed.';
+      });
+  });
+})();
+</script>
+
+<script src="/assets/js/matching-meters.js"></script>
 </body>
 </html>
